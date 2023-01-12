@@ -552,7 +552,7 @@
 
   <xsl:template match="permanentLoanTypeId">
     <xsl:variable name="loantype"
-      select="key('original', .)/datafield[@tag = '209A']/subfield[@code = 'd']"/>
+      select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']"/>
     <permanentLoanTypeId>
       <xsl:choose>
         <xsl:when test=". = 'u'">0 u Ausleihbar</xsl:when>
