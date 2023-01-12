@@ -551,6 +551,7 @@
   </xsl:template>
 
   <xsl:template match="permanentLoanTypeId">
+    <xsl:variable name="i" select="key('original', .)"/>
     <xsl:variable name="loantype"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']"/>
     <permanentLoanTypeId>
