@@ -20,6 +20,7 @@
     <xsl:variable name="abt" select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'f']/text()"/>
     <xsl:variable name="signature"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
+    <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
     <xsl:variable name="signature-lowercase" select="
         translate($signature,
         'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -516,6 +517,7 @@
       </xsl:variable>
 
       <xsl:choose>
+        <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
         <xsl:when test="
             exsl:node-set($ranges-list)/ranges/department[@code = $abt]/prefix or
             exsl:node-set($ranges-list)/ranges/department[@code = $abt]/range">
