@@ -220,7 +220,7 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">les</prefix>
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
-            <range from="mag ug 0" to="mag ug 999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">msla</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
             <range from="n 1" to="n 999999" location="ILN204/CG/UB/UBMagKeller"/>
