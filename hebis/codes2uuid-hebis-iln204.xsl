@@ -26,7 +26,7 @@
         <!-- UB und Zweigbibliotheken -->
         <xsl:when test=".='ILN204/CG/UB/Freihand1OG'">4b0f04c3-80f6-41b8-b932-9ad6b1310ee1</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Freihand2OG'">2b6d95b8-a103-4aca-94a8-c506806b850d</xsl:when>
-        <xsl:when test=".='ILN204/CG/UB/UBMagAltbau'">c04637db-0938-499f-b4a4-92c28c4b1cd2</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMagPohlheim'">c04637db-0938-499f-b4a4-92c28c4b1cd2</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBMag3'">7a2e235e-a835-4aa2-a231-607cd38ea05c</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBMagKeller'">42796a67-f479-4f69-bc09-9eb080249327</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBMagPhil1'">3e26a16a-cf6b-4d14-8606-1db78bfbc023</xsl:when>
