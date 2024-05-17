@@ -36,7 +36,7 @@
             <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
             <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
-            <range from="1900" to="1990" location="ILN204/CG/UB/UBMagAltbau"/>
+            <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="2 1" to="2 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="20.000.00" to="24.999.99" location="ILN204/CG/UB/UBMag3"/>
             <range from="27.000.00" to="27.999.99" location="ILN204/CG/UB/Freihand2OG"/>
@@ -46,7 +46,7 @@
             <range from="2o 3 1" to="2o 3 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="2o 4 1" to="2o 4 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="2o 4/1" to="2o 4/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 40.000.00" to="2o 44.999.99" location="ILN204/CG/UB/UBMagAltbau"/>
+            <range from="2o 40.000.00" to="2o 44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="2o a 49" to="2o a 56" location="ILN204/CG/UB/UBMag3"/>
             <range from="2o b 49" to="2o b 73" location="ILN204/CG/UB/UBMag3"/>
             <range from="2o bt 1/1" to="2o bt 9/9" location="ILN204/CG/UB/UBMag3"/>
@@ -77,7 +77,7 @@
             <range from="4o 4/1" to="4o 4/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">4o azz</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">4o azz</prefix>
             <range from="4o b 49" to="4o b 73" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o bt 1/1" to="4o bt 9/9" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o erk 1" to="4o erk 999999" location="ILN204/CG/UB/UBMag3"/>
@@ -91,32 +91,28 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">4o ztg</prefix>
             <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o zz 21" to="4o zz 48" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/UB/UBMagAltbau"/>
-            <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 21" to="4o zz 48" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/UB/UBMagAltbau"/>
-            <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMag3"/>
+            <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="5 1" to="5 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="a 1" to="a 48" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="a 49" to="a 56" location="ILN204/CG/UB/UBMag3"/>
             <range from="a 57" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">abw</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">adk</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">ags</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">al</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">al</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">an</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">ap</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">aro</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">azz</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">ap</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">aro</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">azz</prefix>
             <range from="b 1" to="b 48" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="b 49" to="b 73" location="ILN204/CG/UB/UBMag3"/>
             <range from="b 74" to="b 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="bap 1" to="bap 10" location="ILN204/CG/UB/UBMagAltbau"/>
-            <range from="bap 13" to="bap 26" location="ILN204/CG/UB/UBMagAltbau"/>
+            <range from="bap 1" to="bap 10" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="bap 13" to="bap 26" location="ILN204/CG/UB/UBMagPohlheim"/>
             <prefix location="ILN204/CG/UB/UBMag3">bap 27</prefix>
-            <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagAltbau"/>
-            <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagAltbau"/>
+            <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagPohlheim"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">bel</prefix>
             <range from="bt 1/1" to="bt 9/9" location="ILN204/CG/UB/UBMag3"/>
             <range from="c 1" to="c 999999" location="ILN204/CG/UB/UBMagKeller"/>
@@ -225,8 +221,8 @@
             <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
             <range from="n 1" to="n 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBSLS">nachl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">nl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">no</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">nl</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">no</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">nr</prefix>
             <range from="o 1" to="o 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/Freihand1OG">osr</prefix>
@@ -247,7 +243,7 @@
             <range from="u 1" to="u 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="v 1" to="v 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">vorl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagAltbau">vuf</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">vuf</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vv</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">w</prefix>
             <range from="x 0" to="x 999999" location="ILN204/CG/UB/UBMagKeller"/>
@@ -258,8 +254,8 @@
             <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
             <range from="zz 1" to="zz 20" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 21" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
-            <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagAltbau"/>
-            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMag3"/>
+            <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
           </department>
           <department code="002" default-location="ILN204/CG/ZNL/Freihand">
             <prefix location="ILN204/CG/ZNL/Freihand">/</prefix>
