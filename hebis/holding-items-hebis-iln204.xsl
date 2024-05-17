@@ -217,6 +217,8 @@
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">mag ssl</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">mag eden</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">msla</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
             <range from="n 1" to="n 999999" location="ILN204/CG/UB/UBMagKeller"/>
