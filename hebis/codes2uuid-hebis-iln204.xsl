@@ -30,6 +30,7 @@
         <xsl:when test=".='ILN204/CG/UB/UBMag3'">7a2e235e-a835-4aa2-a231-607cd38ea05c</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBMagKeller'">42796a67-f479-4f69-bc09-9eb080249327</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBMagPhil1'">3e26a16a-cf6b-4d14-8606-1db78bfbc023</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMagZNL'">e2223b3e-e4a7-4716-9307-a3a00b9b960e</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBSLS'">bde53f6b-b51f-4f42-8a4b-bfea6bdad539</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Handapparate'">86a35533-4023-441d-b4d1-83536e9c8be1</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Erwerbungssignatur'">4f790b65-3874-49a7-8dac-46b3cbcfd6ab</xsl:when>
