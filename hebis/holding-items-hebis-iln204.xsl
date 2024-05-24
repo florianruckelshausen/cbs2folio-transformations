@@ -34,6 +34,10 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
+            
+            <!--<range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>-->
+            
             <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
             <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
@@ -980,5 +984,4 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
 </xsl:stylesheet>
