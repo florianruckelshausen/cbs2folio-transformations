@@ -1,984 +1,174 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2023-09-04 (YYYY-MM-DD) -->
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- date of last edit: 2022-12-20 (YYYY-MM-DD) -->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
-
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/>
-  <xsl:key name="original" match="original/item" use="@epn"/>
-
   <xsl:template match="@* | node()">
     <xsl:copy>
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
 
-  <!-- ILN 204 UB Gießen: holding-items-hebis-iln204.xsl -->
-  <!-- ================================================= -->
 
-  <xsl:template match="permanentLocationId">
-    <xsl:variable name="i" select="key('original', .)"/>
-    <!-- 209A$f/209G$a ? -->
-    <xsl:variable name="abt" select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'f']/text()"/>
-    <xsl:variable name="signature"
-      select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
-    <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
-    <xsl:variable name="signature-lowercase" select="
-        translate($signature,
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-        'abcdefghijklmnopqrstuvwxyz')"/>
+  <!-- ILN 204 UB Gießen -->
+  <!-- Map locations (codes2uuid-hebis-iln204.xsl)
+       the IDs are the location names in FOLIO, generated from 209A $f and other pica fields -->
+
+  <xsl:template match="permanentLocationId"> <!-- ILN -->
     <permanentLocationId>
-      <xsl:variable name="ranges-list">
-        <ranges>
-          <department code="000">
-            <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
-            <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
-            <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
-            <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="2 1" to="2 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="20.000.00" to="24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="27.000.00" to="27.999.99" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="2o 1 1" to="2o 1 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 2 1" to="2o 2 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 20.000.00" to="2o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o 3 1" to="2o 3 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 4 1" to="2o 4 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 4/1" to="2o 4/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 40.000.00" to="2o 44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="2o a 49" to="2o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o b 49" to="2o b 73" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o bt 1/1" to="2o bt 9/9" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o bt 1" to="2o bt 9" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o erk 1" to="2o erk 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">2o hass</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">2o kt a</prefix>
-            <prefix location="ILN204/CG/UB/UBSLS">2o kt b</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">2o kt-a</prefix>
-            <prefix location="ILN204/CG/UB/UBSLS">2o kt-b</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">2o landesk</prefix>
-            <range from="2o ma" to="2o mz" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMag3">2o ss</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">2o ztg</prefix>
-            <range from="2o zz 1" to="2o zz 48" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o zz 49" to="2o zz 99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="3/1" to="3/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagPhil1">350</prefix>
-            <range from="4 b 49" to="4 b 73" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMag3">4 ss</prefix>
-            <range from="4/1" to="4/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="40.000.00" to="44.999.99" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="47.000.00" to="47.999.99" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="4o 1/1" to="4o 1/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 2/1" to="4o 2/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 20.000.00" to="4o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o 3/1" to="4o 3/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 4/1" to="4o 4/9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">4o azz</prefix>
-            <range from="4o b 49" to="4o b 73" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o bt 1/1" to="4o bt 9/9" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o erk 1" to="4o erk 999999" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMag3">4o hass</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">4o kr</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">4o kt</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">4o landesk</prefix>
-            <range from="4o ma" to="4o mz" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMag3">4o pap</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">4o ss</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">4o ztg</prefix>
-            <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 21" to="4o zz 48" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="5 1" to="5 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="a 1" to="a 48" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="a 49" to="a 56" location="ILN204/CG/UB/UBMag3"/>
-            <range from="a 57" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">al</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">an</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">ap</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">aro</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">azz</prefix>
-            <range from="b 1" to="b 48" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="b 49" to="b 73" location="ILN204/CG/UB/UBMag3"/>
-            <range from="b 74" to="b 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="bap 1" to="bap 10" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="bap 13" to="bap 26" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <prefix location="ILN204/CG/UB/UBMag3">bap 27</prefix>
-            <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <prefix location="ILN204/CG/UB/UBMagKeller">bel</prefix>
-            <range from="bt 1/1" to="bt 9/9" location="ILN204/CG/UB/UBMag3"/>
-            <range from="c 1" to="c 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="cd 1" to="cd 999999" location="ILN204/CG/UB/UBMag3"/>
-            <range from="d 0" to="d 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="da 0" to="da 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="e 0" to="e 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="e 10" to="e 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagKeller">erk</prefix>
-            <range from="f 1" to="f 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">fd</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh agr</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh all</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh altege</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ang</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh arb</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh bap</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh bio</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh bliz</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh bot</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh che</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh didge</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh eden</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ern</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh fil</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh geo</prefix>
-            <range from="fh ger a" to="fh ger z" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="fh germ /" to="fh germ z" location="ILN204/CG/UB/Freihand2OG"/>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ggr</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh he</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh his</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh hsh</prefix>
-            <range from="fh jur a" to="fh jur y" location="ILN204/CG/UB/Freihand2OG"/>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh jur z</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kid</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kla</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kun</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kup</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kyb</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh lit</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh mat</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh nat</prefix>
-            <range from="fh ori aa" to="fh ori zz" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="fh orient /" to="fh orient wl" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="fh orient wn" to="fh orient z" location="ILN204/CG/UB/Freihand2OG"/>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ostge</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh pap</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh phi</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh psy</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh rom</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh sla</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh sls 20</prefix>
-            <range from="fh sls 28" to="fh sls 30" location="ILN204/CG/UB/Freihand2OG"/>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh spo</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh spr</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ssl</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh sta</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh sued</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh tea</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh tec</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh umw</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh vol</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh vsp</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh zeitung</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh zoo</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh zp1</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">fk</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fp</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">frsla</prefix>
-            <range from="g 1" to="g 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">gb</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">ges</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">giso</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">gr 2o 2/</prefix>
-            <range from="gr 2o 20.00" to="gr 2o 49.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="gr 2o a 49" to="gr 2o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMag3">gr 2o b</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">gr 2o hass</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">gr 2o kt</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">gr 2o ss</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">gr 2o ztg</prefix>
-            <range from="gr 2o zz 1" to="gr 2o zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="gr 2o zz 49" to="gr 2o zz 99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="h 1" to="h 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">hass</prefix>
-            <prefix location="ILN204/CG/UB/UBSLS">hr</prefix>
-            <range from="hs 1" to="hs 9999" location="ILN204/CG/UB/UBSLS"/>
-            <prefix location="ILN204/CG/UB/UBSLS">hs nf</prefix>
-            <prefix location="ILN204/CG/UB/UBSLS">hs sg sg</prefix>
-            <range from="i 0" to="i 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="i 10" to="i 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">in</prefix>
-            <range from="k 1" to="k 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">kr</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">kt a</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">kt b</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">kt-a</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">kt-b</prefix>
-            <range from="l 1" to="l 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">landesk</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">les</prefix>
-            <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">mag ssl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">mag eden</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">msla</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
-            <range from="n 1" to="n 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBSLS">nachl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">nl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">no</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">nr</prefix>
-            <range from="o 1" to="o 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/Freihand1OG">osr</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>
-            <range from="p 1" to="p 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">pl</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">progr</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">q</prefix>
-            <range from="r 0" to="r 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBSLS">rara</prefix>
-            <range from="s 1" to="s 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">sap</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">sch</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">ss</prefix>
-            <range from="t 1" to="t 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBSLS">thaer</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">theo</prefix>
-            <range from="u 1" to="u 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="v 1" to="v 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagKeller">vorl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">vuf</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">vv</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">w</prefix>
-            <range from="x 0" to="x 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="y 1" to="y 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
-            <range from="z.nr 1" to="z.nr 999999" location="ILN204/CG/UB/UBMag3"/>
-            <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
-            <range from="zz 1" to="zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="zz 21" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
-            <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
-          </department>
-          <department code="002" default-location="ILN204/CG/ZNL/Freihand">
-            <prefix location="ILN204/CG/ZNL/Freihand">/</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 agr</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 all</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 bio</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 bot</prefix>
-            <range from="002 che a" to="002 che e" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fa 0.1" to="002 che fa 0.3" location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Magazin">002 che fa 0.40</prefix>
-            <range from="002 che fa 0.41" to="002 che fa 0.49" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fa 0.5" to="002 che fa 0.9" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fa 1" to="002 che fa 9" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fb" to="002 che fz" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che g" to="002 che z" location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 ern</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 geo</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 ggr</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 kyb</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 mat</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 med</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 nat</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 phy</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 tec</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 umw</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 vet</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 zoo</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>
-            <prefix location="ILN204/CG/ZNL/Magazin">140</prefix>
-            <range from="49.000.00" to="49.999.99" location="ILN204/CG/ZNL/Magazin"/>
-            <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/ZNL/Magazin"/>
-            <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o zz 49" to="4o zz 99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="bap 11,1" to="bap 12,9" location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Freihand">in</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">ss</prefix>
-            <range from="zeitschriftenraum" to="zeitschriftenraum b"
-              location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Magazin">zeitschriftenraum chemie</prefix>
-            <range from="zz 1" to="zz 20" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="zz 49" to="zz 99" location="ILN204/CG/ZNL/Freihand"/>
-          </department>
-          <department code="005" default-location="ILN204/CG/ZHB/Freihand">
-            <prefix location="ILN204/CG/ZHB/Freihand">/</prefix>
-            <prefix location="ILN204/CG/ZHB/Freihand">005</prefix>
-            <prefix location="ILN204/CG/ZHB/Magazin">205</prefix>
-            <prefix location="ILN204/CG/ZHB/Freihand">wand</prefix>
-          </department>
-          <department code="009" default-location="ILN204/CG/ZP2/Freihand">
-            <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
-            <range from="009 aa" to="009 az" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ba" to="009 bh" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 bio</prefix>
-            <range from="009 bk" to="009 bo 9730" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 bot a" to="009 bot z" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 bp" to="009 bw" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ca" to="009 ck" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 cl" to="009 cz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 da" to="009 di 49" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 did bio</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 did ggr</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 did mat</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 did phy</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 did z</prefix>
-            <range from="009 dipl 1" to="009 dipl 9" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 dk" to="009 dz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ea" to="009 ex 970" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 exam 1" to="009 exam 9" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ey" to="009 ez" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 fa" to="009 fz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ga" to="009 gf" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 gg 421" to="009 gg 91" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 ggr</prefix>
-            <range from="009 gh" to="009 gz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 hc" to="009 hu" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ia" to="009 ix" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ka" to="009 kx" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ky 10" to="009 ky 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 kyb</prefix>
-            <range from="009 kz 10" to="009 kz 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 la" to="009 lc" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ld 10" to="009 ld 2999" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ld 30" to="009 ld 8699" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ld 870" to="009 ld 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 le" to="009 lg" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 lh" to="009 lo" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 lp" to="009 ly" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ma 10" to="009 ma 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 mag 1" to="009 mag 9" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 mat</prefix>
-            <range from="009 mb" to="009 ml" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 mn" to="009 ms" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 mus</prefix>
-            <range from="009 mx" to="009 mz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 na 10" to="009 na 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 nat</prefix>
-            <range from="009 nb" to="009 nz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 pa 10" to="009 pa 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 pae</prefix>
-            <range from="009 pb" to="009 pg" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ph 10" to="009 ph 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 phi</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 phy</prefix>
-            <range from="009 pi" to="009 pz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 qa" to="009 qy" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ra" to="009 rd" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 re 10" to="009 re 99999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 rel</prefix>
-            <range from="009 rf" to="009 rz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 sa" to="009 sp" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 sq" to="009 su" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ta" to="009 td" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 te 10" to="009 te 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 tea</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 tec</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009 teo</prefix>
-            <range from="009 tf" to="009 tz" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 ua" to="009 ux" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 va" to="009 vx" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 wa" to="009 wx" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 xa" to="009 yv" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 za" to="009 ze" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 zg" to="009 zn" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 zo 1" to="009 zo 9999" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 zoo a" to="009 zoo z" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 zx" to="009 zy" location="ILN204/CG/ZP2/Freihand"/>
-            <range from="009 010" to="009 999" location="ILN204/CG/ZP2/Freihand"/>
-            <prefix location="ILN204/CG/ZP2/Freihand">zeit</prefix>
-          </department>
-          <department code="010" default-location="ILN204/CG/ZRW/Freihand"/>
-          <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
-          <department code="020" default-location="ILN204/CG/ZRW/Freihand">
-            <range from="/" to="j" location="ILN204/CG/ZRW/Freihand"/>
-            <prefix location="ILN204/CG/ZRW/Freihand">lbs</prefix>
-            <range from="mag a" to="mag z" location="ILN204/CG/ZRW/Freihand"/>
-            <range from="n" to="s 9" location="ILN204/CG/ZRW/Freihand"/>
-            <range from="x" to="z" location="ILN204/CG/ZRW/Freihand"/>
-          </department>
-          <department code="021" default-location="ILN204/CG/DezFB/WiWi-BWL01">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL01"/>
-          </department>
-          <department code="022" default-location="ILN204/CG/DezFB/WiWi-BWL02">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL02"/>
-          </department>
-          <department code="023" default-location="ILN204/CG/DezFB/WiWi-BWL03">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL03"/>
-          </department>
-          <department code="024" default-location="ILN204/CG/DezFB/WiWi-BWL04">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL04"/>
-          </department>
-          <department code="025" default-location="ILN204/CG/DezFB/WiWi-BWL05">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL05"/>
-          </department>
-          <department code="026" default-location="ILN204/CG/DezFB/WiWi-BWL06">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL06"/>
-          </department>
-          <department code="027" default-location="ILN204/CG/DezFB/WiWi-BWL07">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL07"/>
-          </department>
-          <department code="028" default-location="ILN204/CG/DezFB/WiWi-BWL08">
-            <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL08"/>
-          </department>
-          <department code="030" default-location="ILN204/CG/ZP2/Freihand">
-            <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">009</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">03.</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">030 diplom</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">030 kup</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">030 mag</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">030 mus</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">030 pol</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">030 soz</prefix>
-            <prefix location="ILN204/CG/ZP2/Freihand">z</prefix>
-          </department>
-          <department code="055" default-location="ILN204/CG/DezFB/Mediothek-Musikwiss"/>
-          <department code="061" default-location="ILN204/CG/DezFB/Testothek-Psychologie"/>
-          <department code="082" default-location="ILN204/CG/DezFB/FB-Klass-Archaeologie"/>
-          <department code="084" default-location="ILN204/CG/DezFB/FB-Historisches-Institut"/>
-          <department code="090" default-location="ILN204/CG/DezFB/FB-Germanistik"/>
-          <department code="092" default-location="ILN204/CG/DezFB/Sudetendeutsches-Woerterbuch"/>
-          <department code="100" default-location="ILN204/CG/DezFB/FB-Anglistik"/>
-          <department code="111" default-location="ILN204/CG/DezFB/FB-Klass-Philologie">
-            <prefix location="ILN204/CG/DezFB/FB-Klass-Philologie">/</prefix>
-            <prefix location="ILN204/CG/DezFB/FB-Klass-Philologie">0</prefix>
-            <prefix location="ILN204/CG/DezFB/FB-Klass-Philologie">bestellt</prefix>
-            <range from="gr a" to="gr z" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="i 0" to="i 6999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="ii 1" to="ii 999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="iii 1 1" to="iii 9 99999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="iv 1 1" to="iv 4 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="ix 1 1" to="ix 6 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="lat a" to="lat z" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <prefix location="ILN204/CG/DezFB/FB-Klass-Philologie">pap</prefix>
-            <range from="v 1 1" to="v 9 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="vi 1 1" to="vi 9 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="vii 1 1" to="vii 3 99999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="viii 1 1" to="viii 7 9999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="x 1 1" to="x 4 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xi 1 1" to="xi 9 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xii 1 1" to="xii 9 99999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xiii 1 1" to="xiii 1 9999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xiv 1 1" to="xiv 9 99999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xv 3 1" to="xv 5 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xvi 1" to="xvi 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="xvii 1" to="xvii 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-            <range from="zs 0" to="zs 999999" location="ILN204/CG/DezFB/FB-Klass-Philologie"/>
-          </department>
-          <department code="112" default-location="ILN204/CG/DezFB/FB-Romanistik"/>
-          <department code="116" default-location="ILN204/CG/DezFB/SlavistikMediathek"/>
-          <department code="117" default-location="ILN204/CG/DezFB/AngewTheaterwiss"/>
-          <department code="120" default-location="ILN204/CG/DezFB/FB-Mathe-Informatik"/>
-          <department code="122" default-location="ILN204/CG/DezFB/FB-Mathe-Informatik"/>
-          <department code="138" default-location="ILN204/CG/DezFB/Strahelnschutz"/>
-          <department code="151" default-location="ILN204/CG/DezFB/Hermann-Hoffmann-Akademie"/>
-          <department code="154" default-location="ILN204/CG/DezFB/Zoologie1"/>
-          <department code="157" default-location="ILN204/CG/DezFB/Genetik"/>
-          <department code="172" default-location="ILN204/CG/DezFB/Milchwissenschaften"/>
-          <department code="174" default-location="ILN204/CG/DezFB/Veterinaeranatomie"/>
-          <department code="175" default-location="ILN204/CG/DezFB/Veterinaerphysiologie"/>
-          <department code="176" default-location="ILN204/CG/DezFB/Biochemie-Endokrinologie"/>
-          <department code="177" default-location="ILN204/CG/DezFB/Veterinärpathologie"/>
-          <department code="178" default-location="ILN204/CG/DezFB/Tieraerztliche-Nahrungsmittelkunde"/>
-          <department code="179" default-location="ILN204/CG/DezFB/Tierhygiene"/>
-          <department code="180" default-location="ILN204/CG/DezFB/Tierschutz-Ethologie"/>
-          <department code="182" default-location="ILN204/CG/DezFB/Gefluegelkrankheiten"/>
-          <department code="184" default-location="ILN204/CG/DezFB/Kleintier-Innere-Chirurgie"/>
-          <department code="185" default-location="ILN204/CG/DezFB/Pferdeklinik"/>
-          <department code="186" default-location="ILN204/CG/DezFB/Klinik-Wiederkäuer"/>
-          <department code="187" default-location="ILN204/CG/DezFB/Reproduktionsmedizin-und-Neugeborenenkunde"/>
-          <department code="189" default-location="ILN204/CG/DezFB/Virologie"/>
-          <department code="190" default-location="ILN204/CG/DezFB/Parhmakol-Toxikol-BFS"/>
-          <department code="192" default-location="ILN204/CG/DezFB/Prozesstechnik"/>
-          <department code="209" default-location="ILN204/CG/DezFB/Ländliches-Genossenschaftswesen"/>
-          <department code="211" default-location="ILN204/CG/DezFB/Biomathematik"/>
-          <!-- BIK 230 eigentlich nicht mehr aktiv, aber ggf. noch in CBS-Test -->
-          <department code="230" default-location="ILN204/CG/DezFB/Fachbibliotheken"/>
-          <department code="231" default-location="ILN204/CG/DezFB/Anatomie"/>
-          <department code="232" default-location="ILN204/CG/DezFB/Physiologie"/>
-          <department code="233" default-location="ILN204/CG/DezFB/Biochemie"/>
-          <department code="234" default-location="ILN204/CG/DezFB/Pathologie"/>
-          <department code="235" default-location="ILN204/CG/DezFB/Arbeitsmedizin"/>
-          <department code="236" default-location="ILN204/CG/DezFB/Geschichte-der-Medizin"/>
-          <department code="237" default-location="ILN204/CG/DezFB/Hygiene-Umweltmedizin"/>
-          <department code="238" default-location="ILN204/CG/DezFB/Rechtsmedizin"/>
-          <department code="250" default-location="ILN204/CG/DezFB/Dermatologie"/>
-          <department code="258" default-location="ILN204/CG/DezFB/Augenklinik"/>
-          <department code="259" default-location="ILN204/CG/DezFB/Psychiat-Neurol"/>
-          <department code="290" default-location="ILN204/CG/DezFB/Uniarchiv-SLS"/>
-          <!-- BIK 320 eigentlich nicht mehr aktiv, aber ggf. noch in CBS-Test -->
-          <department code="320" default-location="ILN204/CG/DezFB/Fachbibliotheken"/>
-          <!-- BIK 322 eigentlich nicht mehr aktiv, aber ggf. noch in CBS-Test -->
-          <department code="322" default-location="ILN204/CG/DezFB/AAA-DaF"/>
-          <department code="331" default-location="ILN204/CG/DezFB/WiWi-VWL01"/>
-          <department code="332" default-location="ILN204/CG/DezFB/WiWi-VWL02"/>
-          <department code="333" default-location="ILN204/CG/DezFB/WiWi-VWL03"/>
-          <department code="335" default-location="ILN204/CG/DezFB/WiWi-VWL05"/>
-          <department code="336" default-location="ILN204/CG/DezFB/WiWi-VWL06"/>
-          <department code="341" default-location="ILN204/CG/DezFB/WiWi-Statistik-Oekonometrie"/>
-          <department code="342" default-location="ILN204/CG/DezFB/WiWi-BWL09"/>
-          <department code="343" default-location="ILN204/CG/DezFB/WiWi-BWL10"/>
-          <department code="345" default-location="ILN204/CG/DezFB/WiWi-VWL04"/>
-          <!-- BIK 351 eigentlich nicht mehr aktiv, aber ggf. noch in CBS-Test -->
-          <department code="351" default-location="ILN204/CG/DezFB/Fachbibliotheken"/>
-          <department code="372" default-location="ILN204/CG/DezFB/ÖkologischerLandbau"/>
-          <department code="374" default-location="ILN204/CG/DezFB/LW-Inklusion-ZfL"/>
-          <department code="375" default-location="ILN204/CG/DezFB/LernwerkstattIFIB"/>
-          <department code="376" default-location="ILN204/CG/DezFB/DidWerkSpr"/>
-          <department code="380" default-location="ILN204/CG/DezFB/AKWildbiologie"/>
-          <department code="992" default-location="ILN204/E/E/Onlinemedien"/>
-          <department code="993" default-location="ILN204/E/E/Onlinemedien"/>
-          <department code="994" default-location="ILN204/E/E/Onlinemedien"/>
-        </ranges>
-      </xsl:variable>
-
       <xsl:choose>
-        <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
-        <xsl:when test="
-            exsl:node-set($ranges-list)/ranges/department[@code = $abt]/prefix or
-            exsl:node-set($ranges-list)/ranges/department[@code = $abt]/range">
-          <xsl:variable name="location-prefix-match">
-            <xsl:call-template name="get-location-by-prefix">
-              <xsl:with-param name="signature-lowercase" select="$signature-lowercase"/>
-              <xsl:with-param name="prefix-list"
-                select="exsl:node-set($ranges-list)/ranges/department[@code = $abt]/prefix"/>
-            </xsl:call-template>
-          </xsl:variable>
-          <xsl:choose>
-            <xsl:when test="$location-prefix-match = ''">
-              <xsl:call-template name="get-location-by-range">
-                <xsl:with-param name="signature-lowercase" select="$signature-lowercase"/>
-                <xsl:with-param name="range-list"
-                  select="exsl:node-set($ranges-list)/ranges/department[@code = $abt]/range"/>
-                <xsl:with-param name="default-location"
-                  select="exsl:node-set($ranges-list)/ranges/department[@code = $abt]/@default-location"
-                />
-              </xsl:call-template>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="$location-prefix-match"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of
-            select="exsl:node-set($ranges-list)/ranges/department[@code = $abt]/@default-location"/>
-        </xsl:otherwise>
+        <!-- E-Medien Locations -->
+        <xsl:when test=".='ILN204/E/E/Online Medien'">a8147c16-5fea-47e0-b7b6-24016f0c4c86</xsl:when>
+        <xsl:when test=".='ILN204/E/E/Datenbanken'">1b4daf5f-0af8-49eb-b3eb-e7d4c5c0fd7c</xsl:when>
+        <xsl:when test=".='ILN204/E/E/E-Books'">67aec03b-9d32-42d6-89ba-bcd93a9f9475</xsl:when>
+        <xsl:when test=".='ILN204/E/E/E-Journals'">33a863f2-f2f6-4642-8779-4eed44ad1f42</xsl:when>
+        <xsl:when test=".='ILN204/E/E/GEB'">e813fb82-5c87-4f35-b678-7854d1bb6407</xsl:when>
+        <!-- UB und Zweigbibliotheken -->
+        <xsl:when test=".='ILN204/CG/UB/Freihand1OG'">4b0f04c3-80f6-41b8-b932-9ad6b1310ee1</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/Freihand2OG'">2b6d95b8-a103-4aca-94a8-c506806b850d</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMagPohlheim'">c04637db-0938-499f-b4a4-92c28c4b1cd2</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMag3'">7a2e235e-a835-4aa2-a231-607cd38ea05c</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMagKeller'">42796a67-f479-4f69-bc09-9eb080249327</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMagPhil1'">3e26a16a-cf6b-4d14-8606-1db78bfbc023</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBMagZNL'">e2223b3e-e4a7-4716-9307-a3a00b9b960e</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBSLS'">bde53f6b-b51f-4f42-8a4b-bfea6bdad539</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/Handapparate'">86a35533-4023-441d-b4d1-83536e9c8be1</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/Erwerbungssignatur'">4f790b65-3874-49a7-8dac-46b3cbcfd6ab</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/Unbekannt'">76fb831c-500b-4e87-a5ed-f2dea37ee330</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZNL/Freihand'">f3dc06c9-9c2e-4026-a678-146d00591c38</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZNL/Mag'">0c2ef18e-2d61-459f-9f08-a7413f3b701f</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZNL/Handapparate'">116888c5-73db-4b35-b7c7-02df6d2c0fe0</xsl:when>
+        <xsl:when test=".='ILN204/CD/ZNL/Erwerbungssignatur'">ff7db8c1-d6a8-421f-96e0-9564f93c3936</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZNL/Unbekannt'">e9a4e942-da73-4895-8c6a-5a33411b721e</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZP2/Freihand'">f73d8f40-77fb-4b19-b04a-df6177e717f9</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZP2/Handapparate'">2f74f9c5-7d1d-4beb-8a4f-d9c7f0191eb0</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZP2/Erwerbungssignatur'">d0e8d213-b1d0-4ce3-858a-23b8132f8e68</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZP2/Unbekannt'">1f6e4499-9b8d-4fc1-b108-f99b5d272216</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZRW/Freihand'">4a8b6fce-6fa8-402e-afeb-7324cfe1a740</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZRW/Handapparate'">552711a4-bdbc-4d3f-a178-d82d6f7b14f9</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZRW/Erwerbungssignatur'">52f3c598-edba-4759-b950-fe1e4c2a3ddb</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZRW/Unbekannt'">1913d98c-0a68-411e-8dd6-f90871895590</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZHB/Freihand'">d5a66747-ab61-4f4e-bfc5-4e5cd880c403</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZHB/Magazin'">29e31115-b52d-483d-a692-3209f7f25fbe</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZHB/Handapparate'">4b98b8e0-734e-4208-820c-e473cf1a90c7</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZHB/Erwerbungssignatur'">4f2724b1-d94f-41b4-8372-52d953fceec7</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZHB/Unbekannt'">62e3f6fa-b0bf-435d-afa4-f0162eae8e32</xsl:when>
+        <!-- Dezentrale Fachbibliotheken -->
+        <xsl:when test=".='ILN204/CG/DezFB/AAA-DaF'">e7deec44-3df6-48f0-a136-522fef85fe40</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/AngewTheaterwiss'">fbe1532e-daff-49ae-b9f4-38e221dad537</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Biomathematik'">c36584c9-ec7a-4eb5-a000-e4f90c01fcba</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/AKWildbiologie'">9bde0a95-c28b-44d3-875c-9380d6edd4a5</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Anatomie'">4b47709e-02fa-4171-99ca-bb9cd0d113e8</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Arbeitsmedizin'">d814589d-0ece-470f-8344-315b18e205d8</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Augenklinik'">c148f39e-d084-48f3-b658-5f48709987e5</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Biochemie'">af0172e2-ce94-4803-b5af-ec28152fd784</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Biochemie-Endokrinologie'">865c26e8-0e6f-4108-92ef-a95181064960</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Dermatologie'">efbb4601-2cd6-443f-9e50-3edc2751b0ea</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Gefluegelkrankheiten'">ee739a05-398d-4b95-9e9c-c350c7feac5d</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Genetik'">0ea3361f-fb17-4db6-920e-29314c8b5045</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Geschichte-der-Medizin'">96b5effa-f339-4597-838f-01b0736d3b32</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Hermann-Hoffmann-Akademie'">2cd32f06-519e-48fa-936d-b2cc518c66b8</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Tierhygiene'">1be85661-bfa6-4859-9fc2-866fd9e4b3ec</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Hygiene-Umweltmedizin'">3ed44295-be80-4f35-9727-d41d602cce37</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Kleintier-Innere-Chirurgie'">f7a1e989-e0ea-4eaa-9175-96e18cefbd8a</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Klinik-Wiederkäuer'">10dff267-9df7-4399-a5a3-50a0729626c9</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Ländliches-Genossenschaftswesen'">3869f593-6889-4bba-b690-0b2f27d84020</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Milchwissenschaften'">04677453-a07d-4eb3-9316-01f135a6f8b3</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Pathologie'">74fabcd3-56c1-4bb0-ab3c-e75762d72be5</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Pferdeklinik'">67aad08d-8244-4a4a-92a6-bbc70c024b5c</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Parhmakol-Toxikol-BFS'">79514db3-3f93-48eb-94cc-1594e7d3c11c</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Physiologie'">da04460f-b656-4db5-9285-082e527ba0a8</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Prozesstechnik'">46086d5e-d9a3-4fc7-9777-07d271aa3d06</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Psychiat-Neurol'">02874c50-3f5b-4b89-b460-05eb3616f368</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Rechtsmedizin'">75122e51-c259-42f0-aef5-222b8681a2f2</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Strahelnschutz'">b6e1492e-0360-4931-aa1c-b1a2e31ea060</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Tieraerztliche-Nahrungsmittelkunde'">71ced5f8-b435-4665-b5a7-39baa100b050</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Reproduktionsmedizin-und-Neugeborenenkunde'">4a2d543b-ab5f-4906-8e39-751948356450</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Tierschutz-Ethologie'">e9db6ebe-db02-4690-8640-a990886050d2</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Veterinaeranatomie'">87f23d7a-0f9d-46bf-ae22-6036284ff233</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Veterinärpathologie'">b0871de2-42d5-45aa-813d-906a81b31e7c</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Veterinaerphysiologie'">5bdf51c0-f84f-415e-9ebd-d71cb5009b2d</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Virologie'">4dda1a1a-4a7c-4789-aaf8-1fa101ffa807</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Zoologie1'">47c21fb6-d5d0-44f1-9721-fbc2f112e19f</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/DidWerkSpr'">837d5025-1c43-4816-af18-d3571118711b</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/EDZ'">8c260edf-e633-479e-ae59-8162a9c09ff2</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Anglistik'">b69ff77e-db9c-4db6-ac0e-da0e77086c69</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Germanistik'">7ede1ffb-16de-4567-bb64-5917b53d137f</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Historisches-Institut'">ce4522c8-0cf0-4341-b41a-6d59555eb87a</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Klass-Archaeologie'">f6f9c294-809c-4712-89e3-05031e71b355</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Klass-Philologie'">32f506c7-175c-4819-9405-feff540fc113</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Mathe-Informatik'">12d52299-f6af-4b8c-9ad0-7431ecaba5bc</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Romanistik'">d7b572df-749f-40c1-8033-a1f7f0b18e7d</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/LernwerkstattIFIB'">92aaa70c-364a-4f24-a014-05df794acf16</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/LW-Inklusion-ZfL'">2058f074-a55f-402e-8397-099c8324dcdc</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Mediothek-Musikwiss'">4404b60e-4e1b-41f3-89b5-7d17dfd3df21</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/ÖkologischerLandbau'">03706f68-e02c-482f-9c80-d93b1a0dd346</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/SlavistikMediathek'">37c3a550-3ec3-4407-aec9-b92724e76a99</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Sudetendeutsches-Woerterbuch'">f12143d1-3daa-4ef1-856e-db1e74a9aeec</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Testothek-Psychologie'">a2507546-1b16-41a9-bee1-f6063373551d</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Uniarchiv-SLS'">ec058ab4-5b10-4f8a-9f4a-44792edfa668</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL01'">bcb89112-dbfb-4d94-9bff-c535f012e507</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL02'">6204a63a-e20c-4d64-a3af-bf593e15e120</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL03'">4c3cc060-defc-44f4-9ca7-390078a46b77</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL04'">fe3b084e-214b-475f-b5ad-f38305fb942b</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL05'">013cb60d-389b-4230-b6b1-7ae86c622042</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL06'">f68dd648-619e-44e7-8da4-edbbaea7fc12</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL07'">96f4ed6e-29b9-47b6-9fc6-6fbf684bab3c</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL08'">6ac7c41d-1bf6-4e07-88c5-a77b59b1b35c</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL09'">1593f8fc-f309-45e6-888b-2e17a914a101</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-BWL10'">c0e12cbb-d24c-4763-a267-3285d33972e0</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-Statistik-Oekonometrie'">7e5689ad-368e-4771-b938-ee4745cd245d</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL01'">32b4c40c-ad0e-49fa-a9e1-bdbe27cde496</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL02'">35418016-b2ef-41a6-9679-7070f3960d7b</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL03'">bb8317ad-0797-48c0-8688-f37ef17139cc</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL04'">34c8a0b8-c2a9-4176-b2b8-b42fcc7d21fc</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL05'">07ad72fe-fe9b-4a08-a70d-e3f4dd7b142c</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL06'">97db3d60-682d-4743-a8b9-f3a1a9dbcffc</xsl:when>
+        <!-- Aufsatzkatalogisierung -->
+        <xsl:when test=".='ILN204/CG/Aufsatz/Aufsatzkatalogisate'">3522ba70-ee87-4a26-a854-469dff54723a</xsl:when>
+        <xsl:otherwise>32ad6c56-957e-4a4b-ad1f-458e254b1f6e</xsl:otherwise> <!-- Hier dezentrale FB als Sammler? -->
       </xsl:choose>
     </permanentLocationId>
   </xsl:template>
 
-  <xsl:template match="permanentLoanTypeId">
-    <xsl:variable name="loantype"
-      select="key('original', .)/datafield[@tag = '209A']/subfield[@code = 'd']"/>
+  <!-- Map loan types -->
+  <xsl:template match="permanentLoanTypeId"> <!-- ILN -->
     <permanentLoanTypeId>
       <xsl:choose>
-        <xsl:when test=". = 'u'">0 u Ausleihbar</xsl:when>
-        <xsl:when test=". = 'b'">1 b Kurzausleihe</xsl:when>
-        <xsl:when test=". = 'c'">2 c Lehrbuchsammlungsausleihe</xsl:when>
-        <xsl:when test=". = 's'">3 s Präsenzbestand</xsl:when>
-        <xsl:when test=". = 'd'">4 d Passive Fernleihe</xsl:when>
-        <xsl:when test=". = 'i'">5 i Nur für den Lesesaal</xsl:when>
-        <xsl:when test=". = 'f'">6 f nur Kopie möglich</xsl:when>
-        <!-- ILN 8: in LBS3 nicht genutzt -->
-        <!-- Status 7 mit 237A/481 Semesterausleihe erzeugen? = vertagt, da unklar, ob in Folio nutzbar und fuer CBS-Saetze nicht relevant -->
-        <xsl:when test=". = 'e'">8 e Vermisst</xsl:when>
-        <xsl:when test=". = 'a'">9 a Zur Erwerbung bestellt</xsl:when>
-        <xsl:when test=". = 'g'">9 g Nicht ausleihbar</xsl:when>
-        <xsl:when test=". = 'o'">9 o Ausleihstatus unbekannt</xsl:when>
-        <xsl:when test=". = 'z'">9 z Verlust</xsl:when>
-        <!-- <xsl:otherwise>0 u Ausleihbar</xsl:otherwise>  wg. Zs ohne $d? -->
-        <xsl:otherwise>9 o Ausleihstatus unbekannt</xsl:otherwise>
-        <!-- damit Sonderfaelle auffallen -->
+        <xsl:when test=".='0 u Ausleihbar'"><xsl:text>ecfbf446-421a-4a46-8e06-3e1e36d5b317</xsl:text></xsl:when> 
+        <xsl:when test=".='1 b Kurzausleihe'"><xsl:text>03db4452-a270-4e03-9940-0ce86051694c</xsl:text></xsl:when>
+        <xsl:when test=".='2 c Lehrbuchsammlungsausleihe'"><xsl:text>f71d6dcd-b3da-45dd-9e3f-a45afa3718ec</xsl:text></xsl:when>
+        <xsl:when test=".='3 s Präsenzbestand'"><xsl:text>5d0c3d01-4dcb-4923-acda-dc0402f5f476</xsl:text></xsl:when>
+        <xsl:when test=".='4 d Passive Fernleihe'"><xsl:text>7fc991fd-8500-4ba8-9894-052ec69d718f</xsl:text></xsl:when>
+        <xsl:when test=".='5 i Nur für den Lesesaal'"><xsl:text>4d3e1d7a-cf78-4a9e-bb00-e6596de015e2</xsl:text></xsl:when>
+        <xsl:when test=".='6 f nur Kopie möglich'"><xsl:text>6210aee5-990a-42ac-a08c-ecfb28c4bbfb</xsl:text></xsl:when>
+        <!-- <xsl:when test=".='7 x Semesterausleihe'"><xsl:text></xsl:text></xsl:when> -->
+        <xsl:when test=".='8 e Vermisst'"><xsl:text>5e46da98-6ab0-4ff2-a911-531c8b7bc71d</xsl:text></xsl:when>
+        <xsl:when test=".='9 a Zur Erwerbung bestellt'"><xsl:text>48ddc2c8-8b09-4275-9de7-fabbb219d1e1</xsl:text></xsl:when>
+        <xsl:when test=".='9 g Nicht ausleihbar'"><xsl:text>35856cfc-dcde-465f-ada0-cedb491bd2da</xsl:text></xsl:when>
+        <xsl:when test=".='9 o Ausleihstatus unbekannt'"><xsl:text>5170505e-f4a4-4f17-955b-e0ce202889c4</xsl:text></xsl:when>
+        <xsl:when test=".='9 z Verlust'"><xsl:text>38e8967f-a722-4297-aaeb-56f812533a78</xsl:text></xsl:when>
+        <!-- <xsl:otherwise>2b94c631-fca9-4892-a730-03ee529ffe27</xsl:otherwise> <! 0 u normal ausleihbar -->
+        <xsl:otherwise>5170505e-f4a4-4f17-955b-e0ce202889c4</xsl:otherwise> <!-- 9 o Ausleihstatus unbekannt -->
       </xsl:choose>
     </permanentLoanTypeId>
   </xsl:template>
 
-  <xsl:template match="discoverySuppress">
-    <!-- uses 208@$b (und/oder Kat. 247E/XY ?) -->
-    <discoverySuppress>
-      <xsl:value-of select="(substring(., 1, 1) = 'g') or (substring(., 2, 1) = 'y') or (substring(., 2, 1) = 'z')"/> 
-      <!-- Sind die Einstellungen von MZ. Pos1 g passt aus meiner Sicht. MB für den Rest fragen. RH -->
-    </discoverySuppress>
-  </xsl:template>
-
-  <!-- Parsing call number for prefix - optional -->
-
-  <xsl:template name="prefix">
-    <!-- default, nutzt °,@  -->
-    <xsl:param name="cn"/>
-    <xsl:param name="cnprefixelement"/>
-    <xsl:param name="cnelement"/>
-    <xsl:variable name="cnprefix">
-      <xsl:choose>
-        <xsl:when test="contains($cn, '°')">
-          <xsl:value-of select="concat(substring-before($cn, '°'), '°')"/>
-        </xsl:when>
-        <xsl:when test="contains($cn, '@')">
-          <xsl:value-of select="substring-before($cn, '@')"/>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:message>Debug: <xsl:value-of select="$cnelement"/> Prefix "<xsl:value-of select="$cnprefix"
-      />"</xsl:message>
-    <xsl:if test="string-length($cnprefix) > 0">
-      <xsl:element name="{$cnprefixelement}">
-        <xsl:value-of select="normalize-space(translate($cnprefix, '@', ''))"/>
-      </xsl:element>
-    </xsl:if>
-    <xsl:element name="{$cnelement}">
-      <xsl:value-of select="normalize-space(translate(substring-after($cn, $cnprefix), '@', ''))"/>
-    </xsl:element>
-  </xsl:template>
-
-  <xsl:template match="callNumber">
-    <xsl:call-template name="prefix">
-      <xsl:with-param name="cn" select="."/>
-      <xsl:with-param name="cnprefixelement" select="'callNumberPrefix'"/>
-      <xsl:with-param name="cnelement" select="'callNumber'"/>
-    </xsl:call-template>
-  </xsl:template>
-
-  <xsl:template match="itemLevelCallNumber">
-    <xsl:call-template name="prefix">
-      <xsl:with-param name="cn" select="."/>
-      <xsl:with-param name="cnprefixelement" select="'itemLevelCallNumberPrefix'"/>
-      <xsl:with-param name="cnelement" select="'itemLevelCallNumber'"/>
-    </xsl:call-template>
-  </xsl:template>
-
-  <xsl:template name="check-range">
-    <!-- Checks if the string signature-short-lowercase is in the range defined
-      by the strings range-start and range-end.
-      
-      The three strings are getting sorted by comparing char by char with a
-      predefined sort key. If each char of signature-short-lowercase
-      is between the corresponding char of range-start and range-end, the
-      template returns 1, otherwise 0.
-      
-      Inspired by https://weinert-automation.de/pub/XSLT1.0RangeFilter.pdf        
-    -->
-
-    <xsl:param name="signature-short-lowercase"/>
-    <xsl:param name="range-start"/>
-    <xsl:param name="range-end"/>
-    <xsl:param name="i" select="1"/>
-    <xsl:param name="o" select="1"/>
-    <xsl:variable name="sortChar">'0123456789aäbcdefghijklmnoöpqrsßtuüvwxyz'</xsl:variable>
-    <xsl:variable name="frmFrst">
-      <xsl:value-of select="substring($range-start, $i, 1)"/>
-    </xsl:variable>
-    <xsl:variable name="befFrst">
-      <xsl:value-of select="substring($range-end, $i, 1)"/>
-    </xsl:variable>
-    <xsl:variable name="frmCmp">
-      <xsl:value-of select="
-          string-length(
-          substring-before($sortChar, $frmFrst))"/>
-    </xsl:variable>
-    <xsl:variable name="befTmp">
-      <xsl:value-of select="
-          string-length(
-          substring-before($sortChar, $befFrst))"/>
-    </xsl:variable>
-    <xsl:variable name="befCmp">
-      <xsl:choose>
-        <xsl:when test="$befTmp = 0">99</xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$befTmp"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-
-    <xsl:choose>
-      <xsl:when
-        test="$i > string-length($signature-short-lowercase) and $o > string-length($signature-short-lowercase)">
-        <xsl:value-of select="1"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:variable name="idFrst">
-          <xsl:value-of select="substring($signature-short-lowercase, $i, 1)"/>
-        </xsl:variable>
-        <xsl:variable name="idCmp">
-          <xsl:value-of select="string-length(substring-before($sortChar, $idFrst))"/>
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="$idCmp >= $frmCmp and $befCmp >= $idCmp">
-            <xsl:call-template name="check-range">
-              <xsl:with-param name="signature-short-lowercase" select="$signature-short-lowercase"/>
-              <xsl:with-param name="range-start" select="$range-start"/>
-              <xsl:with-param name="range-end" select="$range-end"/>
-              <xsl:with-param name="i" select="$i + 1"/>
-              <xsl:with-param name="o" select="$o + 1"/>
-            </xsl:call-template>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="0"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template name="compare-tokens">
-    <xsl:param name="signature-lowercase-trimmed"/>
-    <xsl:param name="range-from"/>
-    <xsl:param name="range-to"/>
-    <xsl:param name="in-range"/>
-
-    <xsl:variable name="range-from-tokens">
-      <xsl:call-template name="tokenize">
-        <xsl:with-param name="text" select="translate($range-from, ' /.', '|||')"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="range-to-tokens">
-      <xsl:call-template name="tokenize">
-        <xsl:with-param name="text" select="translate($range-to, ' /.', '|||')"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="signature-tokens">
-      <xsl:call-template name="tokenize">
-        <xsl:with-param name="text" select="translate($signature-lowercase-trimmed, ' /.', '|||')"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <xsl:variable name="comparison-token-position">
-      <xsl:call-template name="get-first-non-identical-token">
-        <xsl:with-param name="range-from-tokens" select="$range-from-tokens"/>
-        <xsl:with-param name="range-to-tokens" select="$range-to-tokens"/>
-      </xsl:call-template>
-    </xsl:variable>
-
-    <xsl:variable name="identical-prefix">
-      <xsl:call-template name="concat-items">
-        <xsl:with-param name="items"
-          select="exsl:node-set($range-from-tokens)/item[position() &lt; $comparison-token-position]"
-        />
-      </xsl:call-template>
-    </xsl:variable>
-
-    <xsl:variable name="signature-prefix">
-      <xsl:call-template name="concat-items">
-        <xsl:with-param name="items"
-          select="exsl:node-set($signature-tokens)/item[position() &lt; $comparison-token-position]"
-        />
-      </xsl:call-template>
-    </xsl:variable>
-
-    <xsl:choose>
-      <xsl:when test="
-          $identical-prefix = $signature-prefix or
-          $comparison-token-position = 1">
-        <xsl:variable name="range-from-comparison-token">
-          <xsl:value-of
-            select="exsl:node-set($range-from-tokens)/item[position() = $comparison-token-position]"
-          />
-        </xsl:variable>
-        <xsl:variable name="range-to-comparison-token">
-          <xsl:value-of
-            select="exsl:node-set($range-to-tokens)/item[position() = $comparison-token-position]"/>
-        </xsl:variable>
-        <xsl:variable name="signature-comparison-token">
-          <xsl:choose>
-            <xsl:when
-              test="string(number(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position])) != 'NaN'">
-              <xsl:value-of select="
-                  substring(string(number(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position])),
-                  1, string-length($range-to-comparison-token))"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="
-                  substring(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position],
-                  1, string-length($range-to-comparison-token))"/>
-            </xsl:otherwise>
-          </xsl:choose>
-
-        </xsl:variable>
-        <xsl:choose>
-          <xsl:when test="
-              string(number($signature-comparison-token)) != 'NaN' and
-              string(number($range-from-comparison-token)) != 'NaN' and
-              string(number($range-to-comparison-token)) != 'NaN'">
-            <!-- The current signature token and the comparison tokens, e.g. the from token and the to token
-              can be converted to a number. Therefore a numeric comparison decides whether the signature
-              token fits in the range. -->
+  <!-- Map statistical code ids -->
+  <xsl:template match="statisticalCodeIds"> <!-- ILN -->
+    <statisticalCodeIds>
+      <arr>
+        <xsl:for-each select="arr/i">
+          <i>
             <xsl:choose>
-              <xsl:when test="
-                  number($range-from-comparison-token) &lt;= number($signature-comparison-token) and
-                  number($signature-comparison-token) &lt;= number($range-to-comparison-token)">
-                <xsl:value-of select="1"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="0"/>
-              </xsl:otherwise>
+              <xsl:when test=".='1001'">TBD</xsl:when>
+              <!-- add as needed -->
+              
             </xsl:choose>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:call-template name="check-range">
-              <xsl:with-param name="signature-short-lowercase" select="$signature-comparison-token"/>
-              <xsl:with-param name="range-start" select="$range-from-comparison-token"/>
-              <xsl:with-param name="range-end" select="$range-to-comparison-token"/>
-            </xsl:call-template>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template name="concat-items">
-    <xsl:param name="items"/>
-    <xsl:for-each select="$items">
-      <xsl:value-of select="."/>
-      <xsl:if test="position() != last()">
-        <xsl:text>|</xsl:text>
-      </xsl:if>
-    </xsl:for-each>
-  </xsl:template>
-
-  <xsl:template name="get-first-non-identical-token">
-    <xsl:param name="range-from-tokens"/>
-    <xsl:param name="range-to-tokens"/>
-    <xsl:param name="current-position" select="1"/>
-    <xsl:choose>
-      <xsl:when
-        test="exsl:node-set($range-from-tokens)/item[1] = exsl:node-set($range-to-tokens)/item[1]">
-        <xsl:variable name="range-from-tokens-rest">
-          <xsl:for-each select="exsl:node-set($range-from-tokens)/item[position() != 1]">
-            <xsl:copy-of select="."/>
-          </xsl:for-each>
-        </xsl:variable>
-        <xsl:variable name="range-to-tokens-rest">
-          <xsl:for-each select="exsl:node-set($range-to-tokens)/item[position() != 1]">
-            <xsl:copy-of select="."/>
-          </xsl:for-each>
-        </xsl:variable>
-        <xsl:call-template name="get-first-non-identical-token">
-          <xsl:with-param name="range-from-tokens" select="$range-from-tokens-rest"/>
-          <xsl:with-param name="range-to-tokens" select="$range-to-tokens-rest"/>
-          <xsl:with-param name="current-position" select="$current-position + 1"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$current-position"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template name="get-location-by-prefix">
-    <xsl:param name="signature-lowercase"/>
-    <xsl:param name="prefix-list"/>
-    <xsl:if test="$prefix-list">
-      <xsl:variable name="prefix-zeroless">
-        <xsl:value-of select="$prefix-list[1]"/>
-      </xsl:variable>
-      <xsl:choose>
-        <xsl:when test="starts-with($signature-lowercase, $prefix-zeroless)">
-          <xsl:value-of select="$prefix-list/@location"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:call-template name="get-location-by-prefix">
-            <xsl:with-param name="signature-lowercase" select="$signature-lowercase"/>
-            <xsl:with-param name="prefix-list" select="$prefix-list[position() != 1]"/>
-          </xsl:call-template>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template name="get-location-by-range">
-    <xsl:param name="signature-lowercase"/>
-    <xsl:param name="range-list"/>
-    <xsl:param name="last-range"/>
-    <xsl:param name="in-range"/>
-    <xsl:param name="default-location" select="'Unbekannter Standort'"/>
-    <xsl:choose>
-      <xsl:when test="$in-range = 1">
-        <xsl:value-of select="$last-range/@location"/>
-      </xsl:when>
-      <xsl:when test="$range-list">
-        <!-- if there are unchecked ranges more ranges, test them -->
-        <xsl:call-template name="get-location-by-range">
-          <xsl:with-param name="signature-lowercase" select="$signature-lowercase"/>
-          <xsl:with-param name="last-range" select="$range-list[1]"/>
-          <xsl:with-param name="range-list" select="$range-list[position() != 1]"/>
-          <xsl:with-param name="in-range">
-            <xsl:call-template name="compare-tokens">
-              <xsl:with-param name="signature-lowercase-trimmed">
-                <!--<xsl:value-of
-                  select="substring($signature-lowercase, 1, string-length($range-list[1]/@to))"
-                />-->
-                <xsl:value-of select="$signature-lowercase"/>
-              </xsl:with-param>
-              <xsl:with-param name="range-from">
-                <xsl:value-of select="$range-list[1]/@from"/>
-              </xsl:with-param>
-              <xsl:with-param name="range-to">
-                <xsl:value-of select="$range-list[1]/@to"/>
-              </xsl:with-param>
-            </xsl:call-template>
-          </xsl:with-param>
-          <xsl:with-param name="default-location" select="$default-location"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <!-- range-list has been exhausted -->
-        <xsl:value-of select="$default-location"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template name="remove-leading-zeros">
-    <xsl:param name="range-string"/>
-    <xsl:choose>
-      <xsl:when test="
-          string-length($range-string) >= 6 and
-          not(contains(substring($range-string, 1, 6), ' '))">
-        <xsl:choose>
-          <xsl:when test="string(number(substring($range-string, 1, 6))) != 'NaN'">
-            <xsl:value-of select="translate(substring($range-string, 1, 6), '0', '')"/>
-            <xsl:value-of select="substring($range-string, 7)"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="substring($range-string, 1, 1)"/>
-            <xsl:call-template name="remove-leading-zeros">
-              <xsl:with-param name="range-string" select="substring($range-string, 2)"/>
-            </xsl:call-template>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:if test="$range-string != ''">
-          <xsl:value-of select="substring($range-string, 1, 1)"/>
-          <xsl:call-template name="remove-leading-zeros">
-            <xsl:with-param name="range-string" select="substring($range-string, 2)"/>
-          </xsl:call-template>
-        </xsl:if>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <!-- Tokenize a string that's pipe separated -->
-  <!-- Source: https://gist.github.com/rnelson/395bccd30092cedca87f -->
-  <xsl:template name="tokenize">
-    <xsl:param name="text"/>
-    <xsl:param name="separator" select="'|'"/>
-    <xsl:choose>
-      <xsl:when test="not(contains($text, $separator))">
-        <item>
-          <xsl:value-of select="normalize-space($text)"/>
-        </item>
-      </xsl:when>
-      <xsl:otherwise>
-        <item>
-          <xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
-        </item>
-        <xsl:call-template name="tokenize">
-          <xsl:with-param name="text" select="substring-after($text, $separator)"/>
-        </xsl:call-template>
-      </xsl:otherwise>
-    </xsl:choose>
+          </i>
+        </xsl:for-each>
+      </arr>
+    </statisticalCodeIds>
   </xsl:template>
 
 </xsl:stylesheet>
