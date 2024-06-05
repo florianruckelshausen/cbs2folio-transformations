@@ -33,6 +33,8 @@
         <xsl:when test=".='ILN204/CG/UB/UBMagZNL'">e2223b3e-e4a7-4716-9307-a3a00b9b960e</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBSLS'">bde53f6b-b51f-4f42-8a4b-bfea6bdad539</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Handapparate'">86a35533-4023-441d-b4d1-83536e9c8be1</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBFernleihen'">f4f02b72-2886-4d94-bf95-ff7fe315ff6f</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBFernleihenLesesaal'">9f31103a-14dc-4aba-9ecf-bfb8175d1a63</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Erwerbungssignatur'">4f790b65-3874-49a7-8dac-46b3cbcfd6ab</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Unbekannt'">76fb831c-500b-4e87-a5ed-f2dea37ee330</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Freihand'">f3dc06c9-9c2e-4026-a678-146d00591c38</xsl:when>
