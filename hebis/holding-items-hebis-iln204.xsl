@@ -22,7 +22,18 @@
     <xsl:variable name="abt" select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'f']/text()"/>
     <xsl:variable name="signature"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
+    <xsl:variable name="book-code"
+      select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
+    <xsl:variable name="loan-type"
+      select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>    
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
+    <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
+                                                    substring($signature,1,2) = 'FL' and
+                                                    substring($book-code,1,1) = 'A' "/>
+    
+    
+    
+    
     <xsl:variable name="signature-lowercase" select="
         translate($signature,
         'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -537,6 +548,14 @@
 
       <xsl:choose>
         <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
+        <xsl:when test="$interlibrary-loan">
+          <xsl:choose>
+            <xsl:when test="$loan-type = 'u'">ILN204/CG/UB/UBFernleihen</xsl:when>
+            <xsl:when test="$loan-type = 'd'">ILN204/CG/UB/UBFernleihen</xsl:when>
+            <xsl:when test="$loan-type = 'i'">ILN204/CG/UB/UBFernleihenLesesaal</xsl:when>          
+            <xsl:otherwise>ILN204/CG/UB/Unbekannt</xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
         <xsl:when test="
             exsl:node-set($ranges-list)/ranges/department[@code = $abt]/prefix or
             exsl:node-set($ranges-list)/ranges/department[@code = $abt]/range">

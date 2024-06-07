@@ -254,8 +254,11 @@
             <subfield code="0">0004:03-12-03</subfield>
          </datafield>
          <datafield tag="002@" fulltag="002@">
-            <subfield code="0">Afu</subfield>
+            <subfield code="0">Luf</subfield>
          </datafield>
+         <!--<datafield tag="002@" fulltag="002@">
+        <subfield code="0">Afu</subfield>
+      </datafield>-->
          <datafield tag="003@" fulltag="003@">
             <subfield code="0">116105488</subfield>
          </datafield>
@@ -334,10 +337,16 @@
                <subfield code="a">04-05-04</subfield>
                <subfield code="b">zUB</subfield>
             </datafield>
+            <!--        <datafield tag="209A" occurrence="01" fulltag="209A/01">
+          <subfield code="a">BAp 27,Calderon de la Barca-2,2</subfield>
+          <subfield code="f">000</subfield>
+          <subfield code="d">u</subfield>
+          <subfield code="x">00</subfield>
+        </datafield>-->
             <datafield tag="209A" occurrence="01" fulltag="209A/01">
-               <subfield code="a">BAp 27,Calderon de la Barca-2,2</subfield>
+               <subfield code="a">FL BC 1231515</subfield>
                <subfield code="f">000</subfield>
-               <subfield code="d">u</subfield>
+               <subfield code="d">s</subfield>
                <subfield code="x">00</subfield>
             </datafield>
             <datafield tag="209A" occurrence="01" fulltag="209A/01">
@@ -346,9 +355,13 @@
                <subfield code="x">09</subfield>
             </datafield>
             <datafield tag="209G" occurrence="01" fulltag="209G/01">
-               <subfield code="a">60535647</subfield>
+               <subfield code="a">A60535647</subfield>
                <subfield code="x">00</subfield>
             </datafield>
+            <!--        <datafield tag="209G" occurrence="01" fulltag="209G/01">
+          <subfield code="a">60535647</subfield>
+          <subfield code="x">00</subfield>
+        </datafield>-->
             <datafield tag="245S" occurrence="01" fulltag="245S/01">
                <subfield code="a">20000</subfield>
                <subfield code="x">01</subfield>
@@ -465,7 +478,7 @@
          <arr>
             <i>
                <hrid>21028126X</hrid>
-               <permanentLocationId>ILN204/CG/UB/UBMag3</permanentLocationId>
+               <permanentLocationId>ILN204/CG/UB/Unbekannt</permanentLocationId>
                <callNumber>BAp 27,Calderon de la Barca-2,2</callNumber>
                <holdingsTypeId>physical</holdingsTypeId>
                <holdingsStatements/>
