@@ -540,9 +540,11 @@
           <department code="375" default-location="ILN204/CG/DezFB/LernwerkstattIFIB"/>
           <department code="376" default-location="ILN204/CG/DezFB/DidWerkSpr"/>
           <department code="380" default-location="ILN204/CG/DezFB/AKWildbiologie"/>
+          <department code="950" default-location="ILN204/CG/Aufsatz/Aufsatzkatalogisate"/>
           <department code="992" default-location="ILN204/E/E/Onlinemedien"/>
           <department code="993" default-location="ILN204/E/E/Onlinemedien"/>
           <department code="994" default-location="ILN204/E/E/Onlinemedien"/>
+          
         </ranges>
       </xsl:variable>
 
