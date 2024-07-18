@@ -111,6 +111,7 @@
             <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">amag</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">al</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">an</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">ap</prefix>
