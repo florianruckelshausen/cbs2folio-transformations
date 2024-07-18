@@ -41,7 +41,7 @@
     <permanentLocationId>
       <xsl:variable name="ranges-list">
         <ranges>
-          <department code="000">
+          <department code="000" default-location="ILN204/CG/UB/Unbekannt">
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
@@ -144,9 +144,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bio</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bliz</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bot</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh che</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh didge</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh eden</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">fh che</prefix>            
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ern</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh fil</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh geo</prefix>
@@ -179,7 +177,6 @@
             <range from="fh sls 28" to="fh sls 30" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh spo</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh spr</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ssl</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh sta</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh sued</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh tea</prefix>
@@ -195,6 +192,7 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">frsla</prefix>
             <range from="g 1" to="g 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">gb</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPhil1">gdm</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">ges</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">giso</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">gr 2o 2/</prefix>
@@ -226,6 +224,10 @@
             <prefix location="ILN204/CG/UB/UBMag3">landesk</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">les</prefix>
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag altege</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ssl</prefix>
@@ -278,7 +280,7 @@
             <prefix location="ILN204/CG/ZNL/Freihand">002 bot</prefix>
             <range from="002 che a" to="002 che e" location="ILN204/CG/ZNL/Freihand"/>
             <range from="002 che fa 0.1" to="002 che fa 0.3" location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Magazin">002 che fa 0.40</prefix>
+            <prefix location="ILN204/CG/ZNL/Mag">002 che fa 0.40</prefix>
             <range from="002 che fa 0.41" to="002 che fa 0.49" location="ILN204/CG/ZNL/Freihand"/>
             <range from="002 che fa 0.5" to="002 che fa 0.9" location="ILN204/CG/ZNL/Freihand"/>
             <range from="002 che fa 1" to="002 che fa 9" location="ILN204/CG/ZNL/Freihand"/>
@@ -297,11 +299,11 @@
             <prefix location="ILN204/CG/ZNL/Freihand">002 vet</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 zoo</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>
-            <prefix location="ILN204/CG/ZNL/Magazin">140</prefix>
-            <range from="49.000.00" to="49.999.99" location="ILN204/CG/ZNL/Magazin"/>
+            <prefix location="ILN204/CG/ZNL/Mag">140</prefix>
+            <range from="49.000.00" to="49.999.99" location="ILN204/CG/ZNL/Mag"/>
             <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/ZNL/Magazin"/>
+            <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/ZNL/Mag"/>
             <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 49" to="4o zz 99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/ZNL/Freihand"/>
@@ -310,7 +312,7 @@
             <prefix location="ILN204/CG/ZNL/Freihand">ss</prefix>
             <range from="zeitschriftenraum" to="zeitschriftenraum b"
               location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Magazin">zeitschriftenraum chemie</prefix>
+            <prefix location="ILN204/CG/ZNL/Mag">zeitschriftenraum chemie</prefix>
             <range from="zz 1" to="zz 20" location="ILN204/CG/ZNL/Freihand"/>
             <range from="zz 49" to="zz 99" location="ILN204/CG/ZNL/Freihand"/>
           </department>
