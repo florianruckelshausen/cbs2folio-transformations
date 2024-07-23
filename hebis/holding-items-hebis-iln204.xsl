@@ -25,19 +25,19 @@
     <xsl:variable name="book-code"
       select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
     <xsl:variable name="loan-type"
-      select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>    
+      select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>
+    <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
+                                       (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
+    <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>    
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
     <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
                                                     substring($signature,1,2) = 'FL' and
                                                     substring($book-code,1,1) = 'A' "/>
-    
-    
-    
-    
     <xsl:variable name="signature-lowercase" select="
         translate($signature,
         'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         'abcdefghijklmnopqrstuvwxyz')"/>
+    
     <permanentLocationId>
       <xsl:variable name="ranges-list">
         <ranges>
@@ -86,6 +86,7 @@
             <range from="4o 2/1" to="4o 2/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 20.000.00" to="4o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o 40.000.00" to="4o 44.999.99" location="ILN204/CG/UB/UBMagKeller"/>
+            <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 3/1" to="4o 3/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 4/1" to="4o 4/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
@@ -230,7 +231,7 @@
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag altege</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">mag bap 1</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
@@ -305,8 +306,7 @@
             <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>
             <prefix location="ILN204/CG/ZNL/Mag">140</prefix>            
             <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/ZNL/Mag"/>
+            <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>            
             <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 49" to="4o zz 99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/ZNL/Freihand"/>
@@ -556,6 +556,7 @@
 
       <xsl:choose>
         <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
+        <xsl:when test="$dummy or $article-in-volume">ILN204/CG/Aufsatz/Aufsatzkatalogisate</xsl:when>
         <xsl:when test="$interlibrary-loan">
           <xsl:choose>
             <xsl:when test="$loan-type = 'u'">ILN204/CG/UB/UBFernleihen</xsl:when>
