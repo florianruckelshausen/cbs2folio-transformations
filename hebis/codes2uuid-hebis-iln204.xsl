@@ -82,6 +82,7 @@
         <xsl:when test=".='ILN204/CG/DezFB/Physiologie'">da04460f-b656-4db5-9285-082e527ba0a8</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/Prozesstechnik'">46086d5e-d9a3-4fc7-9777-07d271aa3d06</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/Psychiat-Neurol'">02874c50-3f5b-4b89-b460-05eb3616f368</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/Psychosomatische-Medizin'">bc3503e5-5e34-4331-97f9-96a386dd9a69</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/Rechtsmedizin'">75122e51-c259-42f0-aef5-222b8681a2f2</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/Strahelnschutz'">b6e1492e-0360-4931-aa1c-b1a2e31ea060</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/Tieraerztliche-Nahrungsmittelkunde'">71ced5f8-b435-4665-b5a7-39baa100b050</xsl:when>

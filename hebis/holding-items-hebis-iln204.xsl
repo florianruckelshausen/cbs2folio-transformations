@@ -81,9 +81,11 @@
             <range from="4/1" to="4/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="40.000.00" to="44.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="47.000.00" to="47.999.99" location="ILN204/CG/UB/Freihand2OG"/>
+            <range from="49.000.00" to="49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 1/1" to="4o 1/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 2/1" to="4o 2/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 20.000.00" to="4o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
+            <range from="4o 40.000.00" to="4o 44.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 3/1" to="4o 3/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 4/1" to="4o 4/9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
@@ -223,11 +225,12 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">kt-b</prefix>
             <range from="l 1" to="l 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">landesk</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">lbs</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">les</prefix>
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag altege</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag bap 1</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
@@ -300,8 +303,7 @@
             <prefix location="ILN204/CG/ZNL/Freihand">002 vet</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 zoo</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>
-            <prefix location="ILN204/CG/ZNL/Mag">140</prefix>
-            <range from="49.000.00" to="49.999.99" location="ILN204/CG/ZNL/Mag"/>
+            <prefix location="ILN204/CG/ZNL/Mag">140</prefix>            
             <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/ZNL/Mag"/>
@@ -522,6 +524,7 @@
           <department code="250" default-location="ILN204/CG/DezFB/Dermatologie"/>
           <department code="258" default-location="ILN204/CG/DezFB/Augenklinik"/>
           <department code="259" default-location="ILN204/CG/DezFB/Psychiat-Neurol"/>
+          <department code="260" default-location="ILN204/CG/DezFB/Psychosomatische-Medizin"/>
           <department code="290" default-location="ILN204/CG/DezFB/Uniarchiv-SLS"/>
           <!-- BIK 320 eigentlich nicht mehr aktiv, aber ggf. noch in CBS-Test -->
           <department code="320" default-location="ILN204/CG/DezFB/Fachbibliotheken"/>
