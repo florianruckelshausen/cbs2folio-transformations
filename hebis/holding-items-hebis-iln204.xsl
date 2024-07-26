@@ -24,6 +24,8 @@
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
     <xsl:variable name="book-code"
       select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
+    <xsl:variable name="hap" 
+      select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>
     <xsl:variable name="loan-type"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
@@ -556,6 +558,18 @@
       <xsl:choose>
         <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
         <xsl:when test="$dummy or $article-in-volume">ILN204/CG/Aufsatz/Aufsatzkatalogisate</xsl:when>
+        <xsl:when test="$hap">
+          <xsl:choose>
+            <xsl:when test="$abt = '000'">ILN204/CG/UB/Handapparate</xsl:when>
+            <xsl:when test="$abt = '002'">ILN204/CG/ZNL/Handapparate</xsl:when>
+            <xsl:when test="$abt = '005'">ILN204/CG/ZHB/Handapparate</xsl:when>
+            <xsl:when test="$abt = '009'">ILN204/CG/ZP2/Handapparate</xsl:when>
+            <xsl:when test="$abt = '010'">ILN204/CG/ZRW/Handapparate</xsl:when>
+            <xsl:when test="$abt = '020'">ILN204/CG/ZRW/Handapparate</xsl:when>
+            <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Handapparate</xsl:when>
+            <xsl:otherwise>ILN204/CG/UB/Unbekannt</xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
         <xsl:when test="$interlibrary-loan">
           <xsl:choose>
             <xsl:when test="$loan-type = 'u'">ILN204/CG/UB/UBFernleihen</xsl:when>
