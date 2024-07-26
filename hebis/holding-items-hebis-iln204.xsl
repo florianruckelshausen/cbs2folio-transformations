@@ -44,7 +44,9 @@
           <department code="000" default-location="ILN204/CG/UB/Unbekannt">
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
+            <prefix location="ILN204/CG/UB/UBMagZNL">140 mag </prefix>
             <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
             <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
@@ -129,6 +131,7 @@
             <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagPohlheim"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">bel</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">bestellt</prefix>
             <range from="bt 1/1" to="bt 9/9" location="ILN204/CG/UB/UBMag3"/>
             <range from="c 1" to="c 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="cd 1" to="cd 999999" location="ILN204/CG/UB/UBMag3"/>
@@ -257,11 +260,13 @@
             <prefix location="ILN204/CG/UB/UBMag3">sap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">sch</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ss</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
             <range from="t 1" to="t 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBSLS">thaer</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">theo</prefix>
             <range from="u 1" to="u 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="v 1" to="v 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vorl</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">vuf</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vv</prefix>
@@ -406,15 +411,9 @@
             <range from="009 010" to="009 999" location="ILN204/CG/ZP2/Freihand"/>
             <prefix location="ILN204/CG/ZP2/Freihand">zeit</prefix>
           </department>
-          <department code="010" default-location="ILN204/CG/ZRW/Unbekannt"/>
+          <department code="010" default-location="ILN204/CG/ZRW/Freihand"/>
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
-          <department code="020" default-location="ILN204/CG/ZRW/Freihand">
-            <range from="/" to="j" location="ILN204/CG/ZRW/Freihand"/>
-            <prefix location="ILN204/CG/ZRW/Freihand">lbs</prefix>
-            <range from="mag a" to="mag z" location="ILN204/CG/ZRW/Freihand"/>
-            <range from="n" to="s 9" location="ILN204/CG/ZRW/Freihand"/>
-            <range from="x" to="z" location="ILN204/CG/ZRW/Freihand"/>
-          </department>
+          <department code="020" default-location="ILN204/CG/ZRW/Freihand"/>
           <department code="021" default-location="ILN204/CG/DezFB/WiWi-BWL01">
             <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL01"/>
           </department>
