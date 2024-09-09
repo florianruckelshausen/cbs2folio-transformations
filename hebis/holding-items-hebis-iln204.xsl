@@ -48,7 +48,7 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
-            <prefix location="ILN204/CG/UB/UBMagZNL">140 mag </prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">140 mag </prefix>
             <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
             <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
@@ -117,9 +117,9 @@
             <range from="a 57" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">amag</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>            
             <prefix location="ILN204/CG/UB/UBMagPohlheim">al</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">amag</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">an</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">ap</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">aro</prefix>
@@ -234,14 +234,24 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">lbs</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">les</prefix>
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 agr</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 ern</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 mat</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 nat</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 phy</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 tec</prefix>
+            <!-- Reihenfolge beachten! "mag 002" muss hinter "mag 002 ..." stehen,
+                 da dieser Präfix auf alle mit "mag 002" beginnenden Signaturen zutrifft.
+            -->
             <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag altege</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag eden</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag sls</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag teo</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">mag ssl</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">mag eden</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">msla</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
             <range from="n 1" to="n 999999" location="ILN204/CG/UB/UBMagKeller"/>
