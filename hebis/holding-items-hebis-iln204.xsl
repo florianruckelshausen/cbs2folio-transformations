@@ -248,8 +248,13 @@
             <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag eden</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag kyb</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag mat</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag nat</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag sls</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag sport</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag tec</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag teo</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">msla</prefix>
