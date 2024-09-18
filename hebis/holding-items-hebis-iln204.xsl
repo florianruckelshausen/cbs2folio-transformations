@@ -244,6 +244,7 @@
                  da dieser Präfix auf alle mit "mag 002" beginnenden Signaturen zutrifft.
             -->
             <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
+            <!-- Ehemalige FH-Bestände (altege - vsp) -->
             <prefix location="ILN204/CG/UB/UBMag3">mag altege</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
@@ -256,6 +257,8 @@
             <prefix location="ILN204/CG/UB/UBMag3">mag sport</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag tec</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag teo</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag vol</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag vsp</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">mag ug</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">msla</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
