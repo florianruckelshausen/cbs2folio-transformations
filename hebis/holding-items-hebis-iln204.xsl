@@ -173,7 +173,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh lit</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh mat</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh nat</prefix>
-            <range from="fh ori aa" to="fh ori zz" location="ILN204/CG/UB/Freihand2OG"/>
+            <range from="fh ori a" to="fh ori z" location="ILN204/CG/UB/Freihand2OG"/>
             <range from="fh orient /" to="fh orient wl" location="ILN204/CG/UB/Freihand2OG"/>
             <range from="fh orient wn" to="fh orient z" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ostge</prefix>
