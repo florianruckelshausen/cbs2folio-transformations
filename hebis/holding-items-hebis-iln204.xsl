@@ -33,8 +33,7 @@
     <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>    
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
     <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
-                                                    substring($signature,1,2) = 'FL' and
-                                                    substring($book-code,1,1) = 'A' "/>
+                                                    substring($signature,1,2) = 'FL' "/>
     <xsl:variable name="signature-lowercase" select="
         translate($signature,
         'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
