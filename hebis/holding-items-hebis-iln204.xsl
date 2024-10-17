@@ -302,6 +302,9 @@
             <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
           </department>
           <department code="002" default-location="ILN204/CG/ZNL/Unbekannt">
+            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 agr</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 all</prefix>
@@ -344,12 +347,18 @@
             <range from="zz 49" to="zz 99" location="ILN204/CG/ZNL/Freihand"/>
           </department>
           <department code="005" default-location="ILN204/CG/ZHB/Unbekannt">
+            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZHB/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZHB/Freihand">005</prefix>
             <prefix location="ILN204/CG/ZHB/Magazin">205</prefix>
             <prefix location="ILN204/CG/ZHB/Freihand">wand</prefix>
           </department>
           <department code="009" default-location="ILN204/CG/ZP2/Unbekannt">
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
             <range from="009 aa" to="009 az" location="ILN204/CG/ZP2/Freihand"/>
             <range from="009 ba" to="009 bh" location="ILN204/CG/ZP2/Freihand"/>
@@ -430,9 +439,17 @@
             <range from="009 010" to="009 999" location="ILN204/CG/ZP2/Freihand"/>
             <prefix location="ILN204/CG/ZP2/Freihand">zeit</prefix>
           </department>
-          <department code="010" default-location="ILN204/CG/ZRW/Freihand"/>
+          <department code="010" default-location="ILN204/CG/ZRW/Freihand">
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
+          </department>
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
-          <department code="020" default-location="ILN204/CG/ZRW/Freihand"/>
+          <department code="020" default-location="ILN204/CG/ZRW/Freihand">
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
+          </department>
           <department code="021" default-location="ILN204/CG/DezFB/WiWi-BWL01">
             <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL01"/>
           </department>
@@ -458,6 +475,9 @@
             <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL08"/>
           </department>
           <department code="030" default-location="ILN204/CG/ZP2/Freihand">
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">009</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">03.</prefix>
