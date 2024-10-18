@@ -679,7 +679,7 @@
   <xsl:template match="discoverySuppress">
     <!-- uses 208@$b (und/oder Kat. 247E/XY ?) -->
     <discoverySuppress>
-      <xsl:value-of select="(substring(., 1, 1) = 'g') or (substring(., 2, 1) = 'y') or (substring(., 2, 1) = 'z')"/> 
+      <xsl:value-of select="(substring(., 1, 4) = 'true') or (substring(., 1, 1) = 'g') or (substring(., 2, 1) = 'y') or (substring(., 2, 1) = 'z')"/>
       <!-- Sind die Einstellungen von MZ. Pos1 g passt aus meiner Sicht. MB für den Rest fragen. RH -->
     </discoverySuppress>
   </xsl:template>
