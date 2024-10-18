@@ -360,6 +360,7 @@
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
+            <prefix location="ILN204/CG/ZP2/Freihand">004</prefix>
             <range from="009 aa" to="009 az" location="ILN204/CG/ZP2/Freihand"/>
             <range from="009 ba" to="009 bh" location="ILN204/CG/ZP2/Freihand"/>
             <prefix location="ILN204/CG/ZP2/Freihand">009 bio</prefix>
