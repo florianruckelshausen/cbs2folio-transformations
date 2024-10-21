@@ -129,6 +129,8 @@
         <xsl:when test=".='ILN204/CG/DezFB/WiWi-VWL06'">97db3d60-682d-4743-a8b9-f3a1a9dbcffc</xsl:when>
         <!-- Aufsatzkatalogisierung -->
         <xsl:when test=".='ILN204/CG/Aufsatz/Aufsatzkatalogisate'">3522ba70-ee87-4a26-a854-469dff54723a</xsl:when>
+        <!-- do Dummy Aufnahmen -->
+        <xsl:when test=".='ILN204/CG/Aufsatz/dodummy'">4cd0a8f8-f642-4a92-ad91-3c6b81278824</xsl:when>
         <xsl:otherwise>32ad6c56-957e-4a4b-ad1f-458e254b1f6e</xsl:otherwise> <!-- Hier dezentrale FB als Sammler? -->
       </xsl:choose>
     </permanentLocationId>
