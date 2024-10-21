@@ -270,6 +270,7 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">osr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>
             <range from="p 1" to="p 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBSLS">pap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">pl</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">progr</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">q</prefix>
