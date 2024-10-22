@@ -618,7 +618,24 @@
             <xsl:when test="$abt = '112'">ILN204/CG/DezFB/FB-Romanistik-HAP</xsl:when>
             <xsl:when test="$abt = '120'">ILN204/CG/DezFB/FB-Mathe-Informatik-HAP</xsl:when>
             <xsl:when test="$abt = '122'">ILN204/CG/DezFB/FB-Mathe-Informatik-HAP</xsl:when>
-            <xsl:otherwise>ILN204/CG/UB/Unbekannt</xsl:otherwise>
+            <xsl:when test="$abt = '151'">ILN204/CG/DezFB/Hermann-Hoffmann-Akademie</xsl:when>
+            <xsl:when test="$abt = '154'">ILN204/CG/DezFB/Zoologie1</xsl:when>
+            <xsl:when test="$abt = '157'">ILN204/CG/DezFB/Genetik</xsl:when>
+            <xsl:when test="$abt = '174'">ILN204/CG/DezFB/Veterinaeranatomie</xsl:when>
+            <xsl:when test="$abt = '176'">ILN204/CG/DezFB/Biochemie-Endokrinologie</xsl:when>
+            <xsl:when test="$abt = '177'">ILN204/CG/DezFB/Veterinärpathologie</xsl:when>
+            <xsl:when test="$abt = '179'">ILN204/CG/DezFB/Tierhygiene</xsl:when>
+            <xsl:when test="$abt = '180'">ILN204/CG/DezFB/Tierschutz-Ethologie</xsl:when>
+            <xsl:when test="$abt = '184'">ILN204/CG/DezFB/Kleintier-Innere-Chirurgie</xsl:when>
+            <xsl:when test="$abt = '185'">ILN204/CG/DezFB/Pferdeklinik</xsl:when>
+            <xsl:when test="$abt = '189'">ILN204/CG/DezFB/Virologie</xsl:when>
+            <xsl:when test="$abt = '190'">ILN204/CG/DezFB/Parhmakol-Toxikol-BFS</xsl:when>
+            <xsl:when test="$abt = '192'">ILN204/CG/DezFB/Prozesstechnik</xsl:when>
+            <xsl:when test="$abt = '236'">ILN204/CG/DezFB/Geschichte-der-Medizin</xsl:when>
+            <xsl:when test="$abt = '259'">ILN204/CG/DezFB/Psychiat-Neurol</xsl:when>
+            <xsl:when test="$abt = '331'">ILN204/CG/DezFB/WiWi-VWL01</xsl:when>
+            <xsl:when test="$abt = '343'">ILN204/CG/DezFB/WiWi-BWL10</xsl:when>
+            <xsl:otherwise>ILN204/CG/DezFB/Unbekannt</xsl:otherwise>
           </xsl:choose>
         </xsl:when>
         <xsl:when test="$interlibrary-loan">
