@@ -135,6 +135,8 @@
         <xsl:when test=".='ILN204/CG/Aufsatz/Aufsatzkatalogisate'">3522ba70-ee87-4a26-a854-469dff54723a</xsl:when>
         <!-- do Dummy Aufnahmen -->
         <xsl:when test=".='ILN204/CG/Aufsatz/dodummy'">4cd0a8f8-f642-4a92-ad91-3c6b81278824</xsl:when>
+        <!-- Lokale Titelaufnahmen Erwerbung -->
+        <xsl:when test=".='ILN204/CG/Aufsatz/Erwerbung-LT'">4f1cc38d-f63d-4731-9f6f-03c41f781123</xsl:when>
         <xsl:otherwise>32ad6c56-957e-4a4b-ad1f-458e254b1f6e</xsl:otherwise> <!-- Hier dezentrale FB als Sammler? -->
       </xsl:choose>
     </permanentLocationId>
