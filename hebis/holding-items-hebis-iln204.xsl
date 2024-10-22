@@ -46,7 +46,7 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
-            <prefix location="ILN204/CG/UB/UBMagPhil1">064 </prefix>
+            <prefix location="ILN204/CG/UB/UBMagPhil1">064</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">140 </prefix>
             <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
