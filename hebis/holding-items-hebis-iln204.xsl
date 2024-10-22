@@ -140,6 +140,7 @@
             <range from="da 0" to="da 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="e 0" to="e 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="e 10" to="e 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/Freihand1OG">einzelsig</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">erk</prefix>
             <range from="f 1" to="f 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">fd</prefix>
