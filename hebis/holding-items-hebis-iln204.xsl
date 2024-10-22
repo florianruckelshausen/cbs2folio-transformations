@@ -217,9 +217,7 @@
             <range from="h 1" to="h 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">hass</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">hr</prefix>
-            <range from="hs 1" to="hs 9999" location="ILN204/CG/UB/UBSLS"/>
-            <prefix location="ILN204/CG/UB/UBSLS">hs nf</prefix>
-            <prefix location="ILN204/CG/UB/UBSLS">hs sg sg</prefix>
+            <prefix location="ILN204/CG/UB/UBSLS">hs </prefix>
             <range from="i 0" to="i 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="i 10" to="i 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">in</prefix>
