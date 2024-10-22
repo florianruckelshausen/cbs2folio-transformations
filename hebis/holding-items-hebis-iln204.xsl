@@ -440,6 +440,7 @@
             <range from="009 zoo a" to="009 zoo z" location="ILN204/CG/ZP2/Freihand"/>
             <range from="009 zx" to="009 zy" location="ILN204/CG/ZP2/Freihand"/>
             <range from="009 010" to="009 999" location="ILN204/CG/ZP2/Freihand"/>
+            <prefix location="ILN204/CG/ZP2/Freihand">cd</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">zeit</prefix>
           </department>
           <department code="010" default-location="ILN204/CG/ZRW/Freihand">
