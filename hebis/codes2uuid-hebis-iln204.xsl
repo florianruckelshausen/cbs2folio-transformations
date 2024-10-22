@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<!-- date of last edit: 2022-12-20 (YYYY-MM-DD) -->
+<!-- date of last edit: 2024-10-22 (YYYY-MM-DD) -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/>
@@ -96,12 +96,16 @@
         <xsl:when test=".='ILN204/CG/DezFB/DidWerkSpr'">837d5025-1c43-4816-af18-d3571118711b</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/EDZ'">8c260edf-e633-479e-ae59-8162a9c09ff2</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Anglistik'">b69ff77e-db9c-4db6-ac0e-da0e77086c69</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Anglistik-HAP'">f2cb84eb-719b-4b86-8b8f-8c1649e76e84</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Germanistik'">7ede1ffb-16de-4567-bb64-5917b53d137f</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Germanistik-HAP'">e58d4137-2c5d-4351-8d03-9df2b70e4928</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Historisches-Institut'">ce4522c8-0cf0-4341-b41a-6d59555eb87a</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Klass-Archaeologie'">f6f9c294-809c-4712-89e3-05031e71b355</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Klass-Philologie'">32f506c7-175c-4819-9405-feff540fc113</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Mathe-Informatik'">12d52299-f6af-4b8c-9ad0-7431ecaba5bc</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Mathe-Informatik-HAP'">2f696057-1486-400f-b2b3-a027ee7c92f5</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/FB-Romanistik'">d7b572df-749f-40c1-8033-a1f7f0b18e7d</xsl:when>
+        <xsl:when test=".='ILN204/CG/DezFB/FB-Romanistik-HAP'">8fb87ef0-9c19-49d1-818b-b1de77b45681</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/LernwerkstattIFIB'">92aaa70c-364a-4f24-a014-05df794acf16</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/LW-Inklusion-ZfL'">2058f074-a55f-402e-8397-099c8324dcdc</xsl:when>
         <xsl:when test=".='ILN204/CG/DezFB/Mediothek-Musikwiss'">4404b60e-4e1b-41f3-89b5-7d17dfd3df21</xsl:when>
