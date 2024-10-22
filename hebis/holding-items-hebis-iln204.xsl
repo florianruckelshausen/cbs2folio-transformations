@@ -162,6 +162,7 @@
             <range from="fh ger a" to="fh ger z" location="ILN204/CG/UB/Freihand2OG"/>
             <range from="fh germ /" to="fh germ z" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ggr</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">fh gkt</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh he</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh his</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh hsh</prefix>
