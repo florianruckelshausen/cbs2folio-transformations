@@ -613,6 +613,11 @@
             <xsl:when test="$abt = '010'">ILN204/CG/ZRW/Handapparate</xsl:when>
             <xsl:when test="$abt = '020'">ILN204/CG/ZRW/Handapparate</xsl:when>
             <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Handapparate</xsl:when>
+            <xsl:when test="$abt = '090'">ILN204/CG/DezFB/FB-Germanistik-HAP</xsl:when>
+            <xsl:when test="$abt = '100'">ILN204/CG/DezFB/FB-Anglistik-HAP</xsl:when>
+            <xsl:when test="$abt = '112'">ILN204/CG/DezFB/FB-Romanistik-HAP</xsl:when>
+            <xsl:when test="$abt = '120'">ILN204/CG/DezFB/FB-Mathe-Informatik-HAP</xsl:when>
+            <xsl:when test="$abt = '122'">ILN204/CG/DezFB/FB-Mathe-Informatik-HAP</xsl:when>
             <xsl:otherwise>ILN204/CG/UB/Unbekannt</xsl:otherwise>
           </xsl:choose>
         </xsl:when>
