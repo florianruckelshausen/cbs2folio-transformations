@@ -78,6 +78,8 @@
             <range from="2o zz 1" to="2o zz 48" location="ILN204/CG/UB/UBMag3"/>
             <range from="2o zz 49" to="2o zz 99" location="ILN204/CG/UB/UBMag3"/>
             <range from="3/1" to="3/9" location="ILN204/CG/UB/UBMagKeller"/>
+            <!--32er Signaturen waren nicht in LBS-Konkordanz, lt.- Homepage in Zweigbibl. Phil. 1 -->
+            <prefix location="ILN204/CG/UB/UBMagPhil1">32</prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">350</prefix>
             <range from="4 b 49" to="4 b 73" location="ILN204/CG/UB/UBMag3"/>
             <prefix location="ILN204/CG/UB/UBMag3">4 ss</prefix>
