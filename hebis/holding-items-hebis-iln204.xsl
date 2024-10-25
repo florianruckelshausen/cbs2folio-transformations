@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2023-09-04 (YYYY-MM-DD) -->
+<!-- date of last edit: 2024-10-25 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -43,6 +43,12 @@
       <xsl:variable name="ranges-list">
         <ranges>
           <department code="000" default-location="ILN204/CG/UB/Unbekannt">
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">in bearbeitung</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht lieferbar</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>            
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
@@ -134,7 +140,6 @@
             <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagPohlheim"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">bel</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">bestellt</prefix>
             <range from="bt 1/1" to="bt 9/9" location="ILN204/CG/UB/UBMag3"/>
             <range from="c 1" to="c 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="cd 1" to="cd 999999" location="ILN204/CG/UB/UBMag3"/>
@@ -265,8 +270,6 @@
             <prefix location="ILN204/CG/UB/UBMag3">mus</prefix>
             <range from="n 1" to="n 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBSLS">nachl</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">nl</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">no</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">nr</prefix>
@@ -284,13 +287,11 @@
             <prefix location="ILN204/CG/UB/UBMag3">sap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">sch</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ss</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
             <range from="t 1" to="t 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBSLS">thaer</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">theo</prefix>
             <range from="u 1" to="u 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="v 1" to="v 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vorl</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">vuf</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vv</prefix>
@@ -308,6 +309,7 @@
           </department>
           <department code="002" default-location="ILN204/CG/ZNL/Unbekannt">
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">in bearbeitung</prefix>
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">storniert</prefix>
@@ -355,6 +357,7 @@
           </department>
           <department code="005" default-location="ILN204/CG/ZHB/Unbekannt">
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">in bearbeitung</prefix>
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">storniert</prefix>
@@ -366,6 +369,7 @@
           </department>
           <department code="009" default-location="ILN204/CG/ZP2/Unbekannt">
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">in bearbeitung</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
@@ -455,6 +459,7 @@
           </department>
           <department code="010" default-location="ILN204/CG/ZRW/Freihand">
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">in bearbeitung</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
@@ -463,6 +468,7 @@
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
           <department code="020" default-location="ILN204/CG/ZRW/Freihand">
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">bestellt</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">in bearbeitung</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
