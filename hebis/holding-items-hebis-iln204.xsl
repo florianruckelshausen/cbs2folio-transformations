@@ -48,7 +48,8 @@
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>            
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
@@ -314,6 +315,7 @@
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 agr</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 all</prefix>
@@ -362,6 +364,7 @@
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZHB/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZHB/Freihand">005</prefix>
             <prefix location="ILN204/CG/ZHB/Magazin">205</prefix>
@@ -374,6 +377,7 @@
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">040</prefix>
             <range from="009 aa" to="009 az" location="ILN204/CG/ZP2/Freihand"/>
@@ -464,6 +468,7 @@
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">x</prefix>
           </department>
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
           <department code="020" default-location="ILN204/CG/ZRW/Freihand">
@@ -473,6 +478,7 @@
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">x</prefix>
           </department>
           <department code="021" default-location="ILN204/CG/DezFB/WiWi-BWL01">
             <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL01"/>
