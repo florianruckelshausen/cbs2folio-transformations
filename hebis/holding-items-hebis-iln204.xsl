@@ -247,6 +247,8 @@
             <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 nat</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 phy</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 tec</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 umw</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 zeitschriftenraum</prefix>
             <!-- Reihenfolge beachten! "mag 002" muss hinter "mag 002 ..." stehen,
                  da dieser Präfix auf alle mit "mag 002" beginnenden Signaturen zutrifft.
             -->
