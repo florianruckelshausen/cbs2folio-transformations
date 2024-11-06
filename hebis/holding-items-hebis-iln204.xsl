@@ -37,7 +37,7 @@
       select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>    
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
                                        (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
-    <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>    
+    <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>  
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
     <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
                                                     substring($signature,1,2) = 'FL' "/>
@@ -624,13 +624,23 @@
           <department code="950" default-location="ILN204/CG/Aufsatz/Aufsatzkatalogisate"/>
           <department code="992" default-location="ILN204/E/E/Onlinemedien"/>
           <department code="993" default-location="ILN204/E/E/Onlinemedien"/>
-          <department code="994" default-location="ILN204/E/E/Onlinemedien"/>
-          
+          <department code="994" default-location="ILN204/E/E/Onlinemedien"/>          
         </ranges>
       </xsl:variable>
 
       <xsl:choose>
         <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
+        <xsl:when test="$loan-type = 'a'">
+          <xsl:choose>
+            <xsl:when test="$abt = '000'">ILN204/CG/UB/Erwerbungssignatur</xsl:when>
+            <xsl:when test="$abt = '002'">ILN204/CG/ZNL/Erwerbungssignatur</xsl:when>            
+            <xsl:when test="$abt = '005'">ILN204/CG/ZHB/Erwerbungssignatur</xsl:when>
+            <xsl:when test="$abt = '009'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>
+            <xsl:when test="$abt = '010'">ILN204/CG/ZRW/Erwerbungssignatur</xsl:when>
+            <xsl:when test="$abt = '020'">ILN204/CG/ZRW/Erwerbungssignatur</xsl:when>
+            <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>            
+          </xsl:choose>
+        </xsl:when>
         <xsl:when test="$dummy or $article-in-volume">ILN204/CG/Aufsatz/Aufsatzkatalogisate</xsl:when>
         <xsl:when test="$hap">
           <xsl:choose>
