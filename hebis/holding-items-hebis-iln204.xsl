@@ -19,25 +19,28 @@
   <xsl:template match="permanentLocationId">
     <xsl:variable name="i" select="key('original', .)"/>
     <!-- 209A$f/209G$a ? -->
+    <!-- Text variables -->
     <xsl:variable name="abt" select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'f']/text()"/>
     <xsl:variable name="signature"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
+    <xsl:variable name="signature-lowercase" select="
+      translate($signature,
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      'abcdefghijklmnopqrstuvwxyz')"/>    
     <xsl:variable name="book-code"
       select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
-    <xsl:variable name="hap" 
-      select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>
+
     <xsl:variable name="loan-type"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>
+    <!-- Boolean variables -->    
+    <xsl:variable name="hap" 
+      select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>    
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
                                        (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
     <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>    
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
     <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
                                                     substring($signature,1,2) = 'FL' "/>
-    <xsl:variable name="signature-lowercase" select="
-        translate($signature,
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-        'abcdefghijklmnopqrstuvwxyz')"/>
     
     <permanentLocationId>
       <xsl:variable name="ranges-list">
