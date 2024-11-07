@@ -516,6 +516,7 @@
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">009</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">03.</prefix>
