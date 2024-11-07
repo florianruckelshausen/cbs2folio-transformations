@@ -29,7 +29,6 @@
       'abcdefghijklmnopqrstuvwxyz')"/>    
     <xsl:variable name="book-code"
       select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
-
     <xsl:variable name="loan-type"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>
     <!-- Boolean variables -->    
@@ -38,6 +37,7 @@
     <xsl:variable name="local-order" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,2) = 'La')"/>
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
                                        (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
+    <xsl:variable name="do-dummy" select="(substring($i/../datafield[@tag='208@']/subfield[@code='b'] = 'do')"/>    
     <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>  
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
     <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
@@ -633,6 +633,8 @@
       <xsl:choose>
         <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
         <xsl:when test="$local-order">ILN204/CG/Aufsatz/Erwerbung-LT</xsl:when>
+        <xsl:when test="$dummy-do">ILN204/CG/Aufsatz/dodummy</xsl:when>
+        <xsl:when test="$dummy or $article-in-volume">ILN204/CG/Aufsatz/Aufsatzkatalogisate</xsl:when>
         <xsl:when test="$loan-type = 'a'">
           <xsl:choose>
             <xsl:when test="$abt = '000'">ILN204/CG/UB/Erwerbungssignatur</xsl:when>
@@ -643,8 +645,7 @@
             <xsl:when test="$abt = '020'">ILN204/CG/ZRW/Erwerbungssignatur</xsl:when>
             <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>            
           </xsl:choose>
-        </xsl:when>
-        <xsl:when test="$dummy or $article-in-volume">ILN204/CG/Aufsatz/Aufsatzkatalogisate</xsl:when>
+        </xsl:when>        
         <xsl:when test="$hap">
           <xsl:choose>
             <xsl:when test="$abt = '000'">ILN204/CG/UB/Handapparate</xsl:when>
