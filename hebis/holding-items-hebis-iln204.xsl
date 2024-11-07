@@ -52,8 +52,7 @@
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">x</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>            
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
@@ -303,7 +302,8 @@
             <prefix location="ILN204/CG/UB/UBMagPohlheim">vuf</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vv</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">w</prefix>
-            <range from="x 0" to="x 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">x </prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">x</prefix>
             <range from="y 1" to="y 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
