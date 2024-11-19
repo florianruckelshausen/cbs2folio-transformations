@@ -265,6 +265,8 @@
             <prefix location="ILN204/CG/UB/UBMag3">mag mat</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag nat</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag philos</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag psych</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag sls</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag sport</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag tec</prefix>
