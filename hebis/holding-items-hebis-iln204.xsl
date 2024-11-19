@@ -168,8 +168,8 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ern</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh fil</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh geo</prefix>
-            <range from="fh ger a" to="fh ger z" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="fh germ /" to="fh germ z" location="ILN204/CG/UB/Freihand2OG"/>
+            <prefix location="ILN204/CG/UB/Freihand2OG">fh germ</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">fh ger</prefix>            
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ggr</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh gkt</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh he</prefix>
