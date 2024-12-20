@@ -346,7 +346,7 @@
             <datafield tag="209A" occurrence="01" fulltag="209A/01">
                <subfield code="a">FL BC 1231515</subfield>
                <subfield code="f">000</subfield>
-               <subfield code="d">s</subfield>
+               <subfield code="d">u</subfield>
                <subfield code="x">00</subfield>
             </datafield>
             <datafield tag="209A" occurrence="01" fulltag="209A/01">
@@ -478,7 +478,7 @@
          <arr>
             <i>
                <hrid>21028126X</hrid>
-               <permanentLocationId>ILN204/CG/UB/Unbekannt</permanentLocationId>
+               <permanentLocationId>ILN204/CG/UB/UBFernleihen</permanentLocationId>
                <callNumber>BAp 27,Calderon de la Barca-2,2</callNumber>
                <holdingsTypeId>physical</holdingsTypeId>
                <holdingsStatements/>
