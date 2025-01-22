@@ -36,7 +36,7 @@
       select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>
     <xsl:variable name="local-order" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,2) = 'La')"/>
     <xsl:variable name="microform"
-      select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text() = 'FH Arbeitsplatz Mikroformen'"/>
+      select="contains($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(), 'Mikroformen')"/>
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
                                        (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
     <xsl:variable name="dummy-do" select="($i/datafield[@tag='208@']/subfield[@code='b'] = 'do')"/>    
