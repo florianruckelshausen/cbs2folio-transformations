@@ -159,7 +159,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh all</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh altege</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ang</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh arb</prefix>
+            <prefix location="ILN204/CG/UB/Mikroformen">fh arbeitsplatz mikroformen</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bap</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bio</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bliz</prefix>
@@ -282,7 +282,7 @@
             <prefix location="ILN204/CG/UB/UBMagPohlheim">no</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">nr</prefix>
             <range from="o 1" to="o 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/Freihand1OG">osr</prefix>
+            <prefix location="ILN204/CG/UB/OSR">osr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">p </prefix>
             <prefix location="ILN204/CG/UB/UBSLS">pap</prefix>
