@@ -35,6 +35,8 @@
     <xsl:variable name="hap" 
       select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>
     <xsl:variable name="local-order" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,2) = 'La')"/>
+    <xsl:variable name="microform"
+      select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text() = 'FH Arbeitsplatz Mikroformen'"/>
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
                                        (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
     <xsl:variable name="dummy-do" select="($i/datafield[@tag='208@']/subfield[@code='b'] = 'do')"/>    
@@ -635,6 +637,7 @@
       <xsl:choose>
         <xsl:when test="$electronicholding">ILN204/E/E/Online Medien</xsl:when>
         <xsl:when test="$local-order">ILN204/CG/Aufsatz/Erwerbung-LT</xsl:when>
+        <xsl:when test="$microform">ILN204/CG/UB/Mikroformen</xsl:when>
         <xsl:when test="$dummy-do">ILN204/CG/Aufsatz/dodummy</xsl:when>
         <xsl:when test="$dummy or $article-in-volume">ILN204/CG/Aufsatz/Aufsatzkatalogisate</xsl:when>
         <xsl:when test="$loan-type = 'a'">
