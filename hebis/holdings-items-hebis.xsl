@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2023-07-21 (YYYY-MM-DD) -->
+<!-- date of last edit: 2024-06-06 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:output indent="yes" method="xml" version="1.0" encoding="UTF-8"/>
@@ -9,6 +9,7 @@
   <xsl:template name="loantype">
     <xsl:choose>
       <xsl:when test="substring(datafield[@tag='208@']/subfield[@code='b'],1,1)='d'">dummy</xsl:when>
+      <xsl:when test="(substring(../datafield[@tag='002@']/subfield[@code='0'],2,1)='o') and not(datafield[@tag='209A']/subfield[@code='d'])">aufsatz</xsl:when>
       <xsl:otherwise><xsl:value-of select="datafield[@tag='209A']/subfield[@code='d']"/></xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -20,23 +21,136 @@
     </collection>
   </xsl:template>
 
-  <xsl:template match="record">
+  <xsl:template match="record[not(delete)]">
     <record>
-      <xsl:for-each select="*[not(self::processing)]">
+      <xsl:for-each select="*[not(self::processing)]">  <!-- removes any 'processing' element from pica2instance-new.xsl! -->
             <xsl:copy-of select="."/>
         </xsl:for-each>
         <xsl:apply-templates select="original"/>
     </record>
   </xsl:template>
+  
+  <xsl:template match="record[delete]">
+    <record>
+      <delete>
+        <xsl:for-each select="delete/*[not(self::processing)]">  <!-- removes any 'processing' element from pica2instance-new.xsl! -->
+          <xsl:copy-of select="."/>
+        </xsl:for-each>
+        <processing> <!-- generates hebis default -->
+          <item>
+            <blockDeletion>
+              <ifField>hrid</ifField>
+              <matchesPattern>it.*</matchesPattern>
+            </blockDeletion>
+            <statisticalCoding>
+              <arr>
+                <i>
+                  <if>deleteSkipped</if>
+                  <becauseOf>ITEM_STATUS</becauseOf>
+                  <setCode>ITEM_STATUS</setCode>
+                </i>         
+              </arr>
+            </statisticalCoding>
+          </item>
+          <holdingsRecord>
+            <blockDeletion>
+              <ifField>hrid</ifField>
+              <matchesPattern>ho.*</matchesPattern>
+            </blockDeletion>
+            <statisticalCoding>
+              <arr>
+                <i>
+                  <if>deleteSkipped</if>
+                  <becauseOf>ITEM_STATUS</becauseOf>
+                  <setCode>ITEM_STATUS</setCode>
+                </i>         
+              </arr>
+            </statisticalCoding>
+          </holdingsRecord>
+          <instance>
+            <statisticalCoding>
+              <arr>
+                <i>
+                  <if>deleteSkipped</if>
+                  <becauseOf>PO_LINE_REFERENCE</becauseOf>
+                  <setCode>PO_LINE_REFERENCE</setCode>
+                </i>   
+                <i>
+                  <if>deleteSkipped</if>
+                  <becauseOf>ITEM_STATUS</becauseOf>
+                  <setCode>ITEM_STATUS</setCode>
+                </i>
+                <i>
+                  <if>deleteSkipped</if>
+                  <becauseOf>HOLDINGS_RECORD_PATTERN_MATCH</becauseOf>
+                  <setCode>HOLDINGS_RECORD_PATTERN_MATCH</setCode>
+                </i> 
+                <i>
+                  <if>deleteSkipped</if>
+                  <becauseOf>ITEM_PATTERN_MATCH</becauseOf>
+                  <setCode>ITEM_PATTERN_MATCH</setCode>
+                </i> 
+              </arr>
+            </statisticalCoding>
+          </instance>
+        </processing>
+      </delete>
+    </record>
+  </xsl:template>
 
   <xsl:template match="original">
     <xsl:if test="item/datafield[@tag='203@']/subfield[@code='0']">
-      <processing>
+      <processing> <!-- generates hebis default -->
         <item>
+          <retainExistingValues>
+            <forOmittedProperties>true</forOmittedProperties>
+            <forTheseProperties>
+              <arr>
+                <i>materialTypeId</i>
+              </arr>
+            </forTheseProperties>
+          </retainExistingValues>
           <status>
             <policy>retain</policy>
           </status>
+          <retainOmittedRecord>
+            <ifField>hrid</ifField>
+            <matchesPattern>it.*</matchesPattern>
+          </retainOmittedRecord>
+          <statisticalCoding>
+            <arr>
+              <i>
+                <if>deleteSkipped</if>
+                <becauseOf>ITEM_STATUS</becauseOf>
+                <setCode>ITEM_STATUS</setCode>
+              </i>         
+            </arr>
+          </statisticalCoding>
         </item>
+        <holdingsRecord>
+          <retainExistingValues>
+            <forOmittedProperties>true</forOmittedProperties>
+          </retainExistingValues>
+          <retainOmittedRecord>
+            <ifField>hrid</ifField>
+            <matchesPattern>ho.*</matchesPattern>
+          </retainOmittedRecord>
+          <statisticalCoding>
+            <arr>
+              <i>
+                <if>deleteSkipped</if>
+                <becauseOf>ITEM_STATUS</becauseOf>
+                <setCode>ITEM_STATUS</setCode>
+              </i>
+              <i>
+                <if>deleteSkipped</if>
+                <becauseOf>ITEM_PATTERN_MATCH</becauseOf>
+                <setCode>ITEM_PATTERN_MATCH</setCode>
+              </i> 
+            </arr>
+          </statisticalCoding>
+        </holdingsRecord>
+        <instance/>
       </processing>
       <holdingsRecords>
         <arr>
@@ -57,11 +171,11 @@
       </permanentLocationId>
       <!-- There is no 109R in hebis, see $electronicholding -->
       <xsl:variable name="electronicholding" select="(substring(../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring(datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
-      <xsl:if test="not($electronicholding) and (substring(datafield[@tag='208@']/subfield[@code='b'],1,1) != 'd')">
-         <callNumber>
-           <xsl:value-of select="datafield[@tag='209A']/subfield[@code='a']"/>
-         </callNumber>
-      </xsl:if>
+      <callNumber>
+          <xsl:if test="not($electronicholding) and (substring(datafield[@tag='208@']/subfield[@code='b'],1,1) != 'd')">
+               <xsl:value-of select="datafield[@tag='209A']/subfield[@code='a']"/>
+          </xsl:if>
+      </callNumber>  
 	    <holdingsTypeId>
   		  <xsl:choose>
   		    <xsl:when test="substring(../datafield[@tag='002@']/subfield[@code='0'], 1, 1) = 'O'">electronic</xsl:when>
@@ -145,7 +259,7 @@
                 <xsl:value-of select="./subfield[@code='a']"/>
               </note>
               <holdingsNoteTypeId>Lokaler Schlüssel</holdingsNoteTypeId>
-              <staffOnly>false</staffOnly>
+              <staffOnly>true</staffOnly>
             </i>
           </xsl:for-each>
           <xsl:for-each select="datafield[(@tag='244Z') and (subfield[@code='x']&gt;'79') and (subfield[@code='x']&lt;'99')]">
@@ -187,7 +301,7 @@
                 <xsl:value-of select="."/>
               </note>
               <holdingsNoteTypeId>Lizenzindikator</holdingsNoteTypeId>
-              <staffOnly>false</staffOnly>
+              <staffOnly>true</staffOnly>
             </i>
           </xsl:for-each>
         </arr>
@@ -203,7 +317,7 @@
          <items>
            <arr>
              <xsl:for-each select="datafield[(@tag='209G') and (subfield[@code='x']='00')]/subfield[@code='a']">
-               <xsl:message>Debug: <xsl:value-of select="."/></xsl:message>
+               <!-- <xsl:message>Debug: <xsl:value-of select="."/></xsl:message> -->
                <xsl:variable name="copy">
                  <xsl:choose>
                    <xsl:when test="contains(.,'(')">
@@ -214,7 +328,7 @@
                    </xsl:otherwise>
                  </xsl:choose>
                </xsl:variable>
-               <xsl:message>Debug: <xsl:value-of select="concat($epn,'-',$copy)"/></xsl:message>             
+               <!-- <xsl:message>Debug: <xsl:value-of select="concat($epn,'-',$copy)"/></xsl:message> -->             
                <xsl:apply-templates select="../.." mode="make-item">
                  <xsl:with-param name="hhrid" select="concat($epn,'-',$copy)"/>
                  <xsl:with-param name="bcode" select="substring-before(concat(.,' '),' ')"/>
@@ -224,7 +338,7 @@
                </xsl:apply-templates>
              </xsl:for-each>
              <xsl:if test="not(datafield[(@tag='209G') and (subfield[@code='x']='00')]/subfield[@code='a'])">
-               <xsl:message>Debug: EPN <xsl:value-of select="$epn"/></xsl:message>             
+               <!-- <xsl:message>Debug: EPN <xsl:value-of select="$epn"/></xsl:message>   -->        
                <xsl:apply-templates select="." mode="make-item">
                  <xsl:with-param name="hhrid" select="concat($epn,'-1')"/>
                </xsl:apply-templates>
@@ -232,7 +346,6 @@
            </arr>
          </items>
       </xsl:if>
-      <xsl:if test="datafield[@tag='209S'] | datafield[@tag='204P'] | datafield[@tag='204U'] | datafield[@tag='204R']">
         <electronicAccess>
           <arr>
             <xsl:for-each select="datafield[@tag='209S']">
@@ -251,16 +364,9 @@
             </xsl:for-each>
           </arr>
         </electronicAccess>
-      </xsl:if>
-        <statisticalCodeIds>
-        <arr>
-          <xsl:for-each select="datafield[(@tag='209B') and not(subfield[@code='x']='01' or subfield[@code='x']='02')]">
-            <i>
-              <xsl:value-of select="./subfield[@code='a']"/>
-            </i>
-          </xsl:for-each>
-        </arr>
-      </statisticalCodeIds>
+      
+        <statisticalCodeIds/>
+    
     </i>
   </xsl:template>
  
@@ -301,8 +407,9 @@
             <xsl:when test="(substring(datafield[@tag='208@']/subfield[@code='b'],1,1) = 'd') or 
                             (substring(datafield[@tag='208@']/subfield[@code='b'],1,1) = 'p') or
                             (substring(datafield[@tag='208@']/subfield[@code='b'],1,2) = 'gp')">Intellectual item</xsl:when>
+            <xsl:when test="(substring(../datafield[@tag='002@']/subfield[@code='0'],2,1)='o') and not(datafield[@tag='209A']/subfield[@code='d'])">Unknown</xsl:when>
             <xsl:when test="datafield[@tag='209A']/subfield[@code='d']='a'">On order</xsl:when>
-            <xsl:when test="datafield[@tag='209A']/subfield[@code='d']='e'">Missing</xsl:when>
+            <xsl:when test="datafield[@tag='209A']/subfield[@code='d']='e'">Long missing</xsl:when>
             <xsl:when test="datafield[@tag='209A']/subfield[@code='d']='z'">Withdrawn</xsl:when>
       	 		<xsl:when test="datafield[@tag='209A']/subfield[@code='d']='g'">Restricted</xsl:when>
             <xsl:otherwise>Available</xsl:otherwise>
