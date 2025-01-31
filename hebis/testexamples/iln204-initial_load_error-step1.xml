@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">6062:31-05-24</subfield>
+            <subfield code="t">19:38:18.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">0026:10-08-15</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aau</subfield>
+         </datafield>
+         <datafield tag="002C" fulltag="002C">
+            <subfield code="a">Text</subfield>
+            <subfield code="b">txt</subfield>
+            <subfield code="2">rdacontent</subfield>
+         </datafield>
+         <datafield tag="002D" fulltag="002D">
+            <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+            <subfield code="b">n</subfield>
+            <subfield code="2">rdamedia</subfield>
+         </datafield>
+         <datafield tag="002E" fulltag="002E">
+            <subfield code="a">Band</subfield>
+            <subfield code="b">nc</subfield>
+            <subfield code="2">rdacarrier</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">233272038</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">724127742</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">9783990110188</subfield>
+            <subfield code="f">Pp. : EUR 29.95 (DE), EUR 29.95 (AT), sfr 47.50 (freier Pr.)</subfield>
+         </datafield>
+         <datafield tag="004L" fulltag="004L">
+            <subfield code="0">9783990110188</subfield>
+         </datafield>
+         <datafield tag="006G" fulltag="006G">
+            <subfield code="0">1002146771</subfield>
+         </datafield>
+         <datafield tag="006T" fulltag="006T">
+            <subfield code="0">10,N19</subfield>
+         </datafield>
+         <datafield tag="006U" fulltag="006U">
+            <subfield code="0">11,A12,0504</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">DNB</subfield>
+            <subfield code="0">1002146771</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">ger</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">2010</subfield>
+            <subfield code="n">2010</subfield>
+         </datafield>
+         <datafield tag="013D" fulltag="013D">
+            <subfield code="9">105823643</subfield>
+            <subfield code="a">Kochbuch</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">Zu Gast bei Monet</subfield>
+            <subfield code="d">der große Impressionist als Gourmet ; 180 Originalrezepte</subfield>
+            <subfield code="h">Claire Joyes. Aus dem Franz. von Ingrid Ickler</subfield>
+         </datafield>
+         <datafield tag="022A" fulltag="022A">
+            <subfield code="a">Les @carnets de cuisine de Monet</subfield>
+         </datafield>
+         <datafield tag="028C" fulltag="028C">
+            <subfield code="9">146634640</subfield>
+            <subfield code="8">Joyes, Claire</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">Wien</subfield>
+            <subfield code="n">Ed. Styria</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">190 Seiten</subfield>
+         </datafield>
+         <datafield tag="034I" fulltag="034I">
+            <subfield code="a">28 cm</subfield>
+         </datafield>
+         <datafield tag="034M" fulltag="034M">
+            <subfield code="a">Illustrationen</subfield>
+         </datafield>
+         <datafield tag="037A" fulltag="037A">
+            <subfield code="a">Literaturverzeichnis Seite [189]-190</subfield>
+         </datafield>
+         <item epn="758317298">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">18-08-15</subfield>
+               <subfield code="t">15:00:03.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">10-08-15</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">758317298</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">18-08-15</subfield>
+               <subfield code="b">zUB</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">000 LI 60700 J89</subfield>
+               <subfield code="f">000</subfield>
+               <subfield code="d">u</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209G" occurrence="01" fulltag="209G/01">
+               <subfield code="a">61863818</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="245S" occurrence="01" fulltag="245S/01">
+               <subfield code="a">13000</subfield>
+               <subfield code="x">01</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">102596697</subfield>
+               <subfield code="8">Universität Gießen, Universitätsbibliothek Gießen</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>233272038</hrid>
+         <statusUpdatedDate>2015-08-10</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>6312d172-f0cf-40f6-b27d-9fa8feaf332f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>8d511d33-5e85-4c5d-9bce-6e3c9cd0c324</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>233272038</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>724127742</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>9783990110188 Pp. : EUR 29.95 (DE), EUR 29.95 (AT), sfr 47.50 (freier Pr.)</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>9783990110188</value>
+                  <identifierTypeId>GTIN (vormals EAN)</identifierTypeId>
+               </i>
+               <i>
+                  <value>1002146771</value>
+                  <identifierTypeId>DNB-Nummer</identifierTypeId>
+               </i>
+               <i>
+                  <value>10,N19</value>
+                  <identifierTypeId>CIP-Nummer</identifierTypeId>
+               </i>
+               <i>
+                  <value>11,A12,0504</value>
+                  <identifierTypeId>WV-Nummer</identifierTypeId>
+               </i>
+               <i>
+                  <value>DNB: 1002146771</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>Zu Gast bei Monet : der große Impressionist als Gourmet ; 180 Originalrezepte / Claire Joyes. Aus dem Franz. von Ingrid Ickler</title>
+         <indexTitle>Zu Gast bei Monet der große Impressionist als Gourmet 180 Originalrezepte Claire Joyes Aus dem Franz von Ingrid Ickler</indexTitle>
+         <alternativeTitles>
+            <arr>
+               <i>
+                  <alternativeTitle>Les carnets de cuisine de Monet</alternativeTitle>
+                  <alternativeTitleTypeId>Uniform title</alternativeTitleTypeId>
+               </i>
+            </arr>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Joyes, Claire</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>Wien</place>
+                  <publisher>Ed. Styria</publisher>
+                  <dateOfPublication>2010</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <notes>
+            <arr>
+               <i>
+                  <note>Literaturverzeichnis Seite [189]-190</note>
+                  <instanceNoteTypeId>General note</instanceNoteTypeId>
+               </i>
+            </arr>
+         </notes>
+         <natureOfContentTermIds>
+            <arr>
+               <i/>
+            </arr>
+         </natureOfContentTermIds>
+         <languages>
+            <arr>
+               <i>ger</i>
+            </arr>
+         </languages>
+         <series>
+            <arr/>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>190 Seiten : Illustrationen ; 28 cm</i>
+            </arr>
+         </physicalDescriptions>
+         <administrativeNotes>
+            <arr>
+               <i>Aau (Bibliografische Gattung)</i>
+               <i>31.05.24, 19:38 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">1999:26-08-22</subfield>
+            <subfield code="t">19:13:10.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">0034:27-05-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aau</subfield>
+         </datafield>
+         <datafield tag="002C" fulltag="002C">
+            <subfield code="a">Text</subfield>
+            <subfield code="b">txt</subfield>
+            <subfield code="2">rdacontent</subfield>
+         </datafield>
+         <datafield tag="002D" fulltag="002D">
+            <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+            <subfield code="b">n</subfield>
+            <subfield code="2">rdamedia</subfield>
+         </datafield>
+         <datafield tag="002E" fulltag="002E">
+            <subfield code="a">Band</subfield>
+            <subfield code="b">nc</subfield>
+            <subfield code="2">rdacarrier</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">233197184</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">729928548</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">9780521872812</subfield>
+            <subfield code="f">hardback</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">9780521694414</subfield>
+            <subfield code="f">pbk. : alk. paper</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">0521872812</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">0521694418</subfield>
+         </datafield>
+         <datafield tag="006A" fulltag="006A">
+            <subfield code="0">2010030878</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">GBV</subfield>
+            <subfield code="0">632709561</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">eng</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">2011</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">Labor rights and multinational production</subfield>
+            <subfield code="h">Layna Mosley</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">336749465</subfield>
+            <subfield code="8">Mosley, Layna</subfield>
+            <subfield code="B">Verfasser</subfield>
+            <subfield code="4">aut</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">Cambridge</subfield>
+            <subfield code="n">Cambridge Univ. Press</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">XVI, 287 Seiten</subfield>
+         </datafield>
+         <datafield tag="034M" fulltag="034M">
+            <subfield code="a">Diagramme</subfield>
+         </datafield>
+         <datafield tag="036E" fulltag="036E">
+            <subfield code="a">Cambridge studies in comparative politics</subfield>
+         </datafield>
+         <datafield tag="037A" fulltag="037A">
+            <subfield code="a">Literaturverzeichnis Seite 261 - 284</subfield>
+         </datafield>
+         <item epn="740519670">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">17-03-17</subfield>
+               <subfield code="t">12:11:42.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">24-09-14</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">740519670</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">24-09-14</subfield>
+               <subfield code="b">zb03</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">009 MS 5000 M912</subfield>
+               <subfield code="f">030</subfield>
+               <subfield code="d">u</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209G" occurrence="01" fulltag="209G/01">
+               <subfield code="a">86734575</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="245S" occurrence="01" fulltag="245S/01">
+               <subfield code="a">04014g85b</subfield>
+               <subfield code="x">01</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">116079460</subfield>
+               <subfield code="8">Universität Gießen, Zweigbibliothek im Philosophikum II</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>233197184</hrid>
+         <statusUpdatedDate>2011-05-27</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>6312d172-f0cf-40f6-b27d-9fa8feaf332f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>8d511d33-5e85-4c5d-9bce-6e3c9cd0c324</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>233197184</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>729928548</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>9780521872812 hardback</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>9780521694414 pbk. : alk. paper</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>0521872812</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>0521694418</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>2010030878</value>
+                  <identifierTypeId>LCCN</identifierTypeId>
+               </i>
+               <i>
+                  <value>GBV: 632709561</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>Labor rights and multinational production / Layna Mosley</title>
+         <indexTitle>Labor rights and multinational production Layna Mosley</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Mosley, Layna</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+                  <contributorTypeId>aut</contributorTypeId>
+                  <contributorTypeText>Verfasser</contributorTypeText>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>Cambridge</place>
+                  <publisher>Cambridge Univ. Press</publisher>
+                  <dateOfPublication>2011</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <notes>
+            <arr>
+               <i>
+                  <note>Literaturverzeichnis Seite 261 - 284</note>
+                  <instanceNoteTypeId>General note</instanceNoteTypeId>
+               </i>
+            </arr>
+         </notes>
+         <languages>
+            <arr>
+               <i>eng</i>
+            </arr>
+         </languages>
+         <series>
+            <arr>
+               <i>Cambridge studies in comparative politics</i>
+            </arr>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>XVI, 287 Seiten : Diagramme</i>
+            </arr>
+         </physicalDescriptions>
+         <administrativeNotes>
+            <arr>
+               <i>Aau (Bibliografische Gattung)</i>
+               <i>26.08.22, 19:13 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">5000:20-01-21</subfield>
+            <subfield code="t">08:21:29.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">0026:24-03-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aar</subfield>
+         </datafield>
+         <datafield tag="002C" fulltag="002C">
+            <subfield code="a">Text</subfield>
+            <subfield code="b">txt</subfield>
+            <subfield code="2">rdacontent</subfield>
+         </datafield>
+         <datafield tag="002D" fulltag="002D">
+            <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+            <subfield code="b">n</subfield>
+            <subfield code="2">rdamedia</subfield>
+         </datafield>
+         <datafield tag="002E" fulltag="002E">
+            <subfield code="a">Band</subfield>
+            <subfield code="b">nc</subfield>
+            <subfield code="2">rdacarrier</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">23325417X</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">10685279</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">3518370421</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">HEB</subfield>
+            <subfield code="0">23325417X</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">ger</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">1980</subfield>
+            <subfield code="n">1980</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">Schattseite</subfield>
+            <subfield code="d">Roman</subfield>
+            <subfield code="h">Franz Innerhofer</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">087051567</subfield>
+            <subfield code="8">Innerhofer, Franz *1944-2002*</subfield>
+            <subfield code="B">Verfasser</subfield>
+            <subfield code="4">aut</subfield>
+         </datafield>
+         <datafield tag="032@" fulltag="032@">
+            <subfield code="a">[2. Auflage], 11. - 20. Tsd.</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">[Frankfurt (Main)]</subfield>
+            <subfield code="n">Suhrkamp</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">253 Seiten</subfield>
+         </datafield>
+         <datafield tag="036E" fulltag="036E">
+            <subfield code="a">Suhrkamp-Taschenbuch</subfield>
+            <subfield code="l">542</subfield>
+         </datafield>
+         <datafield tag="037A" fulltag="037A">
+            <subfield code="a">Lizenzausg. d. Residenz-Verl., Salzburg</subfield>
+         </datafield>
+         <item epn="611611287">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">01-02-22</subfield>
+               <subfield code="t">14:02:11.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">24-03-11</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">611611287</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">01-02-22</subfield>
+               <subfield code="b">rbbb</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">APä As 44</subfield>
+               <subfield code="f">000</subfield>
+               <subfield code="d">u</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209C" occurrence="01" fulltag="209C/01">
+               <subfield code="a">009 81/292</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">102596697</subfield>
+               <subfield code="8">Universität Gießen, Universitätsbibliothek Gießen</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>23325417X</hrid>
+         <statusUpdatedDate>2011-03-24</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>6312d172-f0cf-40f6-b27d-9fa8feaf332f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>8d511d33-5e85-4c5d-9bce-6e3c9cd0c324</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>23325417X</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>10685279</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>3518370421</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>HEB: 23325417X</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>Schattseite : Roman / Franz Innerhofer</title>
+         <indexTitle>Schattseite Roman Franz Innerhofer</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Innerhofer, Franz *1944-2002*</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+                  <contributorTypeId>aut</contributorTypeId>
+                  <contributorTypeText>Verfasser</contributorTypeText>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>[Frankfurt (Main)]</place>
+                  <publisher>Suhrkamp</publisher>
+                  <dateOfPublication>1980</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <notes>
+            <arr>
+               <i>
+                  <note>Lizenzausg. d. Residenz-Verl., Salzburg</note>
+                  <instanceNoteTypeId>General note</instanceNoteTypeId>
+               </i>
+            </arr>
+         </notes>
+         <languages>
+            <arr>
+               <i>ger</i>
+            </arr>
+         </languages>
+         <series>
+            <arr>
+               <i>Suhrkamp-Taschenbuch ; 542</i>
+            </arr>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>253 Seiten</i>
+            </arr>
+         </physicalDescriptions>
+         <editions>
+            <arr>
+               <i>[2. Auflage], 11. - 20. Tsd.</i>
+            </arr>
+         </editions>
+         <administrativeNotes>
+            <arr>
+               <i>Aar (Bibliografische Gattung)</i>
+               <i>20.01.21, 08:21 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">1999:14-08-17</subfield>
+            <subfield code="t">00:20:13.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">6000:07-04-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aaxaf</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">233272607</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">724293245</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">9783940938909</subfield>
+            <subfield code="f">kart. : EUR 29.90</subfield>
+         </datafield>
+         <datafield tag="006G" fulltag="006G">
+            <subfield code="0">1004070209</subfield>
+         </datafield>
+         <datafield tag="006T" fulltag="006T">
+            <subfield code="0">10,N27</subfield>
+         </datafield>
+         <datafield tag="006U" fulltag="006U">
+            <subfield code="0">11,A12,0702</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">DNB</subfield>
+            <subfield code="0">1004070209</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">ger</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">2011</subfield>
+            <subfield code="n">2011</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">Von Mähdreschern und Musterdörfern</subfield>
+            <subfield code="d">Industrialisierung der DDR-Landwirtschaft und die Wandlung des ländlichen Lebens am Beispiel der Nordbezirke</subfield>
+            <subfield code="h">Michael Heinz</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">211623342</subfield>
+            <subfield code="8">Heinz, Michael *1979-*</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">Berlin</subfield>
+            <subfield code="n">Metropol</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">558 S.</subfield>
+         </datafield>
+         <datafield tag="034I" fulltag="034I">
+            <subfield code="a">23 cm</subfield>
+         </datafield>
+         <datafield tag="034M" fulltag="034M">
+            <subfield code="a">Ill.</subfield>
+         </datafield>
+         <datafield tag="037A" fulltag="037A">
+            <subfield code="a">Literaturangaben</subfield>
+         </datafield>
+         <item epn="629059551">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">15-09-11</subfield>
+               <subfield code="t">12:02:23.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">02-09-11</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">629059551</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">14-09-11</subfield>
+               <subfield code="b">z005</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">005 ZA 82400 H472</subfield>
+               <subfield code="f">005</subfield>
+               <subfield code="d">u</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209G" occurrence="01" fulltag="209G/01">
+               <subfield code="a">84889873</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="245S" occurrence="01" fulltag="245S/01">
+               <subfield code="a">87000</subfield>
+               <subfield code="x">01</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">193926474</subfield>
+               <subfield code="8">Universität Gießen, Zeughausbibliothek</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>233272607</hrid>
+         <statusUpdatedDate>2011-04-07</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>30fffe0e-e985-4144-b2e2-1e8179bdb41f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>98f0caa9-d38e-427b-9ec4-454de81a94d7</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>233272607</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>724293245</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>9783940938909 kart. : EUR 29.90</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>1004070209</value>
+                  <identifierTypeId>DNB-Nummer</identifierTypeId>
+               </i>
+               <i>
+                  <value>10,N27</value>
+                  <identifierTypeId>CIP-Nummer</identifierTypeId>
+               </i>
+               <i>
+                  <value>11,A12,0702</value>
+                  <identifierTypeId>WV-Nummer</identifierTypeId>
+               </i>
+               <i>
+                  <value>DNB: 1004070209</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>Von Mähdreschern und Musterdörfern : Industrialisierung der DDR-Landwirtschaft und die Wandlung des ländlichen Lebens am Beispiel der Nordbezirke / Michael Heinz</title>
+         <indexTitle>Von Mähdreschern und Musterdörfern Industrialisierung der DDRLandwirtschaft und die Wandlung des ländlichen Lebens am Beispiel der Nordbezirke Michael Heinz</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Heinz, Michael *1979-*</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>Berlin</place>
+                  <publisher>Metropol</publisher>
+                  <dateOfPublication>2011</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <notes>
+            <arr>
+               <i>
+                  <note>Literaturangaben</note>
+                  <instanceNoteTypeId>General note</instanceNoteTypeId>
+               </i>
+            </arr>
+         </notes>
+         <languages>
+            <arr>
+               <i>ger</i>
+            </arr>
+         </languages>
+         <series>
+            <arr/>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>558 S. : Ill. ; 23 cm</i>
+            </arr>
+         </physicalDescriptions>
+         <administrativeNotes>
+            <arr>
+               <i>Aaxaf (Bibliografische Gattung)</i>
+               <i>14.08.17, 00:20 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">0026:26-04-22</subfield>
+            <subfield code="t">14:33:02.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">1999:28-03-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aax</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">233714278</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">5195791</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">2130359477</subfield>
+         </datafield>
+         <datafield tag="006L" fulltag="006L">
+            <subfield code="i">BVB</subfield>
+            <subfield code="0">BV005300199</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">HEB</subfield>
+            <subfield code="0">233714278</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">fre</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">1978</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">France - République Démocratique Allemande</subfield>
+            <subfield code="d">30 ans de relations. Association France-R. D. A.</subfield>
+            <subfield code="h">Georges Castellan ; Roland Lenoir</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">087008289</subfield>
+            <subfield code="8">Castellan, Georges *1920-2014*</subfield>
+         </datafield>
+         <datafield tag="028C" fulltag="028C">
+            <subfield code="9">36163451X</subfield>
+            <subfield code="8">Lenoir, Roland</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">Paris</subfield>
+            <subfield code="n">Pr. Univ. de France</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">240 S.</subfield>
+         </datafield>
+         <item epn="1196313075">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">27-11-24</subfield>
+               <subfield code="t">13:56:48.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">26-04-22</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">1196313075</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">26-04-22</subfield>
+               <subfield code="b">z112</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">ARo X 6.11/19</subfield>
+               <subfield code="f">000</subfield>
+               <subfield code="d">u</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209G" occurrence="01" fulltag="209G/01">
+               <subfield code="a">88952219</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="245S" occurrence="01" fulltag="245S/01">
+               <subfield code="a">20000</subfield>
+               <subfield code="x">01</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">102596697</subfield>
+               <subfield code="8">Universität Gießen, Universitätsbibliothek Gießen</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>233714278</hrid>
+         <statusUpdatedDate>2011-03-28</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>30fffe0e-e985-4144-b2e2-1e8179bdb41f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>98f0caa9-d38e-427b-9ec4-454de81a94d7</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>233714278</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>5195791</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>2130359477</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>BVB: BV005300199</value>
+                  <identifierTypeId>Weitere Verbundidentnummern</identifierTypeId>
+               </i>
+               <i>
+                  <value>HEB: 233714278</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>France - République Démocratique Allemande : 30 ans de relations. Association France-R. D. A. / Georges Castellan ; Roland Lenoir</title>
+         <indexTitle>France République Démocratique Allemande 30 ans de relations Association FranceR D A Georges Castellan Roland Lenoir</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Castellan, Georges *1920-2014*</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+               </i>
+               <i>
+                  <name>Lenoir, Roland</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>Paris</place>
+                  <publisher>Pr. Univ. de France</publisher>
+                  <dateOfPublication>1978</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <languages>
+            <arr>
+               <i>fre</i>
+            </arr>
+         </languages>
+         <series>
+            <arr/>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>240 S.</i>
+            </arr>
+         </physicalDescriptions>
+         <administrativeNotes>
+            <arr>
+               <i>Aax (Bibliografische Gattung)</i>
+               <i>26.04.22, 14:33 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">0077:31-08-11</subfield>
+            <subfield code="t">08:47:45.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">0077:31-08-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aau</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">233471537</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">703218609</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">1439150281</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">9781439150283</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">9781439150290</subfield>
+         </datafield>
+         <datafield tag="006A" fulltag="006A">
+            <subfield code="0">2010009631</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">HEB</subfield>
+            <subfield code="0">233471537</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">eng</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">2011</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">Big girls don't cry</subfield>
+            <subfield code="d">the election that changed everything for American women</subfield>
+            <subfield code="h">Rebecca Traister</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">23514939X</subfield>
+            <subfield code="8">Traister, Rebecca</subfield>
+         </datafield>
+         <datafield tag="032@" fulltag="032@">
+            <subfield code="a">1. Free Press paperback ed.</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">New York, NY {[u.a.]</subfield>
+            <subfield code="n">Free Press</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">336 S.</subfield>
+         </datafield>
+         <datafield tag="034I" fulltag="034I">
+            <subfield code="a">24 cm</subfield>
+         </datafield>
+         <datafield tag="046M" fulltag="046M">
+            <subfield code="u">Literaturverz. S. [305] - 315</subfield>
+         </datafield>
+         <item epn="629746958">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">24-11-11</subfield>
+               <subfield code="t">10:42:17.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">15-09-11</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">629746958</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">15-09-11</subfield>
+               <subfield code="b">zp10</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">DZ U-FI 3002</subfield>
+               <subfield code="f">100</subfield>
+               <subfield code="d">o</subfield>
+               <subfield code="h">100 dz u fi 3002</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209G" occurrence="01" fulltag="209G/01">
+               <subfield code="a">85325485</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="245Z" occurrence="01" fulltag="245Z/01">
+               <subfield code="a">100 DZ U-FI</subfield>
+               <subfield code="x">20</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">102597014</subfield>
+               <subfield code="8">Universität Gießen, Bibliothek Anglistik</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>233471537</hrid>
+         <statusUpdatedDate>2011-08-31</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>30fffe0e-e985-4144-b2e2-1e8179bdb41f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>98f0caa9-d38e-427b-9ec4-454de81a94d7</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>233471537</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>703218609</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>1439150281</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>9781439150283</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>9781439150290</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>2010009631</value>
+                  <identifierTypeId>LCCN</identifierTypeId>
+               </i>
+               <i>
+                  <value>HEB: 233471537</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>Big girls don't cry : the election that changed everything for American women / Rebecca Traister</title>
+         <indexTitle>Big girls don't cry the election that changed everything for American women Rebecca Traister</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Traister, Rebecca</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>New York, NY {[u.a.]</place>
+                  <publisher>Free Press</publisher>
+                  <dateOfPublication>2011</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <notes>
+            <arr>
+               <i>
+                  <note>Literaturverz. S. [305] - 315</note>
+                  <instanceNoteTypeId>With note</instanceNoteTypeId>
+               </i>
+            </arr>
+         </notes>
+         <languages>
+            <arr>
+               <i>eng</i>
+            </arr>
+         </languages>
+         <series>
+            <arr/>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>336 S. ; 24 cm</i>
+            </arr>
+         </physicalDescriptions>
+         <editions>
+            <arr>
+               <i>1. Free Press paperback ed.</i>
+            </arr>
+         </editions>
+         <administrativeNotes>
+            <arr>
+               <i>Aau (Bibliografische Gattung)</i>
+               <i>31.08.11, 08:47 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">0026:02-05-20</subfield>
+            <subfield code="t">15:19:34.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">1999:29-03-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aax</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">23383589X</subfield>
+         </datafield>
+         <datafield tag="003O" fulltag="003O">
+            <subfield code="a">OCoLC</subfield>
+            <subfield code="0">8378267</subfield>
+         </datafield>
+         <datafield tag="004A" fulltag="004A">
+            <subfield code="0">2070264068</subfield>
+         </datafield>
+         <datafield tag="006L" fulltag="006L">
+            <subfield code="i">BVB</subfield>
+            <subfield code="0">BV003641006</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">HEB</subfield>
+            <subfield code="0">23383589X</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">fre</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">1981</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">La @Machine matrimoniale ou Marivaux</subfield>
+            <subfield code="d">essai</subfield>
+            <subfield code="h">Michel Deguy</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">087312271</subfield>
+            <subfield code="8">Deguy, Michel *1930-2022*</subfield>
+         </datafield>
+         <datafield tag="033A" fulltag="033A">
+            <subfield code="p">Paris</subfield>
+            <subfield code="n">Gallimard</subfield>
+         </datafield>
+         <datafield tag="034D" fulltag="034D">
+            <subfield code="a">298 S.</subfield>
+         </datafield>
+         <datafield tag="036E" fulltag="036E">
+            <subfield code="a">Le @chemin</subfield>
+         </datafield>
+         <item epn="1102995290">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">16-06-21</subfield>
+               <subfield code="t">12:28:28.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">27-04-20</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">1102995290</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">27-04-20</subfield>
+               <subfield code="b">r112</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">F 17 MAR e 81/1</subfield>
+               <subfield code="f">112</subfield>
+               <subfield code="d">s</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209C" occurrence="01" fulltag="209C/01">
+               <subfield code="a">112 772/89</subfield>
+            </datafield>
+            <datafield tag="245S" occurrence="01" fulltag="245S/01">
+               <subfield code="a">20000</subfield>
+               <subfield code="x">01</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">102597030</subfield>
+               <subfield code="8">Universität Gießen, Fachbibliothek Romanistik</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>23383589X</hrid>
+         <statusUpdatedDate>2011-03-29</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>30fffe0e-e985-4144-b2e2-1e8179bdb41f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>98f0caa9-d38e-427b-9ec4-454de81a94d7</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>23383589X</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>8378267</value>
+                  <identifierTypeId>OCLC</identifierTypeId>
+               </i>
+               <i>
+                  <value>2070264068</value>
+                  <identifierTypeId>ISBN</identifierTypeId>
+               </i>
+               <i>
+                  <value>BVB: BV003641006</value>
+                  <identifierTypeId>Weitere Verbundidentnummern</identifierTypeId>
+               </i>
+               <i>
+                  <value>HEB: 23383589X</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>La Machine matrimoniale ou Marivaux : essai / Michel Deguy</title>
+         <indexTitle>Machine matrimoniale ou Marivaux essai Michel Deguy</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Deguy, Michel *1930-2022*</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr>
+               <i>
+                  <place>Paris</place>
+                  <publisher>Gallimard</publisher>
+                  <dateOfPublication>1981</dateOfPublication>
+                  <role>Publisher</role>
+               </i>
+            </arr>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <languages>
+            <arr>
+               <i>fre</i>
+            </arr>
+         </languages>
+         <series>
+            <arr>
+               <i>Le chemin</i>
+            </arr>
+         </series>
+         <physicalDescriptions>
+            <arr>
+               <i>298 S.</i>
+            </arr>
+         </physicalDescriptions>
+         <administrativeNotes>
+            <arr>
+               <i>Aax (Bibliografische Gattung)</i>
+               <i>02.05.20, 15:19 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+   <record>
+      <original>
+         <datafield tag="001B" fulltag="001B">
+            <subfield code="0">1999:24-03-11</subfield>
+            <subfield code="t">23:39:54.000</subfield>
+         </datafield>
+         <datafield tag="001D" fulltag="001D">
+            <subfield code="0">0026:24-03-11</subfield>
+         </datafield>
+         <datafield tag="002@" fulltag="002@">
+            <subfield code="0">Aoy</subfield>
+         </datafield>
+         <datafield tag="003@" fulltag="003@">
+            <subfield code="0">233254587</subfield>
+         </datafield>
+         <datafield tag="007G" fulltag="007G">
+            <subfield code="i">HEB</subfield>
+            <subfield code="0">233254587</subfield>
+         </datafield>
+         <datafield tag="010@" fulltag="010@">
+            <subfield code="a">ger</subfield>
+         </datafield>
+         <datafield tag="011@" fulltag="011@">
+            <subfield code="a">2010</subfield>
+         </datafield>
+         <datafield tag="021A" fulltag="021A">
+            <subfield code="a">"1968" als Generationenkonflikt?</subfield>
+            <subfield code="d">Eröffnungsbeitrag zur Tagung "Geschichte - Erinnerung - Ästhetik" aus Anlass des 65. Geburtstags von Dietmar Rieger</subfield>
+            <subfield code="h">Jürgen Reulecke</subfield>
+         </datafield>
+         <datafield tag="028A" fulltag="028A">
+            <subfield code="9">151558329</subfield>
+            <subfield code="8">Reulecke, Jürgen *1940-*</subfield>
+         </datafield>
+         <datafield tag="039B" fulltag="039B">
+            <subfield code="i">In</subfield>
+            <subfield code="9">202514552</subfield>
+            <subfield code="8">Geschichte - Erinnerung - Ästhetik : [Festkolloquium zum 65. Geburtstag von Dietmar Rieger] / herausgegeben von Kirsten Dickhaut .... - Tübingen : Narr, 2010. - XXXIII, 408 Seiten, Illustrationen. - ISBN 978-3-8233-6441-2</subfield>
+            <subfield code="p">(2010), Seite [3]-17</subfield>
+         </datafield>
+         <datafield tag="101B" fulltag="101B">
+            <subfield code="0">24-03-11</subfield>
+            <subfield code="t">14:05:58.000</subfield>
+         </datafield>
+         <datafield tag="101C" fulltag="101C">
+            <subfield code="0">24-03-11</subfield>
+         </datafield>
+         <datafield tag="101U" fulltag="101U">
+            <subfield code="0">utf8</subfield>
+         </datafield>
+         <datafield tag="145S" occurrence="01" fulltag="145S/01">
+            <subfield code="a">10000</subfield>
+         </datafield>
+         <item epn="611611767">
+            <datafield tag="201B" occurrence="01" fulltag="201B/01">
+               <subfield code="0">24-03-11</subfield>
+               <subfield code="t">14:05:58.000</subfield>
+            </datafield>
+            <datafield tag="201C" occurrence="01" fulltag="201C/01">
+               <subfield code="0">24-03-11</subfield>
+            </datafield>
+            <datafield tag="201U" occurrence="01" fulltag="201U/01">
+               <subfield code="0">utf8</subfield>
+            </datafield>
+            <datafield tag="203@" occurrence="01" fulltag="203@/01">
+               <subfield code="0">611611767</subfield>
+            </datafield>
+            <datafield tag="208@" occurrence="01" fulltag="208@/01">
+               <subfield code="a">24-03-11</subfield>
+               <subfield code="b">f</subfield>
+            </datafield>
+            <datafield tag="209A" occurrence="01" fulltag="209A/01">
+               <subfield code="a">/</subfield>
+               <subfield code="f">950</subfield>
+               <subfield code="x">00</subfield>
+            </datafield>
+            <datafield tag="209B" occurrence="01" fulltag="209B/01">
+               <subfield code="a">00010</subfield>
+               <subfield code="x">05</subfield>
+            </datafield>
+            <datafield tag="247C" occurrence="01" fulltag="247C/01">
+               <subfield code="9">102598215</subfield>
+               <subfield code="8">Universität Gießen, Aufsatzkatalogisierung</subfield>
+            </datafield>
+         </item>
+      </original>
+      <instance>
+         <source>hebis</source>
+         <hrid>233254587</hrid>
+         <statusUpdatedDate>2011-03-24</statusUpdatedDate>
+         <modeOfIssuanceId>9d18a02f-5897-4c31-9106-c9abb5c7ae8b</modeOfIssuanceId>
+         <instanceTypeId>30fffe0e-e985-4144-b2e2-1e8179bdb41f</instanceTypeId>
+         <instanceFormatIds>
+            <arr>
+               <i>98f0caa9-d38e-427b-9ec4-454de81a94d7</i>
+            </arr>
+         </instanceFormatIds>
+         <identifiers>
+            <arr>
+               <i>
+                  <value>233254587</value>
+                  <identifierTypeId>PPN</identifierTypeId>
+               </i>
+               <i>
+                  <value>HEB: 233254587</value>
+                  <identifierTypeId>Identnummer der erstkatalogisierenden Institution</identifierTypeId>
+               </i>
+            </arr>
+         </identifiers>
+         <title>"1968" als Generationenkonflikt? : Eröffnungsbeitrag zur Tagung "Geschichte - Erinnerung - Ästhetik" aus Anlass des 65. Geburtstags von Dietmar Rieger / Jürgen Reulecke</title>
+         <indexTitle>1968 als Generationenkonflikt Eröffnungsbeitrag zur Tagung Geschichte Erinnerung Ästhetik aus Anlass des 65 Geburtstags von Dietmar Rieger Jürgen Reulecke</indexTitle>
+         <alternativeTitles>
+            <arr/>
+         </alternativeTitles>
+         <contributors>
+            <arr>
+               <i>
+                  <name>Reulecke, Jürgen *1940-*</name>
+                  <contributorNameTypeId>2b94c631-fca9-4892-a730-03ee529ffe2a</contributorNameTypeId>
+                  <primary>true</primary>
+               </i>
+            </arr>
+         </contributors>
+         <publication>
+            <arr/>
+         </publication>
+         <electronicAccess>
+            <arr/>
+         </electronicAccess>
+         <notes>
+            <arr>
+               <i>
+                  <note>In: Geschichte - Erinnerung - Ästhetik : [Festkolloquium zum 65. Geburtstag von Dietmar Rieger] / herausgegeben von Kirsten Dickhaut .... - Tübingen : Narr, 2010. - XXXIII, 408 Seiten, Illustrationen. - ISBN 978-3-8233-6441-2. - (2010), Seite [3]-17</note>
+                  <instanceNoteTypeId>General note</instanceNoteTypeId>
+               </i>
+            </arr>
+         </notes>
+         <languages>
+            <arr>
+               <i>ger</i>
+            </arr>
+         </languages>
+         <series>
+            <arr/>
+         </series>
+         <administrativeNotes>
+            <arr>
+               <i>Aoy (Bibliografische Gattung)</i>
+               <i>24.03.11, 23:39 (Datum der letzten Änderung)</i>
+            </arr>
+         </administrativeNotes>
+      </instance>
+   </record>
+</collection>
