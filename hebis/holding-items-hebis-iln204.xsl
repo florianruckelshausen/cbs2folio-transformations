@@ -175,11 +175,13 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ggr</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh gkt</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh he</prefix>
+            <!-- fh his inkludiert auch FH Hist -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh his</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh hsh</prefix>
             <range from="fh jur a" to="fh jur y" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh jur z</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kid</prefix>
+            <!-- fh kla inkludiert auch FH KlassPhil und FH KlassArch -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kla</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kun</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kup</prefix>
@@ -263,6 +265,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag didge</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag eden</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag germ</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag kyb</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag mat</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag nat</prefix>
