@@ -38,24 +38,29 @@
         <xsl:when test=".='ILN204/CG/UB/UBFernleihen'">f4f02b72-2886-4d94-bf95-ff7fe315ff6f</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/UBFernleihenLesesaal'">9f31103a-14dc-4aba-9ecf-bfb8175d1a63</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Erwerbungssignatur'">4f790b65-3874-49a7-8dac-46b3cbcfd6ab</xsl:when>
+        <xsl:when test=".='ILN204/CG/UB/UBKoerbe'">9797ee26-3779-4b64-8b35-0006a52c4d67</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Unbekannt'">76fb831c-500b-4e87-a5ed-f2dea37ee330</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Freihand'">f3dc06c9-9c2e-4026-a678-146d00591c38</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Mag'">0c2ef18e-2d61-459f-9f08-a7413f3b701f</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Handapparate'">116888c5-73db-4b35-b7c7-02df6d2c0fe0</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Erwerbungssignatur'">ff7db8c1-d6a8-421f-96e0-9564f93c3936</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZNL/ZNLKoerbe'">719df743-26d0-45ca-832b-cd1b960095ac</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Unbekannt'">e9a4e942-da73-4895-8c6a-5a33411b721e</xsl:when>
         <xsl:when test=".='ILN204/CG/ZP2/Freihand'">f73d8f40-77fb-4b19-b04a-df6177e717f9</xsl:when>
         <xsl:when test=".='ILN204/CG/ZP2/Handapparate'">2f74f9c5-7d1d-4beb-8a4f-d9c7f0191eb0</xsl:when>
         <xsl:when test=".='ILN204/CG/ZP2/Erwerbungssignatur'">d0e8d213-b1d0-4ce3-858a-23b8132f8e68</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZP2/ZP2Koerbe'">4df2582d-5294-4c82-8942-c7050f530927</xsl:when>
         <xsl:when test=".='ILN204/CG/ZP2/Unbekannt'">1f6e4499-9b8d-4fc1-b108-f99b5d272216</xsl:when>
         <xsl:when test=".='ILN204/CG/ZRW/Freihand'">4a8b6fce-6fa8-402e-afeb-7324cfe1a740</xsl:when>
         <xsl:when test=".='ILN204/CG/ZRW/Handapparate'">552711a4-bdbc-4d3f-a178-d82d6f7b14f9</xsl:when>
         <xsl:when test=".='ILN204/CG/ZRW/Erwerbungssignatur'">52f3c598-edba-4759-b950-fe1e4c2a3ddb</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZRW/ZRWKoerbe'">1c292a23-5e0e-4542-8106-dc44a1af680f</xsl:when>
         <xsl:when test=".='ILN204/CG/ZRW/Unbekannt'">1913d98c-0a68-411e-8dd6-f90871895590</xsl:when>
         <xsl:when test=".='ILN204/CG/ZHB/Freihand'">d5a66747-ab61-4f4e-bfc5-4e5cd880c403</xsl:when>
         <xsl:when test=".='ILN204/CG/ZHB/Magazin'">29e31115-b52d-483d-a692-3209f7f25fbe</xsl:when>
         <xsl:when test=".='ILN204/CG/ZHB/Handapparate'">4b98b8e0-734e-4208-820c-e473cf1a90c7</xsl:when>
         <xsl:when test=".='ILN204/CG/ZHB/Erwerbungssignatur'">4f2724b1-d94f-41b4-8372-52d953fceec7</xsl:when>
+        <xsl:when test=".='ILN204/CG/ZHB/ZHBKoerbe'">5ce5fa19-1506-4b4a-9e0c-2fbd2978c805</xsl:when>
         <xsl:when test=".='ILN204/CG/ZHB/Unbekannt'">62e3f6fa-b0bf-435d-afa4-f0162eae8e32</xsl:when>
         <!-- Dezentrale Fachbibliotheken -->
         <xsl:when test=".='ILN204/CG/DezFB/AAA-DaF'">e7deec44-3df6-48f0-a136-522fef85fe40</xsl:when>
