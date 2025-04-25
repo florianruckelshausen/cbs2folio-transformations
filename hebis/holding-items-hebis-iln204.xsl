@@ -795,6 +795,21 @@
     </permanentLoanTypeId>
   </xsl:template>
 
+  <xsl:template match="notes[ancestor::holdingsRecords]">
+    <notes>
+      <arr>
+        <xsl:copy-of select="arr/i"/>
+        <xsl:if test="../discoverySuppress[(substring(., 1, 1) = 'g') or (substring(., 1, 2) = 'pe')]">
+          <i>
+            <note>Diskrepanz 4850n-Selektionscode</note>
+            <holdingsNoteTypeId>Note</holdingsNoteTypeId>
+            <staffOnly>true</staffOnly>
+          </i>
+        </xsl:if>
+      </arr>
+    </notes>
+  </xsl:template>
+
   <xsl:template match="discoverySuppress">
     <!-- uses 208@$b (und/oder Kat. 247E/XY ?) -->
     <discoverySuppress>
