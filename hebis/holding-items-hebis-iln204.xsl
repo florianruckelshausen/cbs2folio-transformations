@@ -351,14 +351,7 @@
             <prefix location="ILN204/CG/ZNL/Freihand">002 all</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 bio</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 bot</prefix>
-            <range from="002 che a" to="002 che e" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fa 0.1" to="002 che fa 0.3" location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Mag">002 che fa 0.40</prefix>
-            <range from="002 che fa 0.41" to="002 che fa 0.49" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fa 0.5" to="002 che fa 0.9" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fa 1" to="002 che fa 9" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che fb" to="002 che fz" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="002 che g" to="002 che z" location="ILN204/CG/ZNL/Freihand"/>
+            <prefix location="ILN204/CG/ZNL/Freihand">002 che</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 ern</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 geo</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 ggr</prefix>
@@ -371,8 +364,7 @@
             <prefix location="ILN204/CG/ZNL/Freihand">002 umw</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 vet</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">002 zoo</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>
-            <prefix location="ILN204/CG/ZNL/Mag">140</prefix>            
+            <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>           
             <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>            
             <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/ZNL/Freihand"/>
