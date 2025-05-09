@@ -65,31 +65,31 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
             <!-- RVK: Kein range, sondern prefix wg. besserer Performance -->
             <!-- ab hier 1. OG -->
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 A</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 B</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 C</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 D</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 E</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 F</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 G</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 H</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 I</prefix>            
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 K</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 L</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 a</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 b</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 c</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 d</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 e</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 f</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 g</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 h</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 i</prefix>            
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 k</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 l</prefix>
             <!-- ab hier 2. OG -->
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 M</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 N</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 P</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 Q</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 R</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 S</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 T</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 U</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 V</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 W</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 X</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 Y</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">000 Z</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 m</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 n</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 p</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 q</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 r</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 s</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 t</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 u</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 v</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 w</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 x</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 y</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 z</prefix>
             <!-- alte ZNL-Regel. Bleibt erstmal bestehen, weil es noch ein paar Reste,
                  z.B. HAP-Exemplare gibt. -->
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
