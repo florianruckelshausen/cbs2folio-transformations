@@ -63,7 +63,35 @@
             <prefix location="ILN204/CG/UB/UBKoerbe">kopfhoerer</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">stecker nr</prefix>            
             <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 </prefix>
+            <!-- RVK: Kein range, sondern prefix wg. besserer Performance -->
+            <!-- ab hier 1. OG -->
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 A</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 B</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 C</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 D</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 E</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 F</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 G</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 H</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 I</prefix>            
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 K</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 L</prefix>
+            <!-- ab hier 2. OG -->
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 M</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 N</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 P</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 Q</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 R</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 S</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 T</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 U</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 V</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 W</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 X</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 Y</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 Z</prefix>
+            <!-- alte ZNL-Regel. Bleibt erstmal bestehen, weil es noch ein paar Reste,
+                 z.B. HAP-Exemplare gibt. -->
             <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">064</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">140 </prefix>
@@ -347,23 +375,7 @@
             <prefix location="ILN204/CG/ZNL/ZNLKoerbe">kopfhoerer</prefix>
             <prefix location="ILN204/CG/ZNL/ZNLKoerbe">stecker nr</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">/</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 agr</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 all</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 bio</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 bot</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 che</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 ern</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 geo</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 ggr</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 kyb</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 mat</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 med</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 nat</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 phy</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 tec</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 umw</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 vet</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 zoo</prefix>
+            <prefix location="ILN204/CG/ZNL/Freihand">002 </prefix>            
             <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>           
             <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>            
