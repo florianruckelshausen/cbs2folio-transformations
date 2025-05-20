@@ -72,7 +72,7 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">000 e</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 f</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 g</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 h</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">000 h</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 i</prefix>            
             <prefix location="ILN204/CG/UB/Freihand1OG">000 k</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 l</prefix>
@@ -299,6 +299,8 @@
                  da dieser Präfix auf alle mit "mag 002" beginnenden Signaturen zutrifft.
             -->
             <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
+            <!-- Ehemalige ZPII-Bestände -->
+            <prefix location="ILN204/CG/UB/UBMag3">mag 03.</prefix>
             <!-- Ehemalige FH-Bestände (altege - vsp) -->
             <prefix location="ILN204/CG/UB/UBMag3">mag altege</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag bap</prefix>
@@ -311,6 +313,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">mag og</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag philos</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag psych</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">mag rom</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag sls</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag ssl</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">mag sport</prefix>
