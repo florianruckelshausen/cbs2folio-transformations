@@ -41,7 +41,6 @@
         <xsl:when test=".='ILN204/CG/UB/UBKoerbe'">9797ee26-3779-4b64-8b35-0006a52c4d67</xsl:when>
         <xsl:when test=".='ILN204/CG/UB/Unbekannt'">76fb831c-500b-4e87-a5ed-f2dea37ee330</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Freihand'">f3dc06c9-9c2e-4026-a678-146d00591c38</xsl:when>
-        <xsl:when test=".='ILN204/CG/ZNL/Mag'">0c2ef18e-2d61-459f-9f08-a7413f3b701f</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Handapparate'">116888c5-73db-4b35-b7c7-02df6d2c0fe0</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/Erwerbungssignatur'">ff7db8c1-d6a8-421f-96e0-9564f93c3936</xsl:when>
         <xsl:when test=".='ILN204/CG/ZNL/ZNLKoerbe'">719df743-26d0-45ca-832b-cd1b960095ac</xsl:when>

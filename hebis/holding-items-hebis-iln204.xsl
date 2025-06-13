@@ -287,18 +287,8 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">lbs</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">les</prefix>
             <range from="m 0" to="m 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 agr</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 ern</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 mat</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 nat</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 phy</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 tec</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 umw</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002 zeitschriftenraum</prefix>
-            <!-- Reihenfolge beachten! "mag 002" muss hinter "mag 002 ..." stehen,
-                 da dieser Präfix auf alle mit "mag 002" beginnenden Signaturen zutrifft.
-            -->
-            <prefix location="ILN204/CG/UB/UBMagZNL">mag 002</prefix>
+            <!-- ZNL-Bestand  in Pohlheim -->
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">mag 002</prefix>
             <!-- Ehemalige ZPII-Bestände -->
             <prefix location="ILN204/CG/UB/UBMag3">mag 03.</prefix>
             <!-- Ehemalige FH-Bestände (altege - vsp) -->
@@ -390,7 +380,6 @@
             <prefix location="ILN204/CG/ZNL/Freihand">ss</prefix>
             <range from="zeitschriftenraum" to="zeitschriftenraum b"
               location="ILN204/CG/ZNL/Freihand"/>
-            <prefix location="ILN204/CG/ZNL/Mag">zeitschriftenraum chemie</prefix>
             <range from="zz 1" to="zz 20" location="ILN204/CG/ZNL/Freihand"/>
             <range from="zz 49" to="zz 99" location="ILN204/CG/ZNL/Freihand"/>
           </department>
