@@ -180,7 +180,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">bap 27</prefix>
             <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <prefix location="ILN204/CG/UB/UBMagKeller">bel</prefix>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">bel</prefix>
             <range from="bt 1/1" to="bt 9/9" location="ILN204/CG/UB/UBMag3"/>
             <range from="c 1" to="c 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="cd 1" to="cd 999999" location="ILN204/CG/UB/UBMag3"/>
@@ -990,12 +990,17 @@
         </xsl:variable>
         <xsl:variable name="signature-comparison-token">
           <xsl:choose>
+            <!-- Numerical comparison: range-from < signature-token < range-to
+              Comparison token won't be truncated to the length of of the range to token
+              e.g. B 6061 is range when range-from is B 74 and range-to is B 99999
+              but B 6061 is not in range when range-from is B 49 and range-to is B 73
+              because B 6061 is not truncated to B 60
+            -->
             <xsl:when
               test="string(number(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position])) != 'NaN'">
-              <xsl:value-of select="
-                  substring(string(number(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position])),
-                  1, string-length($range-to-comparison-token))"/>
+              <xsl:value-of select="string(number(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position]))"/>
             </xsl:when>
+            <!-- String comparison -->
             <xsl:otherwise>
               <xsl:value-of select="
                   substring(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position],
