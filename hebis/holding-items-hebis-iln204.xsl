@@ -218,7 +218,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh hsh</prefix>
             <range from="fh jur a" to="fh jur y" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh jur z</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kid</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">fh kid</prefix>
             <!-- fh kla inkludiert auch FH KlassPhil und FH KlassArch -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kla</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kun</prefix>
