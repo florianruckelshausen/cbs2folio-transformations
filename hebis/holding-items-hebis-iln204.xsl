@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2024-10-25 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-08-08 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -146,7 +146,7 @@
             <prefix location="ILN204/CG/UB/UBMagPohlheim">4o azz</prefix>
             <range from="4o b 49" to="4o b 73" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o bt 1/1" to="4o bt 9/9" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o erk 1" to="4o erk 999999" location="ILN204/CG/UB/UBMag3"/>
+            <range from="4o erk 1" to="4o erk 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">4o hass</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o kr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o kt</prefix>
@@ -219,7 +219,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh hsh</prefix>
             <range from="fh jur a" to="fh jur y" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh jur z</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh kid</prefix>
+            <prefix location="ILN204/CG/UB/Freihand1OG">fh kid</prefix>
             <!-- fh kla inkludiert auch FH KlassPhil und FH KlassArch -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kla</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kun</prefix>
