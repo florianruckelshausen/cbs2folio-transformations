@@ -155,8 +155,8 @@
             <prefix location="ILN204/CG/UB/UBMag3">4o pap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o ss</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">4o ztg</prefix>
-            <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o zz 21" to="4o zz 48" location="ILN204/CG/UB/UBMag3"/>
+            <range from="4o zz 1" to="4o zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="4o zz 20" to="4o zz 48" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="5 1" to="5 9" location="ILN204/CG/UB/UBMagKeller"/>
@@ -196,6 +196,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh all</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh altege</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ang</prefix>
+            <!-- fh ang inkludiert fh ang und fh angl -->
             <prefix location="ILN204/CG/UB/Mikroformen">fh arbeitsplatz mikroformen</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bap</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bio</prefix>
@@ -234,6 +235,7 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh pap</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh phi</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh psy</prefix>
+            <!-- fh rom inkludiert fh rom und fh romanistik -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh rom</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh sla</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh sls 20</prefix>
@@ -348,8 +350,8 @@
             <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
-            <range from="zz 1" to="zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="zz 21" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
+            <range from="zz 1" to="zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="zz 20" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
           </department>
