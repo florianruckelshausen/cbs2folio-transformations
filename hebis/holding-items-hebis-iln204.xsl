@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-09-22 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-10-09 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -163,6 +163,13 @@
             <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="5 1" to="5 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="a 1" to="a 48" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 561</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 562</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 564</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 565</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 566</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 567</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a 569</prefix>
             <range from="a 49" to="a 56" location="ILN204/CG/UB/UBMag3"/>
             <range from="a 57" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
@@ -273,10 +280,10 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">gr 2o ztg</prefix>
             <range from="gr 2o zz 1" to="gr 2o zz 20" location="ILN204/CG/UB/UBMag3"/>
             <range from="gr 2o zz 49" to="gr 2o zz 99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="h 1" to="h 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">hass</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">hr</prefix>
-            <prefix location="ILN204/CG/UB/UBSLS">hs </prefix>
+            <prefix location="ILN204/CG/UB/UBSLS">hs</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">h</prefix>
             <range from="i 0" to="i 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="i 10" to="i 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">in</prefix>
