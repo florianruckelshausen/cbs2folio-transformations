@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-10-09 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-10-15 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -133,13 +133,13 @@
             <range from="4 b 49" to="4 b 73" location="ILN204/CG/UB/UBMag3"/>
             <prefix location="ILN204/CG/UB/UBMag3">4 ss</prefix>
             <range from="4/1" to="4/99999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="40.000.00" to="44.999.99" location="ILN204/CG/UB/UBMagKeller"/>
+            <range from="40.000.00" to="44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="47.000.00" to="47.999.99" location="ILN204/CG/UB/Freihand2OG"/>
             <range from="49.000.00" to="49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 1/1" to="4o 1/99999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 2/1" to="4o 2/99999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 20.000.00" to="4o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o 40.000.00" to="4o 44.999.99" location="ILN204/CG/UB/UBMagKeller"/>
+            <range from="4o 40.000.00" to="4o 44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 3/1" to="4o 3/99999" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="4o 4/1" to="4o 4/99999" location="ILN204/CG/UB/UBMagKeller"/>
