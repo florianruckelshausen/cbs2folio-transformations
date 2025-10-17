@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-10-15 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-10-17 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -163,15 +163,15 @@
             <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="5 1" to="5 9" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="a 1" to="a 48" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 561</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 562</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 564</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 565</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 566</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 567</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">a 569</prefix>
-            <range from="a 49" to="a 56" location="ILN204/CG/UB/UBMag3"/>
-            <range from="a 57" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMag3">a 49/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 50/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 51/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 52/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 53/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 54/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 55/</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">a 56/</prefix>
+            <range from="a 49" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>            
