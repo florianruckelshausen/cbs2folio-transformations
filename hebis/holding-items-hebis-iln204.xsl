@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-10-17 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-10-29 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -49,9 +49,6 @@
       <xsl:variable name="ranges-list">
         <ranges>
           <department code="000" default-location="ILN204/CG/UB/Unbekannt">
-            <!-- The first range is a dummy range. It has to be set but won't
-              be checked -->
-            <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">ausgesondert</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">bestellt</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">erscheint nicht</prefix>
@@ -94,65 +91,69 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">000 z</prefix>
             <!-- alte ZNL-Regel. Bleibt erstmal bestehen, weil es noch ein paar Reste,
                  z.B. HAP-Exemplare gibt. -->
-            <prefix location="ILN204/CG/UB/Freihand2OG">002 </prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">002</prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">064</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">140 </prefix>
-            <range from="1 1" to="1 9" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">140</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">1/</prefix>
             <range from="1600" to="1899" location="ILN204/CG/UB/UBSLS"/>
             <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="2 1" to="2 9" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">2/</prefix>
             <range from="20.000.00" to="24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="27.000.00" to="27.999.99" location="ILN204/CG/UB/Freihand2OG"/>
-            <range from="2o 1 1" to="2o 1 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 2 1" to="2o 2 9" location="ILN204/CG/UB/UBMagKeller"/>
+            <range from="27.000.00" to="27.999.99" location="ILN204/CG/UB/Freihand2OG"/>            
+            <prefix location="ILN204/CG/UB/UBMagKeller">2o 1/</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">2o 2/</prefix>
             <range from="2o 20.000.00" to="2o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o 3 1" to="2o 3 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 4 1" to="2o 4 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="2o 4/1" to="2o 4/99999" location="ILN204/CG/UB/UBMagKeller"/>
+            <!-- 2o 3/ aktuell nicht belegt
+            <prefix location="ILN204/CG/UB/UBMagKeller">2o 3/</prefix>  -->
+            <prefix location="ILN204/CG/UB/UBMagKeller">2o 4/</prefix>
             <range from="2o 40.000.00" to="2o 44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="2o a 49" to="2o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o b 49" to="2o b 73" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o bt 1/1" to="2o bt 9/99999" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o bt 1" to="2o bt 9" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o erk 1" to="2o erk 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMag3">2o a</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">2o bt</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">2o b</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">2o erk</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">2o hass</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">2o kt a</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">2o kt b</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">2o kt-a</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">2o kt-b</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">2o landesk</prefix>
-            <range from="2o ma" to="2o mz" location="ILN204/CG/UB/UBMag3"/>
+            <!-- 2o ma - 2o mz aktuell nicht belegt
+            <range from="2o ma" to="2o mz" location="ILN204/CG/UB/UBMag3"/> -->
             <prefix location="ILN204/CG/UB/UBMag3">2o ss</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">2o ztg</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">2o zz</prefix>
             <range from="2o zz 1" to="2o zz 48" location="ILN204/CG/UB/UBMag3"/>
             <range from="2o zz 49" to="2o zz 99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="3/1" to="3/99999" location="ILN204/CG/UB/UBMagKeller"/>
+            <!-- 2o 3/ aktuell nicht belegt
+            <prefix location="ILN204/CG/UB/UBMagKeller">3/</prefix> -->
             <!--32er Signaturen waren nicht in LBS-Konkordanz, lt.- Homepage in Zweigbibl. Phil. 1 -->
             <prefix location="ILN204/CG/UB/UBMagPhil1">32</prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">350</prefix>
-            <range from="4 b 49" to="4 b 73" location="ILN204/CG/UB/UBMag3"/>
+            <!-- 4 b 49 - 4 b 73 aktuell nicht belegt
+            <range from="4 b 49" to="4 b 73" location="ILN204/CG/UB/UBMag3"/> -->
             <prefix location="ILN204/CG/UB/UBMag3">4 ss</prefix>
-            <range from="4/1" to="4/99999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">4/</prefix>
             <range from="40.000.00" to="44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="47.000.00" to="47.999.99" location="ILN204/CG/UB/Freihand2OG"/>
             <range from="49.000.00" to="49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 1/1" to="4o 1/99999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 2/1" to="4o 2/99999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o 1/</prefix>            
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o 2/</prefix>
             <range from="4o 20.000.00" to="4o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o 3/</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o 4/</prefix>            
             <range from="4o 40.000.00" to="4o 44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 3/1" to="4o 3/99999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o 4/1" to="4o 4/99999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o a 49" to="4o a 56" location="ILN204/CG/UB/UBMag3"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">4o azz</prefix>
-            <range from="4o b 49" to="4o b 73" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o bt 1/1" to="4o bt 9/99999" location="ILN204/CG/UB/UBMag3"/>
-            <range from="4o erk 1" to="4o erk 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMag3">4o a</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">4o bt</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">4o b</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o erk</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o hass</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o kr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o kt</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o landesk</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">4o mus</prefix>
+            <!-- 4o ma - 4o mz aktuell nicht belegt -->
             <range from="4o ma" to="4o mz" location="ILN204/CG/UB/UBMag3"/>
             <prefix location="ILN204/CG/UB/UBMag3">4o pap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">4o ss</prefix>
@@ -161,8 +162,7 @@
             <range from="4o zz 20" to="4o zz 48" location="ILN204/CG/UB/UBMag3"/>
             <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="4o zz 66" to="4o zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="5 1" to="5 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="a 1" to="a 48" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">5/</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">a 49/</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">a 50/</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">a 51/</prefix>
@@ -171,7 +171,6 @@
             <prefix location="ILN204/CG/UB/UBMag3">a 54/</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">a 55/</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">a 56/</prefix>
-            <range from="a 49" to="a 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>            
@@ -181,6 +180,7 @@
             <prefix location="ILN204/CG/UB/UBMagPohlheim">ap</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">aro</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">azz</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">a</prefix>
             <range from="b 1" to="b 48" location="ILN204/CG/UB/UBMagKeller"/>
             <range from="b 49" to="b 73" location="ILN204/CG/UB/UBMag3"/>
             <range from="b 74" to="b 999999" location="ILN204/CG/UB/UBMagKeller"/>
@@ -356,13 +356,13 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">x </prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">x</prefix>
             <range from="y 1" to="y 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
             <range from="zz 1" to="zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 20" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
+            <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
           </department>
           <department code="002" default-location="ILN204/CG/ZNL/Unbekannt">
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">ausgesondert</prefix>
@@ -1013,9 +1013,7 @@
             </xsl:when>
             <!-- String comparison -->
             <xsl:otherwise>
-              <xsl:value-of select="
-                  substring(exsl:node-set($signature-tokens)/item[position() = $comparison-token-position],
-                  1, string-length($range-to-comparison-token))"/>
+              <xsl:value-of select="exsl:node-set($signature-tokens)/item[position() = $comparison-token-position]"/>
             </xsl:otherwise>
           </xsl:choose>
 
@@ -1040,8 +1038,15 @@
             </xsl:choose>
           </xsl:when>
           <xsl:otherwise>
+            <!-- String comparison if the tokens can't be converted to a number.
+                 Tokens are truncated to the minimum string length of either from or to comparison token.
+              -->
             <xsl:call-template name="check-range">
-              <xsl:with-param name="signature-short-lowercase" select="$signature-comparison-token"/>
+              <xsl:with-param name="signature-short-lowercase" select="substring($signature-comparison-token, 1, 
+                                                                        min((string-length($range-from-comparison-token),
+                                                                           string-length($range-to-comparison-token))
+                                                                          )
+                                                                       )"/>
               <xsl:with-param name="range-start" select="substring($range-from-comparison-token, 1, 
                                                            min((string-length($range-from-comparison-token),
                                                                string-length($range-to-comparison-token))
