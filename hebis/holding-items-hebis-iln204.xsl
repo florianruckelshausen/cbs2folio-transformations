@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-10-29 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-11-10 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -55,8 +55,18 @@
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">in bearbeitung</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht lieferbar</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">restituiert</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">tausch</prefix>
+            <!-- "Titel erscheint nicht", "Titel wird nicht erscheinen" etc. -->
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">titel</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">umarbeitung</prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vermisst</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">völlig vergriffen</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vorauszahlung</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">wird nicht erscheinen</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">zurück</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">ipod</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">kopfhoerer</prefix>
@@ -190,16 +200,15 @@
             <range from="bap 28" to="bap 99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="bap a" to="bap z" location="ILN204/CG/UB/UBMagPohlheim"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">bel</prefix>
-            <range from="bt 1/1" to="bt 9/99999" location="ILN204/CG/UB/UBMag3"/>
-            <range from="c 1" to="c 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="cd 1" to="cd 999999" location="ILN204/CG/UB/UBMag3"/>
-            <range from="d 0" to="d 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="da 0" to="da 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="e 0" to="e 9" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="e 10" to="e 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMag3">bt</prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">cd</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">c</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">depositum</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">da</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">d</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">einzelsig</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">erk</prefix>
-            <range from="f 1" to="f 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">e</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">fd</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh agr</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh all</prefix>
@@ -265,6 +274,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">fk</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fp</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">frsla</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">f</prefix>
             <range from="g 1" to="g 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMag3">gb</prefix>
             <prefix location="ILN204/CG/UB/UBMagPhil1">gdm</prefix>
@@ -332,37 +342,37 @@
             <prefix location="ILN204/CG/UB/UBMag3">nr</prefix>
             <range from="o 1" to="o 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/OSR">osr</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">p </prefix>
+            <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>            
             <prefix location="ILN204/CG/UB/UBSLS">pap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">pl</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">progr</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">p</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">q</prefix>
-            <range from="r 0" to="r 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBSLS">rara</prefix>
-            <range from="s 1" to="s 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">r</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">sap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">sch</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ss</prefix>
-            <range from="t 1" to="t 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">s</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">thaer</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">theo</prefix>
-            <range from="u 1" to="u 999999" location="ILN204/CG/UB/UBMagKeller"/>
-            <range from="v 1" to="v 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">t</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">u</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vorl</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">vuf</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">vv</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">v</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">w</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">x </prefix>
             <prefix location="ILN204/CG/UB/Erwerbungssignatur">x</prefix>
-            <range from="y 1" to="y 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <prefix location="ILN204/CG/UB/UBMagKeller">y</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
+            <prefix location="ILN204/CG/UB/UBMagKeller">z</prefix>
             <range from="zz 1" to="zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 20" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="z 1" to="z 999999" location="ILN204/CG/UB/UBMagKeller"/>
+            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>            
           </department>
           <department code="002" default-location="ILN204/CG/ZNL/Unbekannt">
             <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">ausgesondert</prefix>
