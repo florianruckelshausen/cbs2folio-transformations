@@ -203,7 +203,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">bt</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">cd</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">c</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">depositum</prefix>
+            <prefix location="ILN204/CG/UB/UBSLS">depositum</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">da</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">d</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">einzelsig</prefix>
