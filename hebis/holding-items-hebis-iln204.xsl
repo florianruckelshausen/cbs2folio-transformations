@@ -708,7 +708,8 @@
             <xsl:when test="$abt = '009'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>
             <xsl:when test="$abt = '010'">ILN204/CG/ZRW/Erwerbungssignatur</xsl:when>
             <xsl:when test="$abt = '020'">ILN204/CG/ZRW/Erwerbungssignatur</xsl:when>
-            <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>            
+            <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>
+            <xsl:otherwise>ILN204/CG/UB/Erwerbungssignatur</xsl:otherwise>
           </xsl:choose>
         </xsl:when>        
         <xsl:when test="$hap">
