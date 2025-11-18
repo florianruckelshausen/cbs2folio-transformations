@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-11-10 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-11-18 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -534,6 +534,20 @@
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">kopfhoerer</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">stecker nr</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">14</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">22</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">23</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">61</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">65</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">k</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">mag</prefix>
           </department>
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
           <department code="020" default-location="ILN204/CG/ZRW/Freihand">
@@ -546,6 +560,17 @@
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">x</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">an</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">a</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">b</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">c</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">d</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">einzelsignaturen</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">e</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">f</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">g</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">h</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">mag</prefix>
           </department>
           <department code="021" default-location="ILN204/CG/DezFB/WiWi-BWL01">
             <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL01"/>
