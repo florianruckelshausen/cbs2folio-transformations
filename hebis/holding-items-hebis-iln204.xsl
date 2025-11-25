@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-11-18 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-11-25 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -368,7 +368,8 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">y</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">z</prefix>
+            <!-- Spatium nach 'z' erforderlich, damit 'zz'-Signaturen nicht von dieser Regel erfasst werden --> 
+            <prefix location="ILN204/CG/UB/UBMagKeller">z </prefix>
             <range from="zz 1" to="zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 20" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
