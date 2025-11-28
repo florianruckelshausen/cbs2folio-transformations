@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-11-25 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-11-28 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -235,8 +235,7 @@
             <!-- fh his inkludiert auch FH Hist -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh his</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh hsh</prefix>
-            <range from="fh jur a" to="fh jur y" location="ILN204/CG/UB/Freihand2OG"/>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh jur z</prefix>
+            <prefix location="ILN204/CG/UB/Freihand2OG">fh jur</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">fh kid</prefix>
             <!-- fh kla inkludiert auch FH KlassPhil und FH KlassArch -->
             <prefix location="ILN204/CG/UB/Freihand2OG">fh kla</prefix>
