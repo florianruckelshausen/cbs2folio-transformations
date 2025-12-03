@@ -71,7 +71,7 @@
             <prefix location="ILN204/CG/UB/UBKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">kopfhoerer</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">stecker nr</prefix>            
-            <prefix location="ILN204/CG/UB/Freihand1OG">/</prefix>
+            <prefix location="ILN204/CG/UB/Erwerbungssignatur">/</prefix>
             <!-- RVK: Kein range, sondern prefix wg. besserer Performance -->
             <!-- ab hier 1. OG -->
             <prefix location="ILN204/CG/UB/Freihand1OG">000 a</prefix>
