@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-12-03 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-12-09 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -537,6 +537,7 @@
             <prefix location="ILN204/CG/ZRW/Magazin">14</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">22</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">23</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">32 p</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">32</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">45</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
