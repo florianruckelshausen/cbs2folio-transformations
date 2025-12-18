@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-12-09 (YYYY-MM-DD) -->
+<!-- date of last edit: 2025-12-18 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -534,19 +534,52 @@
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">kopfhoerer</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">stecker nr</prefix>
+            <!-- Nur zur Info: Da Freihand default ist, nicht aktiv. -->
+            <!-- <prefix location="ILN204/CG/ZRW/Freihand">11</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">12</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">13</prefix> -->
             <prefix location="ILN204/CG/ZRW/Magazin">14</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">22</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">23</prefix>
-            <prefix location="ILN204/CG/ZRW/Freihand">32 p</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">32</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">45</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">23</prefix>            
+            <prefix location="ILN204/CG/ZRW/Magazin">32 a</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 b</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 d</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 e</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 g</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 h</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 j</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 k</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">32 n</prefix>
+            <!-- Nur zur Info, da Freihand default ist nicht aktiv. -->
+            <!-- 32 impliziert auch 32a (ohne Spatium hinter 32, Steuerliteratur) -->
+            <!-- <prefix location="ILN204/CG/ZRW/Freihand">32</prefix> -->
+            <!-- Nur zur Info: 45 Ka - Qg stehen Freihand, hier greift default -->
+            <prefix location="ILN204/CG/ZRW/Magazin">45 c</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 d</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 e</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 f</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 g</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 h</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 i</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">45 j</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">61</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">65</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">66</prefix>
+            <!-- Nur zur Info: 66 A - 66 J stehen Freihand, hier greift default -->
+            <prefix location="ILN204/CG/ZRW/Magazin">65 a</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">65 b</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">65 c</prefix>
+            <!-- 65/-Signaturen stehen aktuell im BIK 020, hier nur zur Vorbereitung -->
+            <prefix location="ILN204/CG/ZRW/Magazin">65/</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 k</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 l</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 m</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 n</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 p</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 q</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">66 r</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">k</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">mag</prefix>
           </department>
@@ -561,6 +594,13 @@
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
             <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">x</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">61</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">65/</prefix>
+            
             <prefix location="ILN204/CG/ZRW/Freihand">an</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">a</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">b</prefix>
@@ -569,8 +609,9 @@
             <prefix location="ILN204/CG/ZRW/Freihand">einzelsignaturen</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">e</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">f</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">g</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">g</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">h</prefix>
+            <prefix location="ILN204/CG/ZRW/Freihand">n</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">mag</prefix>
           </department>
           <department code="021" default-location="ILN204/CG/DezFB/WiWi-BWL01">
