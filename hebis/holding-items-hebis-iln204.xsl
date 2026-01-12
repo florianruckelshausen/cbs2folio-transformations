@@ -131,9 +131,7 @@
             <range from="2o ma" to="2o mz" location="ILN204/CG/UB/UBMag3"/> -->
             <prefix location="ILN204/CG/UB/UBMag3">2o ss</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">2o ztg</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">2o zz</prefix>
-            <range from="2o zz 1" to="2o zz 48" location="ILN204/CG/UB/UBMag3"/>
-            <range from="2o zz 49" to="2o zz 99" location="ILN204/CG/UB/UBMag3"/>
+            <prefix location="ILN204/CG/UB/UBMag3">2o zz</prefix>            
             <!-- 2o 3/ aktuell nicht belegt
             <prefix location="ILN204/CG/UB/UBMagKeller">3/</prefix> -->
             <!--32er Signaturen waren nicht in LBS-Konkordanz, lt.- Homepage in Zweigbibl. Phil. 1 -->
@@ -287,8 +285,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">gr 2o kt</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">gr 2o ss</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">gr 2o ztg</prefix>
-            <range from="gr 2o zz 1" to="gr 2o zz 20" location="ILN204/CG/UB/UBMag3"/>
-            <range from="gr 2o zz 49" to="gr 2o zz 99" location="ILN204/CG/UB/UBMag3"/>
+            <prefix location="ILN204/CG/UB/UBMag3">gr 2o zz</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">hass</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">hr</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">hs</prefix>
@@ -370,7 +367,7 @@
             <!-- Spatium nach 'z' erforderlich, damit 'zz'-Signaturen nicht von dieser Regel erfasst werden --> 
             <prefix location="ILN204/CG/UB/UBMagKeller">z </prefix>
             <range from="zz 1" to="zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="zz 20" to="zz 30" location="ILN204/CG/UB/UBMag3"/>
+            <range from="zz 20" to="zz 48" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>            
           </department>
