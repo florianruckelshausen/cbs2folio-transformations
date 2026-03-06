@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2025-12-18 (YYYY-MM-DD) -->
+<!-- date of last edit: 2026-02-06 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -560,7 +560,9 @@
             <prefix location="ILN204/CG/ZRW/Magazin">45 i</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">45 j</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
+            <!-- 61-Signaturen Jura steht im 1. OG
             <prefix location="ILN204/CG/ZRW/Magazin">61</prefix>
+            -->
             <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
@@ -578,7 +580,9 @@
             <prefix location="ILN204/CG/ZRW/Magazin">66 q</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">66 r</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">k</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">mag</prefix>
+            <!-- m inkludiert mag. Es gibt noch zwei Bände mit Mf-Signaturen, die aktuell in haps stehen -->            
+            <prefix location="ILN204/CG/ZRW/Magazin">m</prefix>
+            <prefix location="ILN204/CG/ZRW/Magazin">010 zug</prefix>
           </department>
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
           <department code="020" default-location="ILN204/CG/ZRW/Freihand">
@@ -596,8 +600,7 @@
             <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">65/</prefix>
-            
+            <prefix location="ILN204/CG/ZRW/Magazin">65/</prefix>            
             <prefix location="ILN204/CG/ZRW/Freihand">an</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">a</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">b</prefix>
