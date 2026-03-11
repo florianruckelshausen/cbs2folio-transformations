@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2026-03-06 (YYYY-MM-DD) -->
+<!-- date of last edit: 2026-03-11 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -504,11 +504,13 @@
             <prefix location="ILN204/CG/ZRW/Magazin">45 i</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">45 j</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
-            <!-- 61-Signaturen Jura steht im 1. OG
+            <!-- 61-Signaturen Jura stehen im 1. OG
             <prefix location="ILN204/CG/ZRW/Magazin">61</prefix>
             -->
             <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
+            <!-- 63-Signaturen Jura steht im 1. OG
             <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
+            -->
             <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
             <!-- Nur zur Info: 66 A - 66 J stehen Freihand, hier greift default -->
             <prefix location="ILN204/CG/ZRW/Magazin">65 a</prefix>
