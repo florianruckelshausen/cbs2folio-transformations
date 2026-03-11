@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- date of last edit: 2026-02-06 (YYYY-MM-DD) -->
+<!-- date of last edit: 2026-03-06 (YYYY-MM-DD) -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:exsl="http://exslt.org/common" version="1.1" exclude-result-prefixes="exsl">
@@ -26,52 +26,33 @@
     <xsl:variable name="signature-lowercase" select="
       translate($signature,
       'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-      'abcdefghijklmnopqrstuvwxyz')"/>    
+      'abcdefghijklmnopqrstuvwxyz')"/>
     <xsl:variable name="book-code"
       select="$i/datafield[@tag = '209G' and subfield[@code = 'x'] = '00']/subfield[@code = 'a']/text()"/>
     <xsl:variable name="loan-type"
       select="$i/datafield[@tag = '209A' and subfield[@code = 'x'] = '00']/subfield[@code = 'd']/text()"/>
-    <!-- Boolean variables -->    
-    <xsl:variable name="hap" 
+    <!-- Boolean variables -->
+    <xsl:variable name="hap"
       select="substring($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(),1,3) = 'hap'"/>
     <xsl:variable name="local-order" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,2) = 'La')"/>
     <xsl:variable name="microform"
       select="contains($i/datafield[@tag = '209G' and subfield[@code = 'x'] = '01']/subfield[@code = 'a']/text(), 'Mikroformen')"/>
     <xsl:variable name="dummy" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'd') or
                                        (substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'c')"/>
-    <xsl:variable name="dummy-do" select="($i/datafield[@tag='208@']/subfield[@code='b'] = 'do')"/>    
-    <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>  
+    <xsl:variable name="dummy-do" select="($i/datafield[@tag='208@']/subfield[@code='b'] = 'do')"/>
+    <xsl:variable name="article-in-volume" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],2,1) = 'o')"/>
     <xsl:variable name="electronicholding" select="(substring($i/../datafield[@tag='002@']/subfield[@code='0'],1,1) = 'O') and not(substring($i/datafield[@tag='208@']/subfield[@code='b'],1,1) = 'a')"/>
-    <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and 
+    <xsl:variable name="interlibrary-loan" select="($i/../datafield[@tag='002@']/subfield[@code='0'] = 'Luf') and
                                                     substring($signature,1,2) = 'FL' "/>
-    
+
     <permanentLocationId>
       <xsl:variable name="ranges-list">
         <ranges>
           <department code="000" default-location="ILN204/CG/UB/Unbekannt">
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">in bearbeitung</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">restituiert</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">tausch</prefix>
-            <!-- "Titel erscheint nicht", "Titel wird nicht erscheinen" etc. -->
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">titel</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">umarbeitung</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vermisst</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">völlig vergriffen</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">vorauszahlung</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">wird nicht erscheinen</prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">zurück</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">ipod</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/UB/UBKoerbe">kopfhoerer</prefix>
-            <prefix location="ILN204/CG/UB/UBKoerbe">stecker nr</prefix>            
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">/</prefix>
+            <prefix location="ILN204/CG/UB/UBKoerbe">stecker nr</prefix>
             <!-- RVK: Kein range, sondern prefix wg. besserer Performance -->
             <!-- ab hier 1. OG -->
             <prefix location="ILN204/CG/UB/Freihand1OG">000 a</prefix>
@@ -82,7 +63,7 @@
             <prefix location="ILN204/CG/UB/Freihand1OG">000 f</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 g</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">000 h</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">000 i</prefix>            
+            <prefix location="ILN204/CG/UB/Freihand1OG">000 i</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 k</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">000 l</prefix>
             <!-- ab hier 2. OG -->
@@ -109,7 +90,7 @@
             <range from="1900" to="1990" location="ILN204/CG/UB/UBMagPohlheim"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">2/</prefix>
             <range from="20.000.00" to="24.999.99" location="ILN204/CG/UB/UBMag3"/>
-            <range from="27.000.00" to="27.999.99" location="ILN204/CG/UB/Freihand2OG"/>            
+            <range from="27.000.00" to="27.999.99" location="ILN204/CG/UB/Freihand2OG"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">2o 1/</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">2o 2/</prefix>
             <range from="2o 20.000.00" to="2o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
@@ -131,7 +112,7 @@
             <range from="2o ma" to="2o mz" location="ILN204/CG/UB/UBMag3"/> -->
             <prefix location="ILN204/CG/UB/UBMag3">2o ss</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">2o ztg</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">2o zz</prefix>            
+            <prefix location="ILN204/CG/UB/UBMag3">2o zz</prefix>
             <!-- 2o 3/ aktuell nicht belegt
             <prefix location="ILN204/CG/UB/UBMagKeller">3/</prefix> -->
             <!--32er Signaturen waren nicht in LBS-Konkordanz, lt.- Homepage in Zweigbibl. Phil. 1 -->
@@ -144,11 +125,11 @@
             <range from="40.000.00" to="44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="47.000.00" to="47.999.99" location="ILN204/CG/UB/Freihand2OG"/>
             <range from="49.000.00" to="49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
-            <prefix location="ILN204/CG/UB/UBMagKeller">4o 1/</prefix>            
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o 1/</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">4o 2/</prefix>
             <range from="4o 20.000.00" to="4o 24.999.99" location="ILN204/CG/UB/UBMag3"/>
             <prefix location="ILN204/CG/UB/UBMagKeller">4o 3/</prefix>
-            <prefix location="ILN204/CG/UB/UBMagKeller">4o 4/</prefix>            
+            <prefix location="ILN204/CG/UB/UBMagKeller">4o 4/</prefix>
             <range from="4o 40.000.00" to="4o 44.999.99" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="4o 49.000.00" to="4o 49.999.99" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">4o azz</prefix>
@@ -181,7 +162,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">a 56/</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">abw</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">adk</prefix>
-            <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>            
+            <prefix location="ILN204/CG/UB/UBMagPohlheim">ags</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">al</prefix>
             <prefix location="ILN204/CG/UB/UBMagPohlheim">amag</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">an</prefix>
@@ -220,12 +201,12 @@
             <prefix location="ILN204/CG/UB/Freihand2OG">fh bot</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh che</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh didge</prefix>
-            <prefix location="ILN204/CG/UB/Freihand1OG">fh einzelsig</prefix>            
+            <prefix location="ILN204/CG/UB/Freihand1OG">fh einzelsig</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ern</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh fil</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh geo</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh germ</prefix>
-            <prefix location="ILN204/CG/UB/Freihand2OG">fh ger</prefix>            
+            <prefix location="ILN204/CG/UB/Freihand2OG">fh ger</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh ggr</prefix>
             <prefix location="ILN204/CG/UB/Freihand2OG">fh gkt</prefix>
             <prefix location="ILN204/CG/UB/Freihand1OG">fh grünland</prefix>
@@ -338,7 +319,7 @@
             <prefix location="ILN204/CG/UB/UBMag3">nr</prefix>
             <range from="o 1" to="o 999999" location="ILN204/CG/UB/UBMagKeller"/>
             <prefix location="ILN204/CG/UB/OSR">osr</prefix>
-            <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>            
+            <prefix location="ILN204/CG/UB/UBMag3">ott</prefix>
             <prefix location="ILN204/CG/UB/UBSLS">pap</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">pl</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">progr</prefix>
@@ -360,36 +341,26 @@
             <prefix location="ILN204/CG/UB/UBMagKeller">v</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">w</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">x </prefix>
-            <prefix location="ILN204/CG/UB/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/UB/UBMagKeller">y</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">z nr</prefix>
             <prefix location="ILN204/CG/UB/UBMag3">ztg</prefix>
-            <!-- Spatium nach 'z' erforderlich, damit 'zz'-Signaturen nicht von dieser Regel erfasst werden --> 
+            <!-- Spatium nach 'z' erforderlich, damit 'zz'-Signaturen nicht von dieser Regel erfasst werden -->
             <prefix location="ILN204/CG/UB/UBMagKeller">z </prefix>
             <range from="zz 1" to="zz 19" location="ILN204/CG/UB/UBMagPohlheim"/>
             <range from="zz 20" to="zz 48" location="ILN204/CG/UB/UBMag3"/>
             <range from="zz 49" to="zz 65" location="ILN204/CG/UB/UBMagPohlheim"/>
-            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>            
+            <range from="zz 66" to="zz 99" location="ILN204/CG/UB/UBMagPohlheim"/>
           </department>
           <department code="002" default-location="ILN204/CG/ZNL/Unbekannt">
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">in bearbeitung</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/ZNL/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZNL/ZNLKoerbe">ipod</prefix>
             <prefix location="ILN204/CG/ZNL/ZNLKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/ZNL/ZNLKoerbe">kopfhoerer</prefix>
             <prefix location="ILN204/CG/ZNL/ZNLKoerbe">stecker nr</prefix>
             <prefix location="ILN204/CG/ZNL/Freihand">/</prefix>
-            <prefix location="ILN204/CG/ZNL/Freihand">002 </prefix>            
-            <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>           
+            <prefix location="ILN204/CG/ZNL/Freihand">002 </prefix>
+            <prefix location="ILN204/CG/ZNL/Freihand">130</prefix>
             <range from="4o 20.000.00" to="4o 21.999.99" location="ILN204/CG/ZNL/Freihand"/>
-            <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>            
+            <range from="4o 22.000.00" to="4o 22.999.99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 1" to="4o zz 20" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 49" to="4o zz 99" location="ILN204/CG/ZNL/Freihand"/>
             <range from="4o zz 49" to="4o zz 65" location="ILN204/CG/ZNL/Freihand"/>
@@ -402,15 +373,6 @@
             <range from="zz 49" to="zz 99" location="ILN204/CG/ZNL/Freihand"/>
           </department>
           <department code="005" default-location="ILN204/CG/ZHB/Unbekannt">
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">in bearbeitung</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/ZHB/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZHB/ZHBKoerbe">ipod</prefix>
             <prefix location="ILN204/CG/ZHB/ZHBKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/ZHB/ZHBKoerbe">kopfhoerer</prefix>
@@ -421,19 +383,10 @@
             <prefix location="ILN204/CG/ZHB/Freihand">wand</prefix>
           </department>
           <department code="009" default-location="ILN204/CG/ZP2/Unbekannt">
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">in bearbeitung</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZP2/ZP2Koerbe">ipod</prefix>
             <prefix location="ILN204/CG/ZP2/ZP2Koerbe">korb nr</prefix>
             <prefix location="ILN204/CG/ZP2/ZP2Koerbe">kopfhoerer</prefix>
-            <prefix location="ILN204/CG/ZP2/ZP2Koerbe">stecker nr</prefix>            
+            <prefix location="ILN204/CG/ZP2/ZP2Koerbe">stecker nr</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">040</prefix>
             <range from="009 aa" to="009 az" location="ILN204/CG/ZP2/Freihand"/>
@@ -518,15 +471,6 @@
             <prefix location="ILN204/CG/ZP2/Freihand">zeit</prefix>
           </department>
           <department code="010" default-location="ILN204/CG/ZRW/Freihand">
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">in bearbeitung</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">ipod</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">korb nr</prefix>
             <prefix location="ILN204/CG/ZRW/ZRWKoerbe">kopfhoerer</prefix>
@@ -537,7 +481,7 @@
             <prefix location="ILN204/CG/ZRW/Freihand">13</prefix> -->
             <prefix location="ILN204/CG/ZRW/Magazin">14</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">22</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">23</prefix>            
+            <prefix location="ILN204/CG/ZRW/Magazin">23</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">32 a</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">32 b</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">32 d</prefix>
@@ -580,27 +524,18 @@
             <prefix location="ILN204/CG/ZRW/Magazin">66 q</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">66 r</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">k</prefix>
-            <!-- m inkludiert mag. Es gibt noch zwei Bände mit Mf-Signaturen, die aktuell in haps stehen -->            
+            <!-- m inkludiert mag. Es gibt noch zwei Bände mit Mf-Signaturen, die aktuell in haps stehen -->
             <prefix location="ILN204/CG/ZRW/Magazin">m</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">010 zug</prefix>
           </department>
           <department code="015" default-location="ILN204/CG/DezFB/EDZ"/>
           <department code="020" default-location="ILN204/CG/ZRW/Freihand">
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">in bearbeitung</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/ZRW/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">60</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">61</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">62</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">63</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">64</prefix>
-            <prefix location="ILN204/CG/ZRW/Magazin">65/</prefix>            
+            <prefix location="ILN204/CG/ZRW/Magazin">65/</prefix>
             <prefix location="ILN204/CG/ZRW/Freihand">an</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">a</prefix>
             <prefix location="ILN204/CG/ZRW/Magazin">b</prefix>
@@ -639,14 +574,6 @@
             <range from="/" to="z" location="ILN204/CG/DezFB/WiWi-BWL08"/>
           </department>
           <department code="030" default-location="ILN204/CG/ZP2/Freihand">
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">ausgesondert</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">bestellt</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">erscheint nicht</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht lieferbar</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">nicht mehr lieferbar</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">storniert</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">vergriffen</prefix>
-            <prefix location="ILN204/CG/ZP2/Erwerbungssignatur">x</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">/</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">009</prefix>
             <prefix location="ILN204/CG/ZP2/Freihand">03.</prefix>
@@ -756,7 +683,7 @@
           <department code="950" default-location="ILN204/CG/Aufsatz/Aufsatzkatalogisate"/>
           <department code="992" default-location="ILN204/E/E/Onlinemedien"/>
           <department code="993" default-location="ILN204/E/E/Onlinemedien"/>
-          <department code="994" default-location="ILN204/E/E/Onlinemedien"/>          
+          <department code="994" default-location="ILN204/E/E/Onlinemedien"/>
         </ranges>
       </xsl:variable>
 
@@ -769,7 +696,7 @@
         <xsl:when test="$loan-type = 'a'">
           <xsl:choose>
             <xsl:when test="$abt = '000'">ILN204/CG/UB/Erwerbungssignatur</xsl:when>
-            <xsl:when test="$abt = '002'">ILN204/CG/ZNL/Erwerbungssignatur</xsl:when>            
+            <xsl:when test="$abt = '002'">ILN204/CG/ZNL/Erwerbungssignatur</xsl:when>
             <xsl:when test="$abt = '005'">ILN204/CG/ZHB/Erwerbungssignatur</xsl:when>
             <xsl:when test="$abt = '055'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>
             <xsl:when test="$abt = '009'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>
@@ -778,7 +705,7 @@
             <xsl:when test="$abt = '030'">ILN204/CG/ZP2/Erwerbungssignatur</xsl:when>
             <xsl:otherwise>ILN204/CG/UB/Erwerbungssignatur</xsl:otherwise>
           </xsl:choose>
-        </xsl:when>        
+        </xsl:when>
         <xsl:when test="$hap">
           <xsl:choose>
             <xsl:when test="$abt = '000'">ILN204/CG/UB/Handapparate</xsl:when>
@@ -817,7 +744,7 @@
           <xsl:choose>
             <xsl:when test="$loan-type = 'u'">ILN204/CG/UB/UBFernleihen</xsl:when>
             <xsl:when test="$loan-type = 'd'">ILN204/CG/UB/UBFernleihen</xsl:when>
-            <xsl:when test="$loan-type = 'i'">ILN204/CG/UB/UBFernleihenLesesaal</xsl:when>          
+            <xsl:when test="$loan-type = 'i'">ILN204/CG/UB/UBFernleihenLesesaal</xsl:when>
             <xsl:otherwise>ILN204/CG/UB/Unbekannt</xsl:otherwise>
           </xsl:choose>
         </xsl:when>
@@ -951,13 +878,13 @@
   <xsl:template name="check-range">
     <!-- Checks if the string signature-short-lowercase is in the range defined
       by the strings range-start and range-end.
-      
+
       The three strings are getting sorted by comparing char by char with a
       predefined sort key. If each char of signature-short-lowercase
       is between the corresponding char of range-start and range-end, the
       template returns 1, otherwise 0.
-      
-      Inspired by https://weinert-automation.de/pub/XSLT1.0RangeFilter.pdf        
+
+      Inspired by https://weinert-automation.de/pub/XSLT1.0RangeFilter.pdf
     -->
 
     <xsl:param name="signature-short-lowercase"/>
@@ -1121,17 +1048,17 @@
                  Tokens are truncated to the minimum string length of either from or to comparison token.
               -->
             <xsl:call-template name="check-range">
-              <xsl:with-param name="signature-short-lowercase" select="substring($signature-comparison-token, 1, 
+              <xsl:with-param name="signature-short-lowercase" select="substring($signature-comparison-token, 1,
                                                                         min((string-length($range-from-comparison-token),
                                                                            string-length($range-to-comparison-token))
                                                                           )
                                                                        )"/>
-              <xsl:with-param name="range-start" select="substring($range-from-comparison-token, 1, 
+              <xsl:with-param name="range-start" select="substring($range-from-comparison-token, 1,
                                                            min((string-length($range-from-comparison-token),
                                                                string-length($range-to-comparison-token))
                                                               )
                                                            )"/>
-              <xsl:with-param name="range-end" select="substring($range-to-comparison-token, 1, 
+              <xsl:with-param name="range-end" select="substring($range-to-comparison-token, 1,
                                                            min((string-length($range-from-comparison-token),
                                                                string-length($range-to-comparison-token))
                                                               )
